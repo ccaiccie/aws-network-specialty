@@ -3,35 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AWS Advanced Networking – Specialty Daily Study Instructions</title>
+  <title>AWS Advanced Networking Specialty — Daily Study Specification</title>
   <style>
-    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
-    body { margin: 0; background: #f6f8fa; color: #1f2328; }
-    main { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.25rem 3rem; }
-    article { background: #fff; border: 1px solid #d0d7de; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgb(31 35 40 / 8%); }
-    header { padding: 2.25rem 2.25rem 1.75rem; background: linear-gradient(135deg, #0b2b4c, #0969da); color: #fff; }
-    header a { color: #fff; }
-    header p { max-width: 760px; margin-bottom: 0; opacity: .95; }
-    .eyebrow { letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; font-weight: 800; }
-    h1 { margin: .45rem 0 .8rem; line-height: 1.12; font-size: clamp(1.9rem, 5vw, 3rem); }
-    .notice { margin: 1.5rem 2.25rem 0; padding: 1rem 1.1rem; background: #fff8c5; border-left: 4px solid #bf8700; border-radius: 4px; }
-    .content { padding: 1.5rem 2.25rem 2.5rem; }
-    pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 0.94rem/1.62 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #24292f; }
-    footer { padding: 1.25rem 2.25rem; background: #f6f8fa; color: #57606a; font-size: .9rem; border-top: 1px solid #d0d7de; }
-    @media (max-width: 640px) { header, .content, footer { padding-left: 1.1rem; padding-right: 1.1rem; } .notice { margin-left: 1.1rem; margin-right: 1.1rem; } }
+    :root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color:#182230; background:#f5f8fb; }
+    body { margin:0; line-height:1.55; }
+    main { max-width:980px; margin:3rem auto; padding:2rem; background:#fff; border:1px solid #d9e2ec; border-radius:14px; box-shadow:0 8px 24px rgb(16 42 67 / 8%); }
+    h1 { color:#102a43; margin-bottom:.4rem; } .eyebrow { color:#0a66c2; font-size:.8rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+    .note { background:#e9f4ff; border-left:4px solid #0a66c2; padding:1rem; border-radius:6px; } a { color:#0a66c2; overflow-wrap:anywhere; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; font: .92rem/1.58 ui-monospace, SFMono-Regular, Menlo, monospace; background:#f8fafc; border:1px solid #d9e2ec; padding:1.2rem; border-radius:8px; }
   </style>
 </head>
 <body>
   <main>
-    <article>
-      <header>
-        <div class="eyebrow">AWS Networking Study Library</div>
-        <h1>AWS Advanced Networking – Specialty Daily Study Instructions</h1>
-        <p>A rendered, browser-friendly version of the daily-study and quiz specification for AWS advanced networking.</p>
-      </header>
-      <div class="notice"><strong>Status guard included:</strong> Every run must check the official AWS certification status and treat ANS-C01 as blueprint-based professional-development material if it is retired.</div>
-      <section class="content" aria-label="Study instruction document">
-        <pre>Create a DAILY AWS Advanced Networking study session aligned to the AWS Certified Advanced Networking – Specialty (ANS-C01) content outline. The purpose is deep operational and design understanding of AWS and hybrid network architectures at scale.
+    <div class="eyebrow">Canonical generation rules</div>
+    <h1>AWS Advanced Networking Specialty Daily Study Specification</h1>
+    <p class="note">The interactive study report is separate from this specification. <a href="AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-09-04.html">Open the current interactive report</a>. The report’s article sources are now tracked in <a href="aws-study-uniqueness-ledger.json">the 30-day uniqueness ledger</a>.</p>
+    <pre>Create a DAILY AWS Advanced Networking study session aligned to the AWS Certified Advanced Networking – Specialty (ANS-C01) content outline. The purpose is deep operational and design understanding of AWS and hybrid network architectures at scale.
 
 CERTIFICATION-STATUS GOVERNANCE — HARD REQUIREMENT: at the beginning of every run, check the official AWS certification page and record the certification status and check date. Do not imply that ANS-C01 is available to schedule when the official page says it has retired or its last testing date has passed. If it is retired, label the report `ANS-C01 blueprint-based advanced AWS networking study` and retain the content as practical professional-development material. Use the official exam guide as the blueprint authority:
 `https://docs.aws.amazon.com/aws-certification/latest/advanced-networking-specialty-01/advanced-networking-specialty-01.html`
@@ -81,6 +68,8 @@ FEATURE-CENTRIC DAILY ROTATION — HARD REQUIREMENT: for each mandatory target, 
 
 PRIMARY CONTENT-SELECTION RULE — UNIQUENESS FIRST: every day&#39;s FEATURE, primary feature source, support scenario sources, workflow, evidence, scenario, CLI/API/IaC command or configuration fragment, remediation path, topology, and quiz pattern must be materially different from every run in the rolling previous 30 calendar days. Reuse becomes eligible only after 30 days and is still optional. Prefer uncovered in-scope feature material first. A new re:Post or support case does not make a repeated feature lesson unique if the underlying lesson is substantially the same.
 
+CANONICAL 30-DAY ARTICLE LEDGER AND BLOCKLIST — HARD REQUIREMENT: before research or source selection, load `docs/aws-study-uniqueness-ledger.json` and build a blocklist from every primary feature URL, scenario-support URL, canonical redirected URL, source title/topic fingerprint, and source-case fingerprint whose `last_used` date falls within the prior 30 calendar days. Reject a proposed article before drafting if it matches a blocked URL, canonical URL, title/topic, feature lesson, or source case. A different re:Post or support URL does not qualify when it would teach the same already-blocked feature lesson. Every run must record all selected primary and scenario articles with their `last_used` dates and must preserve prior ledger entries; never delete or rewrite past entries to bypass this rule. A run fails validation and must not publish or email unless it has 12 fresh primary-feature articles and 12 fresh scenario-support articles against the rolling 30-day ledger.
+
 ARTICLE DEPTH — COMPREHENSIVE SELF-CONTAINED FEATURE LESSON: every primary feature source becomes a detailed original engineering lesson. Begin with a concise `Essence / mental model`, then comprehensively teach what the feature is; why it exists; architecture/components; prerequisites/dependencies; normal route, DNS, control, and data flow; configuration hierarchy and object relationships; policy/order-of-operations logic; Console/CLI/API/CloudFormation workflows; relevant commands and fields; expected/healthy state; state transitions; feature interactions; failure boundaries; scale/HA/Region/AZ/upgrade implications; quotas and version/platform caveats; design tradeoffs; common engineering mistakes; and key takeaways. The learner should understand the feature without clicking the source. Never reproduce copyrighted source material verbatim.
 
 DEPTH EXPECTATION: substantial feature lessons should normally be roughly 1,000–2,500+ words when the source supports that depth. Narrow features may be shorter, but must still explain the mechanisms required to reason about an advanced scenario.
@@ -121,9 +110,9 @@ MANDATORY FEATURE-FIRST VALIDATION — HARD FAIL: `Primary lessons based on feat
 
 MANDATORY ARTICLE-DEPTH VALIDATION: for each target verify the lesson covers feature purpose, production relevance, architecture/components, dependencies, normal state/flow, configuration/policy logic, Console/CLI/API/IaC workflow, evidence/fields, interpretation, feature interactions, failure boundaries, troubleshooting application, remediation, verification, design implications, Region/AZ/account/platform caveats, common mistakes, takeaways, source title, and visible raw URL. Shallow support summaries fail.
 
-MANDATORY 30-DAY UNIQUENESS VALIDATION: compare against previous 30 days and require history checked YES; targets 12/12; fresh primary feature URLs 12/12; duplicate feature/lesson/scenario/primary-source/command-evidence/evidence-excerpt/question fingerprints all 0; 30-day uniqueness PASS; overall Validation PASS.
+MANDATORY 30-DAY UNIQUENESS VALIDATION: compare against the `docs/aws-study-uniqueness-ledger.json` entries from the previous 30 calendar days and require history checked YES; targets 12/12; fresh primary feature URLs 12/12; fresh scenario-support URLs 12/12; duplicate canonical-article URL/title/topic/feature-lesson/scenario/primary-source/command-evidence/evidence-excerpt/question fingerprints all 0; 30-day uniqueness PASS; overall Validation PASS. State the earliest eligible reuse date for each selected article.
 
-MACHINE-READABLE HISTORY: embed timestamp; certification-status check result/source URL; official-domain mapping; twelve targets; feature/topic fingerprints; primary-feature-source fingerprints; scenario-support-source fingerprints; failure/scenario/CLI/API/IaC/evidence/remediation/question/distractor/answer-position/image fingerprints; Mermaid diagram fingerprints/source URLs when present; source-case identifier; root-cause class; correct-action class; difficulty/reasoning type; and last-used dates.
+MACHINE-READABLE HISTORY: embed timestamp; certification-status check result/source URL; official-domain mapping; twelve targets; feature/topic fingerprints; primary-feature-source fingerprints; scenario-support-source fingerprints; failure/scenario/CLI/API/IaC/evidence/remediation/question/distractor/answer-position/image fingerprints; Mermaid diagram fingerprints/source URLs when present; source-case identifier; root-cause class; correct-action class; difficulty/reasoning type; per-article last-used dates; and the ledger path/version used for the preflight. Append the same article records to `docs/aws-study-uniqueness-ledger.json` after validation.
 
 HTML REPORT: one polished responsive HTML containing executive summary, current certification-status notice, exact ANS-C01 domain distribution, twelve deep feature-first lessons, source-role separation, realistic AWS troubleshooting/design scenarios applying those features, evidence interpretation, Console/CLI/API/CloudFormation reference, verified external technical figures, Mermaid teaching diagrams where applicable, source index, exactly 50 advanced questions with detailed rationales, final grading, feature-first validation, mandatory-target validation, domain-distribution validation, article-depth validation, image-link validation, Mermaid validation, quiz difficulty/root-cause/answer-diversity validation, 30-day uniqueness validation, and valid history JSON.
 
@@ -136,15 +125,12 @@ Report directory: `docs/`
 Report filename: `AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_YYYY-MM-DD-HH-MM.html`
 Index: `docs/index.html`
 GitHub Pages URL pattern: `https://ccaiccie.github.io/aws-network-specialty/&lt;filename&gt;.html` (after GitHub Pages is enabled for this repository)
-If the repository or Pages URL differs, update these two configuration values before enabling publication. Never substitute a different project repository or URL. Fetch the report and index back after commit and rerun certification-status, mandatory-target, domain-distribution, feature-first, article-depth, source-role separation, evidence, image-link, Mermaid, quiz difficulty/root-cause/answer-diversity, 30-day uniqueness, and index validations. If any validation fails, do not email.
+If the repository or Pages URL differs, update these two configuration values before enabling publication. Never substitute a different project repository or URL. Fetch the report, index, and 30-day ledger back after commit and rerun certification-status, mandatory-target, domain-distribution, feature-first, article-depth, source-role separation, evidence, image-link, Mermaid, quiz difficulty/root-cause/answer-diversity, 30-day uniqueness, and index validations. If any validation fails, do not email.
 
 GITHUB PAGES URL — PRIMARY DELIVERY URL: use the confirmed Pages report URL as the primary user-facing report URL. Do not claim a URL is published until the committed report is reachable and passes the fetch-back validation.
 
 EMAIL DELIVERY — HARD REQUIREMENT: only after committed report/index pass validation, send an HTML email from the connected Gmail account to BOTH configured recipients. Subject: `AWS Advanced Networking Specialty Daily Study Quiz — YYYY-MM-DD-HH-MM`. Include the exact GitHub Pages link as the primary button and a visible copyable URL; all twelve targets and feature topics; ANS-C01 domain distribution; primary feature-source summary; scenario-support summary; article-depth summary; scenario/difficulty validation; image-link summary; Mermaid diagram summary/count; feature-first validation; certification-status result; and 30-day uniqueness status. Verify Gmail reports SENT to both recipients before claiming success.
 </pre>
-      </section>
-      <footer>Repository: <a href="https://github.com/ccaiccie/aws-network-specialty">ccaiccie/aws-network-specialty</a> · Updated 2026-09-04 UTC</footer>
-    </article>
   </main>
 </body>
 </html>
