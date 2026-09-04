@@ -97,12 +97,12 @@ HTML REPORT: one polished responsive HTML containing executive summary, current 
 INDEX.HTML — TOP SUMMARY HARD REQUIREMENT: update `docs/index.html` so the latest validated run is first. Show timestamp, certification-status check and official status link, report link, mandatory targets covered 12/12, all target names, each day's feature topic, each target's official ANS-C01 domain mapping, primary feature source article + visible raw source URL, separate scenario-support source counts/links, technical image URLs only when verified, Mermaid diagram count/validation when present, quiz validation, exact 15/13/10/12 domain distribution, feature-first validation, article-depth validation, 30-day uniqueness PASS, and a prominent Open latest report link. Preserve prior runs below.
 
 GITHUB PUBLICATION — CONFIGURATION REQUIRED: publish only after the destination repository and GitHub Pages base URL are confirmed. Default configuration, if this is the intended repository:
-Repository: `ccaiccie4/AWS-Networking-Specialty`
+Repository: `ccaiccie/aws-network-specialty`
 Branch: `main`
 Report directory: `docs/`
 Report filename: `AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_YYYY-MM-DD-HH-MM.html`
 Index: `docs/index.html`
-GitHub Pages URL pattern: `https://ccaiccie4.github.io/AWS-Networking-Specialty/<filename>.html`
+GitHub Pages URL pattern: `https://ccaiccie.github.io/aws-network-specialty/<filename>.html` (after GitHub Pages is enabled for this repository)
 If the repository or Pages URL differs, update these two configuration values before enabling publication. Never substitute a different project repository or URL. Fetch the report and index back after commit and rerun certification-status, mandatory-target, domain-distribution, feature-first, article-depth, source-role separation, evidence, image-link, Mermaid, quiz difficulty/root-cause/answer-diversity, 30-day uniqueness, and index validations. If any validation fails, do not email.
 
 GITHUB PAGES URL — PRIMARY DELIVERY URL: use the confirmed Pages report URL as the primary user-facing report URL. Do not claim a URL is published until the committed report is reachable and passes the fetch-back validation.
