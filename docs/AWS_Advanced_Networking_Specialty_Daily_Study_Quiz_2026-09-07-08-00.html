@@ -12,7 +12,7 @@
 <nav class="toc" aria-label="Lesson navigation"><a href="#lesson-vpc-cidr-association">1. Amazon VPC foundations</a><a href="#lesson-dx-lag">2. Hybrid connectivity</a><a href="#lesson-tgw-sg-reference">3. Transit and multi-VPC networking</a><a href="#lesson-resolver-inbound">4. DNS and service discovery</a><a href="#lesson-privatelink-cross-region">5. Private service access</a><a href="#lesson-alb-zonal-shift">6. Load balancing and zonal recovery</a><a href="#lesson-ga-affinity">7. Edge and global traffic engineering</a><a href="#lesson-nfw-domain-list">8. Inspection and perimeter security</a><a href="#lesson-prefix-list-governance">9. Access control and governance</a><a href="#lesson-network-synthetic-monitor">10. Observability and operations</a><a href="#lesson-cfn-drift">11. Automation and infrastructure as code</a><a href="#lesson-ena-express">12. Workload networking</a></nav>
 
 <article class="lesson" id="lesson-vpc-cidr-association">
-  <div class="lesson-kicker">Target 0 of 12 · Amazon VPC foundations</div>
+  <div class="lesson-kicker">Target 1 of 12 · Amazon VPC foundations</div>
   <h2>Secondary CIDR association lifecycle, overlap gates, and route injection in an existing VPC</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html" target="_blank" rel="noopener">VPC CIDR blocks</a><code>https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> IPv4 and IPv6 CIDR association constraints, local-route behavior, quotas, states, and disassociation boundaries.</p></div>
@@ -39,7 +39,7 @@ dependent subnets before removal: 0</pre><p><strong>What this proves:</strong> T
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>A secondary association extends a VPC; it does not resize or replace the primary IPv4 CIDR.</li><li>Check connected-network and route overlap before requesting the association.</li><li>Wait for the association state and verify local-route effects in every route table.</li><li>Remove dependent subnets and resources before disassociating a removable block.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-dx-lag">
-  <div class="lesson-kicker">Target 1 of 12 · Hybrid connectivity</div>
+  <div class="lesson-kicker">Target 2 of 12 · Hybrid connectivity</div>
   <h2>Direct Connect link aggregation groups: LACP membership, minimum-links safeguards, and true failure domains</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/lags.html" target="_blank" rel="noopener">AWS Direct Connect link aggregation groups</a><code>https://docs.aws.amazon.com/directconnect/latest/UserGuide/lags.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> LAG eligibility, LACP active-active behavior, supported connection counts, capacity, and minimum-links semantics.</p></div>
@@ -67,7 +67,7 @@ expected LAG state: down</pre><p><strong>What this proves:</strong> The minimum-
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>LAG members share one Direct Connect endpoint and location.</li><li>LACP is active-active and distributes flows; one flow remains bounded by a member path.</li><li>Minimum links can withdraw an under-capacity LAG deliberately.</li><li>Use a separate location, router, and carrier path for broader failure-domain resilience.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-tgw-sg-reference">
-  <div class="lesson-kicker">Target 2 of 12 · Transit and multi-VPC networking</div>
+  <div class="lesson-kicker">Target 3 of 12 · Transit and multi-VPC networking</div>
   <h2>Transit Gateway cross-VPC security-group referencing, dual enablement, and middlebox boundaries</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html" target="_blank" rel="noopener">Transit gateway VPC attachments</a><code>https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> Attachment-level options and the documented security-group referencing behavior for VPC attachments.</p></div>
@@ -94,7 +94,7 @@ path contains middlebox = false</pre><p><strong>What this proves:</strong> The c
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>Enable referencing on the Transit Gateway and each participating VPC attachment.</li><li>Security-group references authorize inbound traffic; they do not install routes.</li><li>Keep source and destination in one supported Regional TGW path without an unsupported middlebox.</li><li>Detect stale references before deleting groups or attachments.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-resolver-inbound">
-  <div class="lesson-kicker">Target 3 of 12 · DNS and service discovery</div>
+  <div class="lesson-kicker">Target 4 of 12 · DNS and service discovery</div>
   <h2>Route 53 Resolver inbound endpoints: hybrid authoritative query paths, delegation, and return routing</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-network-to-vpc.html" target="_blank" rel="noopener">Forwarding inbound DNS queries to your VPCs</a><code>https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-network-to-vpc.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> Inbound endpoint ENIs, on-premises forwarding, default versus delegation endpoint behavior, and query flow.</p></div>
@@ -122,7 +122,7 @@ control query: missing.dev.corp.example -&gt; NXDOMAIN</pre><p><strong>What this
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>Inbound endpoint IPs are hybrid DNS targets, not broad network gateways.</li><li>Design endpoint ENIs across AZs and test both UDP and TCP port 53.</li><li>Make namespace authority and delegation explicit to prevent loops and hidden fallbacks.</li><li>A DNS response code carries more diagnostic meaning than a generic application timeout.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-privatelink-cross-region">
-  <div class="lesson-kicker">Target 4 of 12 · Private service access</div>
+  <div class="lesson-kicker">Target 5 of 12 · Private service access</div>
   <h2>PrivateLink cross-Region service access, regional guardrails, and independent availability domains</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/vpc/latest/privatelink/privatelink-share-your-services.html" target="_blank" rel="noopener">Share your services through AWS PrivateLink</a><code>https://docs.aws.amazon.com/vpc/latest/privatelink/privatelink-share-your-services.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> Provider-side supported Regions, endpoint-service availability states, opt-in considerations, and service sharing boundaries.</p></div>
@@ -151,7 +151,7 @@ endpoint state: available</pre><p><strong>What this proves:</strong> The provide
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>Cross-Region PrivateLink is private, service-specific connectivity without peering.</li><li>Both sides need the permission-only multi-Region action and compatible region guardrails.</li><li>Use multi-AZ NLB and endpoint placement, but design regional failover separately.</li><li>Validate endpoint state, DNS/TLS, listener health, latency, and transfer cost as distinct layers.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-alb-zonal-shift">
-  <div class="lesson-kicker">Target 5 of 12 · Load balancing and zonal recovery</div>
+  <div class="lesson-kicker">Target 6 of 12 · Load balancing and zonal recovery</div>
   <h2>Application Load Balancer zonal shift and zonal autoshift: evacuation, capacity, and health semantics</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/zonal-shift.html" target="_blank" rel="noopener">Zonal shift for your Application Load Balancer</a><code>https://docs.aws.amazon.com/elasticloadbalancing/latest/application/zonal-shift.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> How an ALB is enabled for zonal shift, DNS withdrawal, target handling, connection behavior, and capacity planning.</p></div>
@@ -179,7 +179,7 @@ CPU in remaining zones: 78%</pre><p><strong>What this proves:</strong> ARC is su
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>Zonal shift is an administrative evacuation signal, distinct from target health.</li><li>Existing connections and DNS caches make evacuation gradual.</li><li>Pre-scale surviving zones; autoshift does not wait for capacity.</li><li>Use controlled practice runs with workload alarms and cancellation criteria.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-ga-affinity">
-  <div class="lesson-kicker">Target 6 of 12 · Edge and global traffic engineering</div>
+  <div class="lesson-kicker">Target 7 of 12 · Edge and global traffic engineering</div>
   <h2>Global Accelerator client affinity, flow hashing, and TCP-reset attribution</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-listeners-client-affinity.html" target="_blank" rel="noopener">Client affinity in AWS Global Accelerator</a><code>https://docs.aws.amazon.com/global-accelerator/latest/dg/about-listeners-client-affinity.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> The None and Source IP affinity modes, 5-tuple versus 2-tuple hashing, and edge-routing limitations.</p></div>
@@ -207,7 +207,7 @@ TCP_Endpoint_Reset_Count: baseline</pre><p><strong>What this proves:</strong> Tw
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>None uses five-tuple hashing; Source IP uses a two-tuple and can concentrate NAT users.</li><li>Affinity helps selection but does not preserve a failed TCP connection.</li><li>Use the three reset metrics to attribute direction before changing endpoints or networks.</li><li>Design retries and shared session state so edge changes are survivable.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-nfw-domain-list">
-  <div class="lesson-kicker">Target 7 of 12 · Inspection and perimeter security</div>
+  <div class="lesson-kicker">Target 8 of 12 · Inspection and perimeter security</div>
   <h2>Network Firewall stateful domain lists, HTTP Host and TLS SNI evidence, and HOME_NET scope</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html" target="_blank" rel="noopener">Stateful domain list rule groups in AWS Network Firewall</a><code>https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> Allow, deny, reject, and alert semantics; HTTP_HOST/TLS_SNI matching; wildcard behavior; HOME_NET; and generated rules.</p></div>
@@ -235,7 +235,7 @@ HOME_NET: [10.0.0.0/16, 10.20.0.0/16, 10.30.0.0/16]</pre><p><strong>What this pr
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>Domain lists inspect HTTP Host and TLS SNI, not DNS answers or destination IP ownership.</li><li>A leading dot matches the apex and subdomains.</li><li>Expand HOME_NET for centralized spoke inspection.</li><li>Validate rule-order interactions and add controls for no-SNI or manipulated metadata.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-prefix-list-governance">
-  <div class="lesson-kicker">Target 8 of 12 · Access control and governance</div>
+  <div class="lesson-kicker">Target 9 of 12 · Access control and governance</div>
   <h2>Customer-managed prefix-list versioning, quota economics, and AWS RAM ownership across accounts</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html" target="_blank" rel="noopener">Customer-managed prefix lists</a><code>https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> IP-family rules, maximum entries, versioning, references, and how quotas are consumed.</p></div>
@@ -264,7 +264,7 @@ quota cost before right-sizing: 3000 rule slots</pre><p><strong>What this proves
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>One list has one IP family, one owner, a maximum size, and versioned entries.</li><li>Quota consumption can follow maximum entries rather than current population.</li><li>RAM consumers reference shared lists; only the owner changes membership.</li><li>Audit versions and references because one update can expand access across accounts.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-network-synthetic-monitor">
-  <div class="lesson-kicker">Target 9 of 12 · Observability and operations</div>
+  <div class="lesson-kicker">Target 10 of 12 · Observability and operations</div>
   <h2>CloudWatch Network Synthetic Monitor probes, hybrid path baselines, and AWS network health attribution</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/what-is-network-monitor.html" target="_blank" rel="noopener">Using Network Synthetic Monitor</a><code>https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/what-is-network-monitor.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> Fully managed hybrid probes, latency and packet-loss metrics, the network health indicator, sources, destinations, and limitations.</p></div>
@@ -291,7 +291,7 @@ application latency: elevated for 1a clients</pre><p><strong>What this proves:</
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>A probe is one managed synthetic source-destination flow, not universal application telemetry.</li><li>Use representative subnets, protocols, ports, packet sizes, and multiple fault domains.</li><li>Interpret NHI as probabilistic supported-path attribution, not a complete root-cause verdict.</li><li>Monitoring raises evidence and alarms; it does not perform failover.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-cfn-drift">
-  <div class="lesson-kicker">Target 10 of 12 · Automation and infrastructure as code</div>
+  <div class="lesson-kicker">Target 11 of 12 · Automation and infrastructure as code</div>
   <h2>CloudFormation drift detection for network controls, explicit properties, and cross-stack attachment blind spots</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html" target="_blank" rel="noopener">Detect unmanaged configuration changes with drift detection</a><code>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> Expected-versus-actual property comparison, status codes, supported resources, explicit-property limits, nested stacks, and attachment edge cases.</p></div>
@@ -320,7 +320,7 @@ difference -&gt; ADD: 0.0.0.0/0</pre><p><strong>What this proves:</strong> A sup
   <div class="takeaways"><h3>Decision checkpoints</h3><ul><li>Drift compares supported actual properties with explicit template expectations.</li><li>Poll the asynchronous detection ID before reading detailed resource differences.</li><li>Run detection directly on nested stacks and account for cross-stack attachment blind spots.</li><li>IN_SYNC is configuration evidence, not end-to-end network or security proof.</li></ul></div>
 </article>
 <article class="lesson" id="lesson-ena-express">
-  <div class="lesson-kicker">Target 11 of 12 · Workload networking</div>
+  <div class="lesson-kicker">Target 12 of 12 · Workload networking</div>
   <h2>EC2 ENA Express and SRD: per-attachment enablement, eligibility fallback, and transport tuning</h2>
   <div class="source-grid">
     <div><span class="source-label">Primary feature lesson source</span><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ena-express.html" target="_blank" rel="noopener">Improve network performance between EC2 instances with ENA Express</a><code>https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ena-express.html</code><p class="source-note"><strong>Classification/platform:</strong> Official AWS service documentation · current online guide · checked 2026-09-07. <strong>Source date:</strong> no update date displayed; checked 2026-09-07. <strong>Supports:</strong> SRD mechanics, single-flow bandwidth, tail-latency benefits, eligibility, fallback, Region/AZ boundaries, and host tuning.</p></div>
