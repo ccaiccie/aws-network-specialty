@@ -7635,7 +7635,7 @@
           "earliest_eligible_reuse_date": "2026-10-23"
         },
         {
-          "target_id": "tgw-sg-reference",
+          "target_id": "tgw-sg-identity-20260923",
           "source_role": "primary_feature",
           "target": "Transit and multi-VPC networking",
           "topic": "Transit Gateway security-group referencing for identity-based east-west controls across attached VPCs",
@@ -7644,12 +7644,12 @@
           "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security-groups.html",
           "title_topic_fingerprint": "security group referencing in aws transit gateway — transit gateway security-group referencing for identity-based east-west controls across attached vpcs",
           "feature_lesson_fingerprint": "transit gateway security-group referencing for identity-based east-west controls across attached vpcs",
-          "source_case": "tgw-sg-reference: feature lesson",
+          "source_case": "tgw-sg-identity-20260923: feature lesson",
           "last_used": "2026-09-23",
           "earliest_eligible_reuse_date": "2026-10-23"
         },
         {
-          "target_id": "tgw-sg-reference",
+          "target_id": "tgw-sg-identity-20260923",
           "source_role": "scenario_support",
           "target": "Transit and multi-VPC networking",
           "topic": "Transit Gateway security-group referencing for identity-based east-west controls across attached VPCs",
@@ -7658,7 +7658,7 @@
           "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/enable-tgw-security-group-referencing.html",
           "title_topic_fingerprint": "enable security group referencing in aws transit gateway — transit gateway security-group referencing for identity-based east-west controls across attached vpcs — scenario",
           "feature_lesson_fingerprint": "transit gateway security-group referencing for identity-based east-west controls across attached vpcs — scenario",
-          "source_case": "tgw-sg-reference: operational scenario",
+          "source_case": "tgw-sg-identity-20260923: operational scenario",
           "last_used": "2026-09-23",
           "earliest_eligible_reuse_date": "2026-10-23"
         },
@@ -7747,7 +7747,7 @@
           "earliest_eligible_reuse_date": "2026-10-23"
         },
         {
-          "target_id": "ga-custom-routing",
+          "target_id": "ga-portmap-control-20260923",
           "source_role": "primary_feature",
           "target": "Edge and global traffic delivery",
           "topic": "Global Accelerator custom-routing endpoint groups: deterministic port mapping, VPC subnet destinations, health responsibility, and traffic allow/deny controls",
@@ -7756,12 +7756,12 @@
           "canonical_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/custom-routing-about-endpoint-groups.html",
           "title_topic_fingerprint": "endpoint groups for custom routing accelerators in aws global accelerator — global accelerator custom-routing endpoint groups: deterministic port mapping, vpc subnet destinations, health responsibility, and traffic allow/deny controls",
           "feature_lesson_fingerprint": "global accelerator custom-routing endpoint groups: deterministic port mapping, vpc subnet destinations, health responsibility, and traffic allow/deny controls",
-          "source_case": "ga-custom-routing: feature lesson",
+          "source_case": "ga-portmap-control-20260923: feature lesson",
           "last_used": "2026-09-23",
           "earliest_eligible_reuse_date": "2026-10-23"
         },
         {
-          "target_id": "ga-custom-routing",
+          "target_id": "ga-portmap-control-20260923",
           "source_role": "scenario_support",
           "target": "Edge and global traffic delivery",
           "topic": "Global Accelerator custom-routing endpoint groups: deterministic port mapping, VPC subnet destinations, health responsibility, and traffic allow/deny controls",
@@ -7770,7 +7770,7 @@
           "canonical_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/custom-routing-about-endpoints.html",
           "title_topic_fingerprint": "endpoints for custom routing accelerators in aws global accelerator — global accelerator custom-routing endpoint groups: deterministic port mapping, vpc subnet destinations, health responsibility, and traffic allow/deny controls — scenario",
           "feature_lesson_fingerprint": "global accelerator custom-routing endpoint groups: deterministic port mapping, vpc subnet destinations, health responsibility, and traffic allow/deny controls — scenario",
-          "source_case": "ga-custom-routing: operational scenario",
+          "source_case": "ga-portmap-control-20260923: operational scenario",
           "last_used": "2026-09-23",
           "earliest_eligible_reuse_date": "2026-10-23"
         },
@@ -7859,7 +7859,7 @@
           "earliest_eligible_reuse_date": "2026-10-23"
         },
         {
-          "target_id": "internet-monitor",
+          "target_id": "internet-monitor-asn-baseline-20260923",
           "source_role": "primary_feature",
           "target": "Network observability and operations",
           "topic": "CloudWatch Internet Monitor for client-location and ASN health events, baselines, resource selection, and evidence-driven escalation",
@@ -7868,12 +7868,12 @@
           "canonical_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html",
           "title_topic_fingerprint": "using internet monitor - amazon cloudwatch — cloudwatch internet monitor for client-location and asn health events, baselines, resource selection, and evidence-driven escalation",
           "feature_lesson_fingerprint": "cloudwatch internet monitor for client-location and asn health events, baselines, resource selection, and evidence-driven escalation",
-          "source_case": "internet-monitor: feature lesson",
+          "source_case": "internet-monitor-asn-baseline-20260923: feature lesson",
           "last_used": "2026-09-23",
           "earliest_eligible_reuse_date": "2026-10-23"
         },
         {
-          "target_id": "internet-monitor",
+          "target_id": "internet-monitor-asn-baseline-20260923",
           "source_role": "scenario_support",
           "target": "Network observability and operations",
           "topic": "CloudWatch Internet Monitor for client-location and ASN health events, baselines, resource selection, and evidence-driven escalation",
@@ -7882,7 +7882,7 @@
           "canonical_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-get-started.html",
           "title_topic_fingerprint": "getting started with internet monitor using the console - amazon cloudwatch — cloudwatch internet monitor for client-location and asn health events, baselines, resource selection, and evidence-driven escalation — scenario",
           "feature_lesson_fingerprint": "cloudwatch internet monitor for client-location and asn health events, baselines, resource selection, and evidence-driven escalation — scenario",
-          "source_case": "internet-monitor: operational scenario",
+          "source_case": "internet-monitor-asn-baseline-20260923: operational scenario",
           "last_used": "2026-09-23",
           "earliest_eligible_reuse_date": "2026-10-23"
         },
