@@ -9889,4 +9889,26 @@
       "history_checked": true,
       "published_at": "2026-09-28T14:58:00.000Z",
       "report": "AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-09-28-07-58.html",
-      "report_url": "https://ccaiccie.github.io/aws-network-
+      "report_url": "https://ccaiccie.github.io/aws-network-specialty/AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-09-28-07-58.html",
+      "validation": {
+        "mandatory_targets": "12/12",
+        "primary_feature_sources": "12/12",
+        "scenario_support_sources": "12/12",
+        "domain_distribution": "15/13/10/12",
+        "quiz_questions": 50,
+        "images": 0,
+        "mermaid_diagrams": 12,
+        "uniqueness": "PASS",
+        "quiz_characteristics": {
+          "scenario_based": 50,
+          "support_or_implementation_grounded": 50,
+          "multi_step": 50,
+          "competing_hypotheses": 50,
+          "configuration_or_design_decision": 50,
+          "cross_service_or_cross_account": 50
+        }
+      },
+      "validation_status": "PASS"
+    }
+  ]
+}
