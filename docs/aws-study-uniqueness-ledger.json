@@ -10298,6 +10298,1462 @@
         }
       },
       "validation_status": "PASS"
+    },
+    {
+      "generated_at": "2026-09-30T08:03:00-07:00",
+      "report": "AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-09-30-08-03.html",
+      "report_url": "https://ccaiccie.github.io/aws-network-specialty/AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-09-30-08-03.html",
+      "certification_status": {
+        "result": "AWS states ANS-C01 is being retired; the last day to take the exam is December 31, 2026 (checked 2026-09-30).",
+        "source_url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+      },
+      "ledger": {
+        "path": "docs/aws-study-uniqueness-ledger.json",
+        "version": "1.0",
+        "history_checked": true,
+        "rolling_calendar_days": 30
+      },
+      "uniqueness_window": {
+        "days": 30,
+        "block_through": "2026-10-29",
+        "earliest_eligible_reuse_date": "2026-10-30"
+      },
+      "validation": {
+        "mandatory_targets": "12/12",
+        "primary_feature_sources": "12/12",
+        "scenario_support_sources": "12/12",
+        "domain_distribution": "15/13/10/12",
+        "quiz_questions": 50,
+        "images": {
+          "count": 0,
+          "status": "PASS",
+          "note": "No external figures used; no candidate passed necessity and render-verification gates."
+        },
+        "mermaid_diagrams": 12,
+        "uniqueness": "PASS",
+        "quiz_characteristics": {
+          "scenario_based": 50,
+          "support_or_implementation_grounded": 50,
+          "multi_step": 50,
+          "competing_hypotheses": 50,
+          "configuration_or_design_decision": 50,
+          "cross_service_or_cross_account": 50
+        },
+        "mermaid": {
+          "count": 12,
+          "status": "PASS"
+        }
+      },
+      "targets": [
+        {
+          "id": "vpc-ipv6-migration-20260930",
+          "target_number": 1,
+          "target": "Amazon VPC foundations",
+          "feature_topic": "Phased IPv6 enablement for an existing VPC: dual-stack CIDR assignment, public versus private default routes, egress-only internet gateways, IPv6 security controls, address assignment, and rollback-safe validation",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6-add.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6-add.html",
+            "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "vpn-cloudwatch-flap-evidence-20260930",
+          "target_number": 2,
+          "target": "Hybrid connectivity",
+          "feature_topic": "Site-to-Site VPN observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, BGP and device correlation, metric interpretation, alarms, and evidence-driven failover validation",
+          "primary_source": "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-overview-vpn.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-cloudwatch-vpn.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-overview-vpn.html",
+            "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-cloudwatch-vpn.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "tgw-pbr-limits-20260930",
+          "target_number": 3,
+          "target": "Transit and multi-VPC networking",
+          "feature_topic": "Transit Gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, BGP advertisement loss, field-reset semantics, and staged rollback",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-limitations.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-entry-modify.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-limitations.html",
+            "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-entry-modify.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cloudmap-health-semantics-20260930",
+          "target_number": 4,
+          "target": "DNS and service discovery",
+          "feature_topic": "AWS Cloud Map health-check semantics: public Route 53 versus custom checks, private-namespace constraints, A and AAAA coupling, CNAME exclusions, health-threshold behavior, TTL propagation, and safe service updates",
+          "primary_source": "https://docs.aws.amazon.com/cloud-map/latest/dg/services-health-checks.html",
+          "scenario_source": "https://docs.aws.amazon.com/cloud-map/latest/dg/editing-services.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/cloud-map/latest/dg/services-health-checks.html",
+            "https://docs.aws.amazon.com/cloud-map/latest/dg/editing-services.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "privatelink-endpoint-policy-iam-20260930",
+          "target_number": 5,
+          "target": "Private service and resource access",
+          "feature_topic": "PrivateLink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private DNS, security groups, and CloudTrail evidence",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/privatelink/security_iam_service-with-iam.html",
+          "scenario_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/interface-vpc-endpoints.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/privatelink/security_iam_service-with-iam.html",
+            "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/interface-vpc-endpoints.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "alb-rule-transform-api-20260930",
+          "target_number": 6,
+          "target": "Load balancing and service insertion",
+          "feature_topic": "Application Load Balancer listener-rule transforms: host and URL rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout",
+          "primary_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleTransform.html",
+          "scenario_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/add-rule.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleTransform.html",
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/add-rule.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "ga-byoip-lifecycle-20260930",
+          "target_number": 7,
+          "target": "Edge and global traffic delivery",
+          "feature_topic": "Global Accelerator BYOIP lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety",
+          "primary_source": "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html",
+          "scenario_source": "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.provision.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html",
+            "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.provision.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "waf-ja3-fingerprint-20260930",
+          "target_number": 8,
+          "target": "Network inspection and perimeter protection",
+          "feature_topic": "AWS WAF JA3 and JA4 TLS fingerprint matching: CloudFront and ALB visibility, exact fingerprint selection, forwarded TLS boundaries, fallback behavior, labels and logs, staged Count deployment, and evasion-aware operations",
+          "primary_source": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-ja3-ja4-fingerprint-match.html",
+          "scenario_source": "https://docs.aws.amazon.com/waf/latest/APIReference/API_JA3Fingerprint.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-ja3-ja4-fingerprint-match.html",
+            "https://docs.aws.amazon.com/waf/latest/APIReference/API_JA3Fingerprint.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "org-vpc-encryption-policy-20260930",
+          "target_number": 9,
+          "target": "Network access control and governance",
+          "feature_topic": "AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence",
+          "primary_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2.html",
+          "scenario_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2_syntax.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2.html",
+            "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2_syntax.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cloudtrail-network-activity-20260930",
+          "target_number": 10,
+          "target": "Network observability and operations",
+          "feature_topic": "CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation",
+          "primary_source": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-events.html",
+          "scenario_source": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-events.html",
+            "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cfn-guard-network-policy-20260930",
+          "target_number": 11,
+          "target": "Deployment and automation",
+          "feature_topic": "CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness",
+          "primary_source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
+          "scenario_source": "https://docs.aws.amazon.com/cfn-guard/latest/ug/writing-rules.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
+            "https://docs.aws.amazon.com/cfn-guard/latest/ug/writing-rules.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "ecs-service-connect-tls-logs-20260930",
+          "target_number": 12,
+          "target": "Workload and service integration",
+          "feature_topic": "ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation",
+          "primary_source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-tls.html",
+          "scenario_source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-envoy-access-logs.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-tls.html",
+            "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-envoy-access-logs.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        }
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "target_id": "vpc-ipv6-migration-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A team adds IPv6 addresses to private application instances and publishes AAAA records, but outbound package downloads fail even though IPv4 traffic continues to work.",
+          "question_fingerprint": "For Phased IPv6 enablement for an existing VPC: dual-stack CIDR assignment, public versus private default routes, egress-only internet gateways, IPv6 security controls, address assignment, and rollback-safe validation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-ipv6-migration-20260930-primary-cause",
+          "correct_action_class": "vpc-ipv6-migration-20260930-primary-action"
+        },
+        {
+          "id": 2,
+          "target_id": "vpc-ipv6-migration-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Phased IPv6 enablement for an existing VPC: dual-stack CIDR assignment, public versus private default routes, egress-only internet gateways, IPv6 security controls, address assignment, and rollback-safe validation into a production control with a safe rollback.",
+          "question_fingerprint": "For vpc-ipv6-migration-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-ipv6-migration-20260930-design-cause",
+          "correct_action_class": "vpc-ipv6-migration-20260930-design-action"
+        },
+        {
+          "id": 3,
+          "target_id": "vpc-ipv6-migration-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For vpc-ipv6-migration-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the vpc-ipv6-migration-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-ipv6-migration-20260930-evidence-cause",
+          "correct_action_class": "vpc-ipv6-migration-20260930-evidence-action"
+        },
+        {
+          "id": 4,
+          "target_id": "vpc-ipv6-migration-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Phased IPv6 enablement for an existing VPC: dual-stack CIDR assignment, public versus private default routes, egress-only internet gateways, IPv6 security controls, address assignment, and rollback-safe validation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For vpc-ipv6-migration-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-ipv6-migration-20260930-approval-gate-cause",
+          "correct_action_class": "vpc-ipv6-migration-20260930-approval-gate-action"
+        },
+        {
+          "id": 5,
+          "target_id": "vpn-cloudwatch-flap-evidence-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "Users report a 90-second interruption, but the VPN console shows both tunnels UP when the operator checks and TunnelDataIn contains a few bytes throughout the incident.",
+          "question_fingerprint": "For Site-to-Site VPN observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, BGP and device correlation, metric interpretation, alarms, and evidence-driven failover validation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpn-cloudwatch-flap-evidence-20260930-primary-cause",
+          "correct_action_class": "vpn-cloudwatch-flap-evidence-20260930-primary-action"
+        },
+        {
+          "id": 6,
+          "target_id": "vpn-cloudwatch-flap-evidence-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Site-to-Site VPN observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, BGP and device correlation, metric interpretation, alarms, and evidence-driven failover validation into a production control with a safe rollback.",
+          "question_fingerprint": "For vpn-cloudwatch-flap-evidence-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpn-cloudwatch-flap-evidence-20260930-design-cause",
+          "correct_action_class": "vpn-cloudwatch-flap-evidence-20260930-design-action"
+        },
+        {
+          "id": 7,
+          "target_id": "vpn-cloudwatch-flap-evidence-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For vpn-cloudwatch-flap-evidence-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the vpn-cloudwatch-flap-evidence-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpn-cloudwatch-flap-evidence-20260930-evidence-cause",
+          "correct_action_class": "vpn-cloudwatch-flap-evidence-20260930-evidence-action"
+        },
+        {
+          "id": 8,
+          "target_id": "vpn-cloudwatch-flap-evidence-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Site-to-Site VPN observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, BGP and device correlation, metric interpretation, alarms, and evidence-driven failover validation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For vpn-cloudwatch-flap-evidence-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpn-cloudwatch-flap-evidence-20260930-approval-gate-cause",
+          "correct_action_class": "vpn-cloudwatch-flap-evidence-20260930-approval-gate-action"
+        },
+        {
+          "id": 9,
+          "target_id": "tgw-pbr-limits-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A team steers TCP 443 traffic from a VPN attachment through an inspection route table, then on-premises loses all AWS prefixes immediately after the policy-table association.",
+          "question_fingerprint": "For Transit Gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, BGP advertisement loss, field-reset semantics, and staged rollback, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-pbr-limits-20260930-primary-cause",
+          "correct_action_class": "tgw-pbr-limits-20260930-primary-action"
+        },
+        {
+          "id": 10,
+          "target_id": "tgw-pbr-limits-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Transit Gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, BGP advertisement loss, field-reset semantics, and staged rollback into a production control with a safe rollback.",
+          "question_fingerprint": "For tgw-pbr-limits-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-pbr-limits-20260930-design-cause",
+          "correct_action_class": "tgw-pbr-limits-20260930-design-action"
+        },
+        {
+          "id": 11,
+          "target_id": "tgw-pbr-limits-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For tgw-pbr-limits-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the tgw-pbr-limits-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-pbr-limits-20260930-evidence-cause",
+          "correct_action_class": "tgw-pbr-limits-20260930-evidence-action"
+        },
+        {
+          "id": 12,
+          "target_id": "tgw-pbr-limits-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Transit Gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, BGP advertisement loss, field-reset semantics, and staged rollback must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For tgw-pbr-limits-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-pbr-limits-20260930-approval-gate-cause",
+          "correct_action_class": "tgw-pbr-limits-20260930-approval-gate-action"
+        },
+        {
+          "id": 13,
+          "target_id": "cloudmap-health-semantics-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A dual-stack public Cloud Map service has healthy IPv6 listeners, but both A and AAAA answers disappear when only the IPv4 listener fails.",
+          "question_fingerprint": "For AWS Cloud Map health-check semantics: public Route 53 versus custom checks, private-namespace constraints, A and AAAA coupling, CNAME exclusions, health-threshold behavior, TTL propagation, and safe service updates, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudmap-health-semantics-20260930-primary-cause",
+          "correct_action_class": "cloudmap-health-semantics-20260930-primary-action"
+        },
+        {
+          "id": 14,
+          "target_id": "cloudmap-health-semantics-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn AWS Cloud Map health-check semantics: public Route 53 versus custom checks, private-namespace constraints, A and AAAA coupling, CNAME exclusions, health-threshold behavior, TTL propagation, and safe service updates into a production control with a safe rollback.",
+          "question_fingerprint": "For cloudmap-health-semantics-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudmap-health-semantics-20260930-design-cause",
+          "correct_action_class": "cloudmap-health-semantics-20260930-design-action"
+        },
+        {
+          "id": 15,
+          "target_id": "cloudmap-health-semantics-20260930",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For cloudmap-health-semantics-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cloudmap-health-semantics-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudmap-health-semantics-20260930-evidence-cause",
+          "correct_action_class": "cloudmap-health-semantics-20260930-evidence-action"
+        },
+        {
+          "id": 16,
+          "target_id": "privatelink-endpoint-policy-iam-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A workload can resolve and connect to an S3 interface endpoint but receives AccessDenied, while the same role succeeds through a public endpoint.",
+          "question_fingerprint": "For PrivateLink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private DNS, security groups, and CloudTrail evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "privatelink-endpoint-policy-iam-20260930-primary-cause",
+          "correct_action_class": "privatelink-endpoint-policy-iam-20260930-primary-action"
+        },
+        {
+          "id": 17,
+          "target_id": "privatelink-endpoint-policy-iam-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn PrivateLink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private DNS, security groups, and CloudTrail evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For privatelink-endpoint-policy-iam-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "privatelink-endpoint-policy-iam-20260930-design-cause",
+          "correct_action_class": "privatelink-endpoint-policy-iam-20260930-design-action"
+        },
+        {
+          "id": 18,
+          "target_id": "privatelink-endpoint-policy-iam-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For privatelink-endpoint-policy-iam-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the privatelink-endpoint-policy-iam-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "privatelink-endpoint-policy-iam-20260930-evidence-cause",
+          "correct_action_class": "privatelink-endpoint-policy-iam-20260930-evidence-action"
+        },
+        {
+          "id": 19,
+          "target_id": "alb-rule-transform-api-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A migration rule matches /legacy/* and rewrites the path, but requests continue to the legacy target group even when the rewritten path resembles the new-services rule.",
+          "question_fingerprint": "For Application Load Balancer listener-rule transforms: host and URL rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "alb-rule-transform-api-20260930-primary-cause",
+          "correct_action_class": "alb-rule-transform-api-20260930-primary-action"
+        },
+        {
+          "id": 20,
+          "target_id": "alb-rule-transform-api-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn Application Load Balancer listener-rule transforms: host and URL rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout into a production control with a safe rollback.",
+          "question_fingerprint": "For alb-rule-transform-api-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "alb-rule-transform-api-20260930-design-cause",
+          "correct_action_class": "alb-rule-transform-api-20260930-design-action"
+        },
+        {
+          "id": 21,
+          "target_id": "alb-rule-transform-api-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For alb-rule-transform-api-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the alb-rule-transform-api-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "alb-rule-transform-api-20260930-evidence-cause",
+          "correct_action_class": "alb-rule-transform-api-20260930-evidence-action"
+        },
+        {
+          "id": 22,
+          "target_id": "ga-byoip-lifecycle-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A company schedules a same-day cutover to its customer-owned Global Accelerator address and keeps its ISP advertisement active for rollback, but clients reach inconsistent networks.",
+          "question_fingerprint": "For Global Accelerator BYOIP lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ga-byoip-lifecycle-20260930-primary-cause",
+          "correct_action_class": "ga-byoip-lifecycle-20260930-primary-action"
+        },
+        {
+          "id": 23,
+          "target_id": "ga-byoip-lifecycle-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn Global Accelerator BYOIP lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety into a production control with a safe rollback.",
+          "question_fingerprint": "For ga-byoip-lifecycle-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ga-byoip-lifecycle-20260930-design-cause",
+          "correct_action_class": "ga-byoip-lifecycle-20260930-design-action"
+        },
+        {
+          "id": 24,
+          "target_id": "ga-byoip-lifecycle-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For ga-byoip-lifecycle-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the ga-byoip-lifecycle-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ga-byoip-lifecycle-20260930-evidence-cause",
+          "correct_action_class": "ga-byoip-lifecycle-20260930-evidence-action"
+        },
+        {
+          "id": 25,
+          "target_id": "waf-ja3-fingerprint-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A JA3 block rule stops known scraper traffic at an ALB, then a corporate TLS-inspection proxy update causes legitimate employee traffic to match the same fingerprint.",
+          "question_fingerprint": "For AWS WAF JA3 and JA4 TLS fingerprint matching: CloudFront and ALB visibility, exact fingerprint selection, forwarded TLS boundaries, fallback behavior, labels and logs, staged Count deployment, and evasion-aware operations, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-ja3-fingerprint-20260930-primary-cause",
+          "correct_action_class": "waf-ja3-fingerprint-20260930-primary-action"
+        },
+        {
+          "id": 26,
+          "target_id": "waf-ja3-fingerprint-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn AWS WAF JA3 and JA4 TLS fingerprint matching: CloudFront and ALB visibility, exact fingerprint selection, forwarded TLS boundaries, fallback behavior, labels and logs, staged Count deployment, and evasion-aware operations into a production control with a safe rollback.",
+          "question_fingerprint": "For waf-ja3-fingerprint-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-ja3-fingerprint-20260930-design-cause",
+          "correct_action_class": "waf-ja3-fingerprint-20260930-design-action"
+        },
+        {
+          "id": 27,
+          "target_id": "waf-ja3-fingerprint-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For waf-ja3-fingerprint-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the waf-ja3-fingerprint-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-ja3-fingerprint-20260930-evidence-cause",
+          "correct_action_class": "waf-ja3-fingerprint-20260930-evidence-action"
+        },
+        {
+          "id": 28,
+          "target_id": "waf-ja3-fingerprint-20260930",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A change review for AWS WAF JA3 and JA4 TLS fingerprint matching: CloudFront and ALB visibility, exact fingerprint selection, forwarded TLS boundaries, fallback behavior, labels and logs, staged Count deployment, and evasion-aware operations must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For waf-ja3-fingerprint-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-ja3-fingerprint-20260930-approval-gate-cause",
+          "correct_action_class": "waf-ja3-fingerprint-20260930-approval-gate-action"
+        },
+        {
+          "id": 29,
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "Security attaches an organization policy requesting enforcement, reports compliance immediately, and later discovers several accounts in a partially successful state because legacy resources blocked the transition.",
+          "question_fingerprint": "For AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "org-vpc-encryption-policy-20260930-primary-cause",
+          "correct_action_class": "org-vpc-encryption-policy-20260930-primary-action"
+        },
+        {
+          "id": 30,
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For org-vpc-encryption-policy-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "org-vpc-encryption-policy-20260930-design-cause",
+          "correct_action_class": "org-vpc-encryption-policy-20260930-design-action"
+        },
+        {
+          "id": 31,
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For org-vpc-encryption-policy-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the org-vpc-encryption-policy-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "org-vpc-encryption-policy-20260930-evidence-cause",
+          "correct_action_class": "org-vpc-encryption-policy-20260930-evidence-action"
+        },
+        {
+          "id": 32,
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For org-vpc-encryption-policy-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "org-vpc-encryption-policy-20260930-approval-gate-cause",
+          "correct_action_class": "org-vpc-encryption-policy-20260930-approval-gate-action"
+        },
+        {
+          "id": 33,
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For org-vpc-encryption-policy-20260930, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "org-vpc-encryption-policy-20260930-state-cause",
+          "correct_action_class": "org-vpc-encryption-policy-20260930-state-action"
+        },
+        {
+          "id": 34,
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An engineer is mapping evidence for AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence.",
+          "question_fingerprint": "For org-vpc-encryption-policy-20260930, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "org-vpc-encryption-policy-20260930-signal-map-cause",
+          "correct_action_class": "org-vpc-encryption-policy-20260930-signal-map-action"
+        },
+        {
+          "id": 35,
+          "target_id": "cloudtrail-network-activity-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A shared interface endpoint begins denying calls from an external account, but application logs only show generic AccessDenied and the endpoint owner cannot identify which policy path failed.",
+          "question_fingerprint": "For CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudtrail-network-activity-20260930-primary-cause",
+          "correct_action_class": "cloudtrail-network-activity-20260930-primary-action"
+        },
+        {
+          "id": 36,
+          "target_id": "cloudtrail-network-activity-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation into a production control with a safe rollback.",
+          "question_fingerprint": "For cloudtrail-network-activity-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudtrail-network-activity-20260930-design-cause",
+          "correct_action_class": "cloudtrail-network-activity-20260930-design-action"
+        },
+        {
+          "id": 37,
+          "target_id": "cloudtrail-network-activity-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For cloudtrail-network-activity-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cloudtrail-network-activity-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudtrail-network-activity-20260930-evidence-cause",
+          "correct_action_class": "cloudtrail-network-activity-20260930-evidence-action"
+        },
+        {
+          "id": 38,
+          "target_id": "cloudtrail-network-activity-20260930",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For cloudtrail-network-activity-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudtrail-network-activity-20260930-approval-gate-cause",
+          "correct_action_class": "cloudtrail-network-activity-20260930-approval-gate-action"
+        },
+        {
+          "id": 39,
+          "target_id": "cloudtrail-network-activity-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For cloudtrail-network-activity-20260930, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudtrail-network-activity-20260930-state-cause",
+          "correct_action_class": "cloudtrail-network-activity-20260930-state-action"
+        },
+        {
+          "id": 40,
+          "target_id": "cloudtrail-network-activity-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An engineer is mapping evidence for CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation.",
+          "question_fingerprint": "For cloudtrail-network-activity-20260930, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudtrail-network-activity-20260930-signal-map-cause",
+          "correct_action_class": "cloudtrail-network-activity-20260930-signal-map-action"
+        },
+        {
+          "id": 41,
+          "target_id": "cfn-guard-network-policy-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A Guard rule intended to reject 0.0.0.0/0 ingress passes a template where SecurityGroupIngress is produced through a conditional nested list.",
+          "question_fingerprint": "For CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-guard-network-policy-20260930-primary-cause",
+          "correct_action_class": "cfn-guard-network-policy-20260930-primary-action"
+        },
+        {
+          "id": 42,
+          "target_id": "cfn-guard-network-policy-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness into a production control with a safe rollback.",
+          "question_fingerprint": "For cfn-guard-network-policy-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-guard-network-policy-20260930-design-cause",
+          "correct_action_class": "cfn-guard-network-policy-20260930-design-action"
+        },
+        {
+          "id": 43,
+          "target_id": "cfn-guard-network-policy-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For cfn-guard-network-policy-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cfn-guard-network-policy-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-guard-network-policy-20260930-evidence-cause",
+          "correct_action_class": "cfn-guard-network-policy-20260930-evidence-action"
+        },
+        {
+          "id": 44,
+          "target_id": "cfn-guard-network-policy-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For cfn-guard-network-policy-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-guard-network-policy-20260930-approval-gate-cause",
+          "correct_action_class": "cfn-guard-network-policy-20260930-approval-gate-action"
+        },
+        {
+          "id": 45,
+          "target_id": "cfn-guard-network-policy-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For cfn-guard-network-policy-20260930, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-guard-network-policy-20260930-state-cause",
+          "correct_action_class": "cfn-guard-network-policy-20260930-state-action"
+        },
+        {
+          "id": 46,
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "After a KMS policy change, service-to-service calls still work, but a RotationFailed alarm appears and no one acts because current TLS handshakes succeed.",
+          "question_fingerprint": "For ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-service-connect-tls-logs-20260930-primary-cause",
+          "correct_action_class": "ecs-service-connect-tls-logs-20260930-primary-action"
+        },
+        {
+          "id": 47,
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation into a production control with a safe rollback.",
+          "question_fingerprint": "For ecs-service-connect-tls-logs-20260930, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-service-connect-tls-logs-20260930-design-cause",
+          "correct_action_class": "ecs-service-connect-tls-logs-20260930-design-action"
+        },
+        {
+          "id": 48,
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For ecs-service-connect-tls-logs-20260930, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the ecs-service-connect-tls-logs-20260930 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-service-connect-tls-logs-20260930-evidence-cause",
+          "correct_action_class": "ecs-service-connect-tls-logs-20260930-evidence-action"
+        },
+        {
+          "id": 49,
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For ecs-service-connect-tls-logs-20260930, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-service-connect-tls-logs-20260930-approval-gate-cause",
+          "correct_action_class": "ecs-service-connect-tls-logs-20260930-approval-gate-action"
+        },
+        {
+          "id": 50,
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For ecs-service-connect-tls-logs-20260930, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-service-connect-tls-logs-20260930-state-cause",
+          "correct_action_class": "ecs-service-connect-tls-logs-20260930-state-action"
+        }
+      ],
+      "sources": [
+        {
+          "target_id": "vpc-ipv6-migration-20260930",
+          "source_role": "primary_feature",
+          "target": "Amazon VPC foundations",
+          "topic": "Phased IPv6 enablement for an existing VPC: dual-stack CIDR assignment, public versus private default routes, egress-only internet gateways, IPv6 security controls, address assignment, and rollback-safe validation",
+          "title": "Add IPv6 support for your VPC",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6-add.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6-add.html",
+          "title_topic_fingerprint": "add ipv6 support for your vpc — phased ipv6 enablement for an existing vpc: dual-stack cidr assignment, public versus private default routes, egress-only internet gateways, ipv6 security controls, address assignment, and rollback-safe validation",
+          "feature_lesson_fingerprint": "phased ipv6 enablement for an existing vpc: dual-stack cidr assignment, public versus private default routes, egress-only internet gateways, ipv6 security controls, address assignment, and rollback-safe validation",
+          "source_case": "vpc-ipv6-migration-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "vpc-ipv6-migration-20260930",
+          "source_role": "scenario_support",
+          "target": "Amazon VPC foundations",
+          "topic": "Phased IPv6 enablement for an existing VPC: dual-stack CIDR assignment, public versus private default routes, egress-only internet gateways, IPv6 security controls, address assignment, and rollback-safe validation",
+          "title": "Migrate from IPv4 to IPv6",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6.html",
+          "title_topic_fingerprint": "migrate from ipv4 to ipv6 — phased ipv6 enablement for an existing vpc: dual-stack cidr assignment, public versus private default routes, egress-only internet gateways, ipv6 security controls, address assignment, and rollback-safe validation — scenario",
+          "feature_lesson_fingerprint": "phased ipv6 enablement for an existing vpc: dual-stack cidr assignment, public versus private default routes, egress-only internet gateways, ipv6 security controls, address assignment, and rollback-safe validation — scenario",
+          "source_case": "vpc-ipv6-migration-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "vpn-cloudwatch-flap-evidence-20260930",
+          "source_role": "primary_feature",
+          "target": "Hybrid connectivity",
+          "topic": "Site-to-Site VPN observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, BGP and device correlation, metric interpretation, alarms, and evidence-driven failover validation",
+          "title": "Monitor an AWS Site-to-Site VPN connection",
+          "url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-overview-vpn.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-overview-vpn.html",
+          "title_topic_fingerprint": "monitor an aws site-to-site vpn connection — site-to-site vpn observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, bgp and device correlation, metric interpretation, alarms, and evidence-driven failover validation",
+          "feature_lesson_fingerprint": "site-to-site vpn observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, bgp and device correlation, metric interpretation, alarms, and evidence-driven failover validation",
+          "source_case": "vpn-cloudwatch-flap-evidence-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "vpn-cloudwatch-flap-evidence-20260930",
+          "source_role": "scenario_support",
+          "target": "Hybrid connectivity",
+          "topic": "Site-to-Site VPN observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, BGP and device correlation, metric interpretation, alarms, and evidence-driven failover validation",
+          "title": "Monitor AWS Site-to-Site VPN tunnels using Amazon CloudWatch",
+          "url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-cloudwatch-vpn.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-cloudwatch-vpn.html",
+          "title_topic_fingerprint": "monitor aws site-to-site vpn tunnels using amazon cloudwatch — site-to-site vpn observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, bgp and device correlation, metric interpretation, alarms, and evidence-driven failover validation — scenario",
+          "feature_lesson_fingerprint": "site-to-site vpn observability and flap forensics: tunnel state and byte metrics, transient outage blind spots, bgp and device correlation, metric interpretation, alarms, and evidence-driven failover validation — scenario",
+          "source_case": "vpn-cloudwatch-flap-evidence-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "tgw-pbr-limits-20260930",
+          "source_role": "primary_feature",
+          "target": "Transit and multi-VPC networking",
+          "topic": "Transit Gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, BGP advertisement loss, field-reset semantics, and staged rollback",
+          "title": "Transit gateway policy table limitations in AWS Transit Gateway",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-limitations.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-limitations.html",
+          "title_topic_fingerprint": "transit gateway policy table limitations in aws transit gateway — transit gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, bgp advertisement loss, field-reset semantics, and staged rollback",
+          "feature_lesson_fingerprint": "transit gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, bgp advertisement loss, field-reset semantics, and staged rollback",
+          "source_case": "tgw-pbr-limits-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "tgw-pbr-limits-20260930",
+          "source_role": "scenario_support",
+          "target": "Transit and multi-VPC networking",
+          "topic": "Transit Gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, BGP advertisement loss, field-reset semantics, and staged rollback",
+          "title": "Modify a policy table entry in AWS Transit Gateway",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-entry-modify.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-policy-tables-entry-modify.html",
+          "title_topic_fingerprint": "modify a policy table entry in aws transit gateway — transit gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, bgp advertisement loss, field-reset semantics, and staged rollback — scenario",
+          "feature_lesson_fingerprint": "transit gateway policy-based routing production safety: ordered packet classifiers, first-match route-table selection, implicit drop, attachment exclusivity, bgp advertisement loss, field-reset semantics, and staged rollback — scenario",
+          "source_case": "tgw-pbr-limits-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "cloudmap-health-semantics-20260930",
+          "source_role": "primary_feature",
+          "target": "DNS and service discovery",
+          "topic": "AWS Cloud Map health-check semantics: public Route 53 versus custom checks, private-namespace constraints, A and AAAA coupling, CNAME exclusions, health-threshold behavior, TTL propagation, and safe service updates",
+          "title": "AWS Cloud Map service health check configuration",
+          "url": "https://docs.aws.amazon.com/cloud-map/latest/dg/services-health-checks.html",
+          "canonical_url": "https://docs.aws.amazon.com/cloud-map/latest/dg/services-health-checks.html",
+          "title_topic_fingerprint": "aws cloud map service health check configuration — aws cloud map health-check semantics: public route 53 versus custom checks, private-namespace constraints, a and aaaa coupling, cname exclusions, health-threshold behavior, ttl propagation, and safe service updates",
+          "feature_lesson_fingerprint": "aws cloud map health-check semantics: public route 53 versus custom checks, private-namespace constraints, a and aaaa coupling, cname exclusions, health-threshold behavior, ttl propagation, and safe service updates",
+          "source_case": "cloudmap-health-semantics-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "cloudmap-health-semantics-20260930",
+          "source_role": "scenario_support",
+          "target": "DNS and service discovery",
+          "topic": "AWS Cloud Map health-check semantics: public Route 53 versus custom checks, private-namespace constraints, A and AAAA coupling, CNAME exclusions, health-threshold behavior, TTL propagation, and safe service updates",
+          "title": "Updating an AWS Cloud Map service",
+          "url": "https://docs.aws.amazon.com/cloud-map/latest/dg/editing-services.html",
+          "canonical_url": "https://docs.aws.amazon.com/cloud-map/latest/dg/editing-services.html",
+          "title_topic_fingerprint": "updating an aws cloud map service — aws cloud map health-check semantics: public route 53 versus custom checks, private-namespace constraints, a and aaaa coupling, cname exclusions, health-threshold behavior, ttl propagation, and safe service updates — scenario",
+          "feature_lesson_fingerprint": "aws cloud map health-check semantics: public route 53 versus custom checks, private-namespace constraints, a and aaaa coupling, cname exclusions, health-threshold behavior, ttl propagation, and safe service updates — scenario",
+          "source_case": "cloudmap-health-semantics-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "privatelink-endpoint-policy-iam-20260930",
+          "source_role": "primary_feature",
+          "target": "Private service and resource access",
+          "topic": "PrivateLink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private DNS, security groups, and CloudTrail evidence",
+          "title": "How AWS PrivateLink works with IAM",
+          "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/security_iam_service-with-iam.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/privatelink/security_iam_service-with-iam.html",
+          "title_topic_fingerprint": "how aws privatelink works with iam — privatelink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private dns, security groups, and cloudtrail evidence",
+          "feature_lesson_fingerprint": "privatelink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private dns, security groups, and cloudtrail evidence",
+          "source_case": "privatelink-endpoint-policy-iam-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "privatelink-endpoint-policy-iam-20260930",
+          "source_role": "scenario_support",
+          "target": "Private service and resource access",
+          "topic": "PrivateLink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private DNS, security groups, and CloudTrail evidence",
+          "title": "Access an AWS service using an interface VPC endpoint",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/interface-vpc-endpoints.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/interface-vpc-endpoints.html",
+          "title_topic_fingerprint": "access an aws service using an interface vpc endpoint — privatelink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private dns, security groups, and cloudtrail evidence — scenario",
+          "feature_lesson_fingerprint": "privatelink interface endpoint authorization: endpoint policies as resource policies, identity-policy intersection, service support, principal and resource scoping, private dns, security groups, and cloudtrail evidence — scenario",
+          "source_case": "privatelink-endpoint-policy-iam-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "alb-rule-transform-api-20260930",
+          "source_role": "primary_feature",
+          "target": "Load balancing and service insertion",
+          "topic": "Application Load Balancer listener-rule transforms: host and URL rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout",
+          "title": "RuleTransform",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleTransform.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleTransform.html",
+          "title_topic_fingerprint": "ruletransform — application load balancer listener-rule transforms: host and url rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout",
+          "feature_lesson_fingerprint": "application load balancer listener-rule transforms: host and url rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout",
+          "source_case": "alb-rule-transform-api-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "alb-rule-transform-api-20260930",
+          "source_role": "scenario_support",
+          "target": "Load balancing and service insertion",
+          "topic": "Application Load Balancer listener-rule transforms: host and URL rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout",
+          "title": "Add a listener rule for your Application Load Balancer",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/add-rule.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/add-rule.html",
+          "title_topic_fingerprint": "add a listener rule for your application load balancer — application load balancer listener-rule transforms: host and url rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout — scenario",
+          "feature_lesson_fingerprint": "application load balancer listener-rule transforms: host and url rewrites, regex constraints, match-versus-rewrite ordering, default-rule limits, transform failure handling, rule priority, and observable rollout — scenario",
+          "source_case": "alb-rule-transform-api-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "ga-byoip-lifecycle-20260930",
+          "source_role": "primary_feature",
+          "target": "Edge and global traffic delivery",
+          "topic": "Global Accelerator BYOIP lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety",
+          "title": "Bring your own IP addresses (BYOIP) in Global Accelerator",
+          "url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html",
+          "canonical_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html",
+          "title_topic_fingerprint": "bring your own ip addresses (byoip) in global accelerator — global accelerator byoip lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety",
+          "feature_lesson_fingerprint": "global accelerator byoip lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety",
+          "source_case": "ga-byoip-lifecycle-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "ga-byoip-lifecycle-20260930",
+          "source_role": "scenario_support",
+          "target": "Edge and global traffic delivery",
+          "topic": "Global Accelerator BYOIP lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety",
+          "title": "Provision the address range for use with Global Accelerator",
+          "url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.provision.html",
+          "canonical_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.provision.html",
+          "title_topic_fingerprint": "provision the address range for use with global accelerator — global accelerator byoip lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety — scenario",
+          "feature_lesson_fingerprint": "global accelerator byoip lifecycle: ownership authorization, asynchronous provisioning, route-origin validation, single-origin advertisement, network-zone diversity, service-specific pools, cutover, and deprovision safety — scenario",
+          "source_case": "ga-byoip-lifecycle-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "waf-ja3-fingerprint-20260930",
+          "source_role": "primary_feature",
+          "target": "Network inspection and perimeter protection",
+          "topic": "AWS WAF JA3 and JA4 TLS fingerprint matching: CloudFront and ALB visibility, exact fingerprint selection, forwarded TLS boundaries, fallback behavior, labels and logs, staged Count deployment, and evasion-aware operations",
+          "title": "JA3 and JA4 fingerprint match rule statement",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-ja3-ja4-fingerprint-match.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-ja3-ja4-fingerprint-match.html",
+          "title_topic_fingerprint": "ja3 and ja4 fingerprint match rule statement — aws waf ja3 and ja4 tls fingerprint matching: cloudfront and alb visibility, exact fingerprint selection, forwarded tls boundaries, fallback behavior, labels and logs, staged count deployment, and evasion-aware operations",
+          "feature_lesson_fingerprint": "aws waf ja3 and ja4 tls fingerprint matching: cloudfront and alb visibility, exact fingerprint selection, forwarded tls boundaries, fallback behavior, labels and logs, staged count deployment, and evasion-aware operations",
+          "source_case": "waf-ja3-fingerprint-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "waf-ja3-fingerprint-20260930",
+          "source_role": "scenario_support",
+          "target": "Network inspection and perimeter protection",
+          "topic": "AWS WAF JA3 and JA4 TLS fingerprint matching: CloudFront and ALB visibility, exact fingerprint selection, forwarded TLS boundaries, fallback behavior, labels and logs, staged Count deployment, and evasion-aware operations",
+          "title": "JA3Fingerprint",
+          "url": "https://docs.aws.amazon.com/waf/latest/APIReference/API_JA3Fingerprint.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/APIReference/API_JA3Fingerprint.html",
+          "title_topic_fingerprint": "ja3fingerprint — aws waf ja3 and ja4 tls fingerprint matching: cloudfront and alb visibility, exact fingerprint selection, forwarded tls boundaries, fallback behavior, labels and logs, staged count deployment, and evasion-aware operations — scenario",
+          "feature_lesson_fingerprint": "aws waf ja3 and ja4 tls fingerprint matching: cloudfront and alb visibility, exact fingerprint selection, forwarded tls boundaries, fallback behavior, labels and logs, staged count deployment, and evasion-aware operations — scenario",
+          "source_case": "waf-ja3-fingerprint-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "source_role": "primary_feature",
+          "target": "Network access control and governance",
+          "topic": "AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence",
+          "title": "EC2 policies",
+          "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2.html",
+          "canonical_url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2.html",
+          "title_topic_fingerprint": "ec2 policies — aws organizations declarative policy governance for vpc encryption controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence",
+          "feature_lesson_fingerprint": "aws organizations declarative policy governance for vpc encryption controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence",
+          "source_case": "org-vpc-encryption-policy-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "org-vpc-encryption-policy-20260930",
+          "source_role": "scenario_support",
+          "target": "Network access control and governance",
+          "topic": "AWS Organizations declarative policy governance for VPC Encryption Controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence",
+          "title": "EC2 declarative policy syntax and examples",
+          "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2_syntax.html",
+          "canonical_url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ec2_syntax.html",
+          "title_topic_fingerprint": "ec2 declarative policy syntax and examples — aws organizations declarative policy governance for vpc encryption controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence — scenario",
+          "feature_lesson_fingerprint": "aws organizations declarative policy governance for vpc encryption controls: account inheritance, monitor-to-enforce transitions, exclusions, immutable effective settings, rollout states, delegated change control, and evidence — scenario",
+          "source_case": "org-vpc-encryption-policy-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "cloudtrail-network-activity-20260930",
+          "source_role": "primary_feature",
+          "target": "Network observability and operations",
+          "topic": "CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation",
+          "title": "Understanding CloudTrail events",
+          "url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-events.html",
+          "canonical_url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-events.html",
+          "title_topic_fingerprint": "understanding cloudtrail events — cloudtrail network activity events for vpc endpoints: awsvpceevent records, vpceaccessdenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus lake differences, and incident correlation",
+          "feature_lesson_fingerprint": "cloudtrail network activity events for vpc endpoints: awsvpceevent records, vpceaccessdenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus lake differences, and incident correlation",
+          "source_case": "cloudtrail-network-activity-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "cloudtrail-network-activity-20260930",
+          "source_role": "scenario_support",
+          "target": "Network observability and operations",
+          "topic": "CloudTrail network activity events for VPC endpoints: AwsVpceEvent records, VpceAccessDenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus Lake differences, and incident correlation",
+          "title": "AdvancedEventSelector",
+          "url": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html",
+          "canonical_url": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html",
+          "title_topic_fingerprint": "advancedeventselector — cloudtrail network activity events for vpc endpoints: awsvpceevent records, vpceaccessdenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus lake differences, and incident correlation — scenario",
+          "feature_lesson_fingerprint": "cloudtrail network activity events for vpc endpoints: awsvpceevent records, vpceaccessdenied evidence, advanced selectors, endpoint and principal attribution, cost-aware logging, trail versus lake differences, and incident correlation — scenario",
+          "source_case": "cloudtrail-network-activity-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "cfn-guard-network-policy-20260930",
+          "source_role": "primary_feature",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness",
+          "title": "Validate templates with Guard",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
+          "title_topic_fingerprint": "validate templates with guard — cloudformation guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, ci gates, exception governance, and runtime-boundary awareness",
+          "feature_lesson_fingerprint": "cloudformation guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, ci gates, exception governance, and runtime-boundary awareness",
+          "source_case": "cfn-guard-network-policy-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "cfn-guard-network-policy-20260930",
+          "source_role": "scenario_support",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation Guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, CI gates, exception governance, and runtime-boundary awareness",
+          "title": "Writing AWS CloudFormation Guard rules",
+          "url": "https://docs.aws.amazon.com/cfn-guard/latest/ug/writing-rules.html",
+          "canonical_url": "https://docs.aws.amazon.com/cfn-guard/latest/ug/writing-rules.html",
+          "title_topic_fingerprint": "writing aws cloudformation guard rules — cloudformation guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, ci gates, exception governance, and runtime-boundary awareness — scenario",
+          "feature_lesson_fingerprint": "cloudformation guard for network policy as code: rule queries, filtering, named-rule composition, unit tests, template and change-set validation, ci gates, exception governance, and runtime-boundary awareness — scenario",
+          "source_case": "cfn-guard-network-policy-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "source_role": "primary_feature",
+          "target": "Workload and service integration",
+          "topic": "ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation",
+          "title": "Encrypt Amazon ECS Service Connect traffic",
+          "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-tls.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-tls.html",
+          "title_topic_fingerprint": "encrypt amazon ecs service connect traffic — ecs service connect tls and access-log operations: aws private ca certificates, kms and iam dependencies, automatic rotation, rotationfailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation",
+          "feature_lesson_fingerprint": "ecs service connect tls and access-log operations: aws private ca certificates, kms and iam dependencies, automatic rotation, rotationfailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation",
+          "source_case": "ecs-service-connect-tls-logs-20260930: feature lesson",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        },
+        {
+          "target_id": "ecs-service-connect-tls-logs-20260930",
+          "source_role": "scenario_support",
+          "target": "Workload and service integration",
+          "topic": "ECS Service Connect TLS and access-log operations: AWS Private CA certificates, KMS and IAM dependencies, automatic rotation, RotationFailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation",
+          "title": "Amazon ECS Service Connect access logs",
+          "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-envoy-access-logs.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-envoy-access-logs.html",
+          "title_topic_fingerprint": "amazon ecs service connect access logs — ecs service connect tls and access-log operations: aws private ca certificates, kms and iam dependencies, automatic rotation, rotationfailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation — scenario",
+          "feature_lesson_fingerprint": "ecs service connect tls and access-log operations: aws private ca certificates, kms and iam dependencies, automatic rotation, rotationfailed alarms, proxy telemetry, request-level access logs, cost, and fault isolation — scenario",
+          "source_case": "ecs-service-connect-tls-logs-20260930: operational scenario",
+          "last_used": "2026-09-30",
+          "earliest_eligible_reuse_date": "2026-10-30"
+        }
+      ]
     }
   ]
 }
