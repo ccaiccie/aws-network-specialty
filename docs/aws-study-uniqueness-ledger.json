@@ -11754,6 +11754,1462 @@
           "earliest_eligible_reuse_date": "2026-10-30"
         }
       ]
+    },
+    {
+      "generated_at": "2026-10-01T07:55:00-07:00",
+      "report": "AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-01-07-55.html",
+      "report_url": "https://ccaiccie.github.io/aws-network-specialty/AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-01-07-55.html",
+      "certification_status": {
+        "result": "AWS states ANS-C01 is being retired; the last day to take the exam is December 31, 2026 (checked 2026-10-01).",
+        "source_url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+      },
+      "ledger": {
+        "path": "docs/aws-study-uniqueness-ledger.json",
+        "version": "1.0",
+        "history_checked": true,
+        "rolling_calendar_days": 30
+      },
+      "uniqueness_window": {
+        "days": 30,
+        "block_through": "2026-10-30",
+        "earliest_eligible_reuse_date": "2026-10-31"
+      },
+      "validation": {
+        "mandatory_targets": "12/12",
+        "primary_feature_sources": "12/12",
+        "scenario_support_sources": "12/12",
+        "domain_distribution": "15/13/10/12",
+        "quiz_questions": 50,
+        "images": {
+          "count": 0,
+          "status": "PASS",
+          "note": "No external figures used; no candidate passed necessity and render-verification gates."
+        },
+        "mermaid_diagrams": 12,
+        "uniqueness": "PASS",
+        "quiz_characteristics": {
+          "scenario_based": 50,
+          "support_or_implementation_grounded": 50,
+          "multi_step": 50,
+          "competing_hypotheses": 50,
+          "configuration_or_design_decision": 50,
+          "cross_service_or_cross_account": 50
+        },
+        "mermaid": {
+          "count": 12,
+          "status": "PASS"
+        }
+      },
+      "targets": [
+        {
+          "id": "vpc-bpa-exclusions-20261001",
+          "target_number": 1,
+          "target": "Amazon VPC foundations",
+          "feature_topic": "Amazon VPC Block Public Access staged enforcement: bidirectional and ingress-only modes, VPC and subnet exclusions, asynchronous status, Network Access Analyzer preflight, and evidence-driven rollback",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/security-vpc-bpa-example.html",
+          "scenario_source": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcBlockPublicAccessExclusion.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/security-vpc-bpa-example.html",
+            "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcBlockPublicAccessExclusion.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "dx-resiliency-failover-test-20261001",
+          "target_number": 2,
+          "target": "Hybrid connectivity",
+          "feature_topic": "AWS Direct Connect resiliency failover testing: virtual-interface ownership, BGP peering withdrawal, bounded test duration, redundant path proof, CloudTrail evidence, and deterministic stop and recovery",
+          "primary_source": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/start_failover_test.html",
+          "scenario_source": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/view_failover_test.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/directconnect/latest/UserGuide/start_failover_test.html",
+            "https://docs.aws.amazon.com/directconnect/latest/UserGuide/view_failover_test.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "network-manager-route-analyzer-20261001",
+          "target_number": 3,
+          "target": "Transit and multi-VPC networking",
+          "feature_topic": "AWS Network Manager Route Analyzer for Transit Gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits",
+          "primary_source": "https://docs.aws.amazon.com/network-manager/latest/tgwnm/example-route-analyzer.html",
+          "scenario_source": "https://docs.aws.amazon.com/network-manager/latest/tgwnm/working-with-route-analyzer.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/network-manager/latest/tgwnm/example-route-analyzer.html",
+            "https://docs.aws.amazon.com/network-manager/latest/tgwnm/working-with-route-analyzer.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "route53-profile-query-logging-20261001",
+          "target_number": 4,
+          "target": "DNS and service discovery",
+          "feature_topic": "Route 53 Profiles query-logging association: centralized resource attachment, inherited VPC logging, destination permissions, regional scope, cache-aware validation, and drift evidence",
+          "primary_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profile-associate-query-logging.html",
+          "scenario_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logging-configurations-managing.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profile-associate-query-logging.html",
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logging-configurations-managing.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "lattice-service-network-resource-association-20261001",
+          "target_number": 5,
+          "target": "Private service and resource access",
+          "feature_topic": "VPC Lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-DNS choice, cross-account ownership, asynchronous state, and client isolation",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/privatelink/resource-configuration-associations.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_CreateServiceNetworkResourceAssociation.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/privatelink/resource-configuration-associations.html",
+            "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_CreateServiceNetworkResourceAssociation.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "nlb-target-health-thresholds-20261001",
+          "target_number": 6,
+          "target": "Load balancing and service insertion",
+          "feature_topic": "Network Load Balancer target-group health settings: DNS failover and routing failover thresholds, zonal IP withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery",
+          "primary_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/modify-target-group-health-settings.html",
+          "scenario_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/edit-target-group-attributes.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/modify-target-group-health-settings.html",
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/edit-target-group-attributes.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cloudfront-origin-prefix-list-20261001",
+          "target_number": 7,
+          "target": "Edge and global traffic delivery",
+          "feature_topic": "CloudFront-to-ALB origin restriction with the AWS-managed origin-facing prefix list: security-group quota weight, IPv4 and IPv6 coverage, secret-header enforcement, HTTPS, and rotation-safe deployment",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html",
+          "scenario_source": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/restrict-access-to-load-balancer.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html",
+            "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/restrict-access-to-load-balancer.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "dns-firewall-advanced-lists-20261001",
+          "target_number": 8,
+          "target": "Network inspection and perimeter protection",
+          "feature_topic": "Route 53 Resolver DNS Firewall Advanced Managed Domain Lists: threat and content categories, Alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security",
+          "primary_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/firewall-advanced-managed-domain-lists.html",
+          "scenario_source": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomainLists.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/firewall-advanced-managed-domain-lists.html",
+            "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomainLists.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "fms-nacl-initialization-remediation-20261001",
+          "target_number": 9,
+          "target": "Network access control and governance",
+          "feature_topic": "Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery",
+          "primary_source": "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-initialization.html",
+          "scenario_source": "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-remediation.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-initialization.html",
+            "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-remediation.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "network-synthetic-monitor-20261001",
+          "target_number": 10,
+          "target": "Network observability and operations",
+          "feature_topic": "CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness",
+          "primary_source": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-how-it-works.html",
+          "scenario_source": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-dashboards.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-how-it-works.html",
+            "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-dashboards.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cloudformation-guard-hooks-20261001",
+          "target_number": 11,
+          "target": "Deployment and automation",
+          "feature_topic": "CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion",
+          "primary_source": "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/guard-hooks.html",
+          "scenario_source": "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-stack-level-filtering.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/guard-hooks.html",
+            "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-stack-level-filtering.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "eks-enhanced-subnet-discovery-20261001",
+          "target_number": 12,
+          "target": "Workload and service integration",
+          "feature_topic": "Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting",
+          "primary_source": "https://docs.aws.amazon.com/eks/latest/userguide/cni-subnet-selection.html",
+          "scenario_source": "https://docs.aws.amazon.com/eks/latest/userguide/network-policies-troubleshooting.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/eks/latest/userguide/cni-subnet-selection.html",
+            "https://docs.aws.amazon.com/eks/latest/userguide/network-policies-troubleshooting.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        }
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "target_id": "vpc-bpa-exclusions-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A platform team enables an ingress-only account posture and creates an allow-egress exclusion for a public-subnet workload, expecting it to restore an internet-gateway egress pattern, but the application remains unreachable.",
+          "question_fingerprint": "For Amazon VPC Block Public Access staged enforcement: bidirectional and ingress-only modes, VPC and subnet exclusions, asynchronous status, Network Access Analyzer preflight, and evidence-driven rollback, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-bpa-exclusions-20261001-primary-cause",
+          "correct_action_class": "vpc-bpa-exclusions-20261001-primary-action"
+        },
+        {
+          "id": 2,
+          "target_id": "vpc-bpa-exclusions-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Amazon VPC Block Public Access staged enforcement: bidirectional and ingress-only modes, VPC and subnet exclusions, asynchronous status, Network Access Analyzer preflight, and evidence-driven rollback into a production control with a safe rollback.",
+          "question_fingerprint": "For vpc-bpa-exclusions-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-bpa-exclusions-20261001-design-cause",
+          "correct_action_class": "vpc-bpa-exclusions-20261001-design-action"
+        },
+        {
+          "id": 3,
+          "target_id": "vpc-bpa-exclusions-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For vpc-bpa-exclusions-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the vpc-bpa-exclusions-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-bpa-exclusions-20261001-evidence-cause",
+          "correct_action_class": "vpc-bpa-exclusions-20261001-evidence-action"
+        },
+        {
+          "id": 4,
+          "target_id": "vpc-bpa-exclusions-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Amazon VPC Block Public Access staged enforcement: bidirectional and ingress-only modes, VPC and subnet exclusions, asynchronous status, Network Access Analyzer preflight, and evidence-driven rollback must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For vpc-bpa-exclusions-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-bpa-exclusions-20261001-approval-gate-cause",
+          "correct_action_class": "vpc-bpa-exclusions-20261001-approval-gate-action"
+        },
+        {
+          "id": 5,
+          "target_id": "dx-resiliency-failover-test-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An operator starts a failover test on the only private virtual interface carrying production prefixes and traffic drops instead of moving to the standby path.",
+          "question_fingerprint": "For AWS Direct Connect resiliency failover testing: virtual-interface ownership, BGP peering withdrawal, bounded test duration, redundant path proof, CloudTrail evidence, and deterministic stop and recovery, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-resiliency-failover-test-20261001-primary-cause",
+          "correct_action_class": "dx-resiliency-failover-test-20261001-primary-action"
+        },
+        {
+          "id": 6,
+          "target_id": "dx-resiliency-failover-test-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn AWS Direct Connect resiliency failover testing: virtual-interface ownership, BGP peering withdrawal, bounded test duration, redundant path proof, CloudTrail evidence, and deterministic stop and recovery into a production control with a safe rollback.",
+          "question_fingerprint": "For dx-resiliency-failover-test-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-resiliency-failover-test-20261001-design-cause",
+          "correct_action_class": "dx-resiliency-failover-test-20261001-design-action"
+        },
+        {
+          "id": 7,
+          "target_id": "dx-resiliency-failover-test-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For dx-resiliency-failover-test-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the dx-resiliency-failover-test-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-resiliency-failover-test-20261001-evidence-cause",
+          "correct_action_class": "dx-resiliency-failover-test-20261001-evidence-action"
+        },
+        {
+          "id": 8,
+          "target_id": "dx-resiliency-failover-test-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for AWS Direct Connect resiliency failover testing: virtual-interface ownership, BGP peering withdrawal, bounded test duration, redundant path proof, CloudTrail evidence, and deterministic stop and recovery must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For dx-resiliency-failover-test-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-resiliency-failover-test-20261001-approval-gate-cause",
+          "correct_action_class": "dx-resiliency-failover-test-20261001-approval-gate-action"
+        },
+        {
+          "id": 9,
+          "target_id": "network-manager-route-analyzer-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "Route Analyzer reports a valid forward path between two VPC attachments, but a TCP connection still times out and the team concludes the tool is wrong.",
+          "question_fingerprint": "For AWS Network Manager Route Analyzer for Transit Gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-manager-route-analyzer-20261001-primary-cause",
+          "correct_action_class": "network-manager-route-analyzer-20261001-primary-action"
+        },
+        {
+          "id": 10,
+          "target_id": "network-manager-route-analyzer-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn AWS Network Manager Route Analyzer for Transit Gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits into a production control with a safe rollback.",
+          "question_fingerprint": "For network-manager-route-analyzer-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-manager-route-analyzer-20261001-design-cause",
+          "correct_action_class": "network-manager-route-analyzer-20261001-design-action"
+        },
+        {
+          "id": 11,
+          "target_id": "network-manager-route-analyzer-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For network-manager-route-analyzer-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the network-manager-route-analyzer-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-manager-route-analyzer-20261001-evidence-cause",
+          "correct_action_class": "network-manager-route-analyzer-20261001-evidence-action"
+        },
+        {
+          "id": 12,
+          "target_id": "network-manager-route-analyzer-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for AWS Network Manager Route Analyzer for Transit Gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For network-manager-route-analyzer-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-manager-route-analyzer-20261001-approval-gate-cause",
+          "correct_action_class": "network-manager-route-analyzer-20261001-approval-gate-action"
+        },
+        {
+          "id": 13,
+          "target_id": "route53-profile-query-logging-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A central team attaches a query-logging configuration to a Profile and sees no records from one application VPC even though DNS resolution works.",
+          "question_fingerprint": "For Route 53 Profiles query-logging association: centralized resource attachment, inherited VPC logging, destination permissions, regional scope, cache-aware validation, and drift evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "route53-profile-query-logging-20261001-primary-cause",
+          "correct_action_class": "route53-profile-query-logging-20261001-primary-action"
+        },
+        {
+          "id": 14,
+          "target_id": "route53-profile-query-logging-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Route 53 Profiles query-logging association: centralized resource attachment, inherited VPC logging, destination permissions, regional scope, cache-aware validation, and drift evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For route53-profile-query-logging-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "route53-profile-query-logging-20261001-design-cause",
+          "correct_action_class": "route53-profile-query-logging-20261001-design-action"
+        },
+        {
+          "id": 15,
+          "target_id": "route53-profile-query-logging-20261001",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For route53-profile-query-logging-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the route53-profile-query-logging-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "route53-profile-query-logging-20261001-evidence-cause",
+          "correct_action_class": "route53-profile-query-logging-20261001-evidence-action"
+        },
+        {
+          "id": 16,
+          "target_id": "lattice-service-network-resource-association-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A shared resource association reaches ACTIVE, but consumers cannot resolve its private name even though authorization permits the connection.",
+          "question_fingerprint": "For VPC Lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-DNS choice, cross-account ownership, asynchronous state, and client isolation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lattice-service-network-resource-association-20261001-primary-cause",
+          "correct_action_class": "lattice-service-network-resource-association-20261001-primary-action"
+        },
+        {
+          "id": 17,
+          "target_id": "lattice-service-network-resource-association-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn VPC Lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-DNS choice, cross-account ownership, asynchronous state, and client isolation into a production control with a safe rollback.",
+          "question_fingerprint": "For lattice-service-network-resource-association-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lattice-service-network-resource-association-20261001-design-cause",
+          "correct_action_class": "lattice-service-network-resource-association-20261001-design-action"
+        },
+        {
+          "id": 18,
+          "target_id": "lattice-service-network-resource-association-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For lattice-service-network-resource-association-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the lattice-service-network-resource-association-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lattice-service-network-resource-association-20261001-evidence-cause",
+          "correct_action_class": "lattice-service-network-resource-association-20261001-evidence-action"
+        },
+        {
+          "id": 19,
+          "target_id": "nlb-target-health-thresholds-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An aggressive DNS threshold removes one Availability Zone from NLB answers during routine maintenance even though its remaining targets could have carried the reduced load.",
+          "question_fingerprint": "For Network Load Balancer target-group health settings: DNS failover and routing failover thresholds, zonal IP withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "nlb-target-health-thresholds-20261001-primary-cause",
+          "correct_action_class": "nlb-target-health-thresholds-20261001-primary-action"
+        },
+        {
+          "id": 20,
+          "target_id": "nlb-target-health-thresholds-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn Network Load Balancer target-group health settings: DNS failover and routing failover thresholds, zonal IP withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery into a production control with a safe rollback.",
+          "question_fingerprint": "For nlb-target-health-thresholds-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "nlb-target-health-thresholds-20261001-design-cause",
+          "correct_action_class": "nlb-target-health-thresholds-20261001-design-action"
+        },
+        {
+          "id": 21,
+          "target_id": "nlb-target-health-thresholds-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For nlb-target-health-thresholds-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the nlb-target-health-thresholds-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "nlb-target-health-thresholds-20261001-evidence-cause",
+          "correct_action_class": "nlb-target-health-thresholds-20261001-evidence-action"
+        },
+        {
+          "id": 22,
+          "target_id": "cloudfront-origin-prefix-list-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A deployment that adds the CloudFront managed prefix list to an ALB security group fails even though the group appears to have only a few explicit rules.",
+          "question_fingerprint": "For CloudFront-to-ALB origin restriction with the AWS-managed origin-facing prefix list: security-group quota weight, IPv4 and IPv6 coverage, secret-header enforcement, HTTPS, and rotation-safe deployment, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudfront-origin-prefix-list-20261001-primary-cause",
+          "correct_action_class": "cloudfront-origin-prefix-list-20261001-primary-action"
+        },
+        {
+          "id": 23,
+          "target_id": "cloudfront-origin-prefix-list-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn CloudFront-to-ALB origin restriction with the AWS-managed origin-facing prefix list: security-group quota weight, IPv4 and IPv6 coverage, secret-header enforcement, HTTPS, and rotation-safe deployment into a production control with a safe rollback.",
+          "question_fingerprint": "For cloudfront-origin-prefix-list-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudfront-origin-prefix-list-20261001-design-cause",
+          "correct_action_class": "cloudfront-origin-prefix-list-20261001-design-action"
+        },
+        {
+          "id": 24,
+          "target_id": "cloudfront-origin-prefix-list-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For cloudfront-origin-prefix-list-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cloudfront-origin-prefix-list-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudfront-origin-prefix-list-20261001-evidence-cause",
+          "correct_action_class": "cloudfront-origin-prefix-list-20261001-evidence-action"
+        },
+        {
+          "id": 25,
+          "target_id": "dns-firewall-advanced-lists-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A new advanced content-category rule is deployed directly in Block mode and prevents access to a business partner whose domain was recently reclassified, causing a company-wide incident. Competing hypotheses include stale client state, a routing or DNS defect, an identity-policy denial, a security control, and application failure. The decisive root cause is: The team skipped Alert-mode baselining and had no logs, sampled-request workflow, or preapproved high-priority exception process for opaque, continuously changing managed lists.\n\nThe corrective sequence is: Return the managed rule to Alert, identify the rule and list in DNS Firewall logs, validate business ownership, add the narrowest expiring allow at lower numeric priority, monitor sampled requests and metrics, then reintroduce blocking in canary VPCs. The team first captures a failing transaction with timestamps and stable identifiers, then changes one layer, repeats both positive and negative tests, and compares the evidence. Rollback restores the recorded configuration, not a reconstructed guess.",
+          "question_fingerprint": "For Route 53 Resolver DNS Firewall Advanced Managed Domain Lists: threat and content categories, Alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dns-firewall-advanced-lists-20261001-primary-cause",
+          "correct_action_class": "dns-firewall-advanced-lists-20261001-primary-action"
+        },
+        {
+          "id": 26,
+          "target_id": "dns-firewall-advanced-lists-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn Route 53 Resolver DNS Firewall Advanced Managed Domain Lists: threat and content categories, Alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security into a production control with a safe rollback.",
+          "question_fingerprint": "For dns-firewall-advanced-lists-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dns-firewall-advanced-lists-20261001-design-cause",
+          "correct_action_class": "dns-firewall-advanced-lists-20261001-design-action"
+        },
+        {
+          "id": 27,
+          "target_id": "dns-firewall-advanced-lists-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For dns-firewall-advanced-lists-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the dns-firewall-advanced-lists-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dns-firewall-advanced-lists-20261001-evidence-cause",
+          "correct_action_class": "dns-firewall-advanced-lists-20261001-evidence-action"
+        },
+        {
+          "id": 28,
+          "target_id": "dns-firewall-advanced-lists-20261001",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A change review for Route 53 Resolver DNS Firewall Advanced Managed Domain Lists: threat and content categories, Alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For dns-firewall-advanced-lists-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dns-firewall-advanced-lists-20261001-approval-gate-cause",
+          "correct_action_class": "dns-firewall-advanced-lists-20261001-approval-gate-action"
+        },
+        {
+          "id": 29,
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "Automatic remediation repeatedly fails for a noncompliant subnet after a new last-rule guardrail is introduced, while the ACL is already near its rule quota.",
+          "question_fingerprint": "For Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-nacl-initialization-remediation-20261001-primary-cause",
+          "correct_action_class": "fms-nacl-initialization-remediation-20261001-primary-action"
+        },
+        {
+          "id": 30,
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery into a production control with a safe rollback.",
+          "question_fingerprint": "For fms-nacl-initialization-remediation-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-nacl-initialization-remediation-20261001-design-cause",
+          "correct_action_class": "fms-nacl-initialization-remediation-20261001-design-action"
+        },
+        {
+          "id": 31,
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For fms-nacl-initialization-remediation-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the fms-nacl-initialization-remediation-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-nacl-initialization-remediation-20261001-evidence-cause",
+          "correct_action_class": "fms-nacl-initialization-remediation-20261001-evidence-action"
+        },
+        {
+          "id": 32,
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For fms-nacl-initialization-remediation-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-nacl-initialization-remediation-20261001-approval-gate-cause",
+          "correct_action_class": "fms-nacl-initialization-remediation-20261001-approval-gate-action"
+        },
+        {
+          "id": 33,
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For fms-nacl-initialization-remediation-20261001, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-nacl-initialization-remediation-20261001-state-cause",
+          "correct_action_class": "fms-nacl-initialization-remediation-20261001-state-action"
+        },
+        {
+          "id": 34,
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An engineer is mapping evidence for Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery.",
+          "question_fingerprint": "For fms-nacl-initialization-remediation-20261001, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-nacl-initialization-remediation-20261001-signal-map-cause",
+          "correct_action_class": "fms-nacl-initialization-remediation-20261001-signal-map-action"
+        },
+        {
+          "id": 35,
+          "target_id": "network-synthetic-monitor-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A TCP monitor reports 100% loss to an on-premises HTTPS endpoint, application users are unaffected, and the dashboard NHI remains 0. Competing hypotheses include stale client state, a routing or DNS defect, an identity-policy denial, a security control, and application failure. The decisive root cause is: The on-premises firewall allowed application flows from known ephemeral ranges but denied the monitors rotating 1024–65535 source ports; NHI=0 only excluded detected AWS-path degradation.\n\nThe corrective sequence is: Verify probe ENI addresses and TCP SYN evidence, allow the documented source-port range to destination port 443, correlate probe RTT and loss with application telemetry, keep customer-path alarms separate from NHI, and use distinct monitors for IPv4 and IPv6. The team first captures a failing transaction with timestamps and stable identifiers, then changes one layer, repeats both positive and negative tests, and compares the evidence. Rollback restores the recorded configuration, not a reconstructed guess.",
+          "question_fingerprint": "For CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-synthetic-monitor-20261001-primary-cause",
+          "correct_action_class": "network-synthetic-monitor-20261001-primary-action"
+        },
+        {
+          "id": 36,
+          "target_id": "network-synthetic-monitor-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness into a production control with a safe rollback.",
+          "question_fingerprint": "For network-synthetic-monitor-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-synthetic-monitor-20261001-design-cause",
+          "correct_action_class": "network-synthetic-monitor-20261001-design-action"
+        },
+        {
+          "id": 37,
+          "target_id": "network-synthetic-monitor-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For network-synthetic-monitor-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the network-synthetic-monitor-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-synthetic-monitor-20261001-evidence-cause",
+          "correct_action_class": "network-synthetic-monitor-20261001-evidence-action"
+        },
+        {
+          "id": 38,
+          "target_id": "network-synthetic-monitor-20261001",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For network-synthetic-monitor-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-synthetic-monitor-20261001-approval-gate-cause",
+          "correct_action_class": "network-synthetic-monitor-20261001-approval-gate-action"
+        },
+        {
+          "id": 39,
+          "target_id": "network-synthetic-monitor-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For network-synthetic-monitor-20261001, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-synthetic-monitor-20261001-state-cause",
+          "correct_action_class": "network-synthetic-monitor-20261001-state-action"
+        },
+        {
+          "id": 40,
+          "target_id": "network-synthetic-monitor-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An engineer is mapping evidence for CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness.",
+          "question_fingerprint": "For network-synthetic-monitor-20261001, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-synthetic-monitor-20261001-signal-map-cause",
+          "correct_action_class": "network-synthetic-monitor-20261001-signal-map-action"
+        },
+        {
+          "id": 41,
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A production network stack containing a prohibited 0.0.0.0/0 route deploys successfully even though the Guard rule blocks that pattern in tests.",
+          "question_fingerprint": "For CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-guard-hooks-20261001-primary-cause",
+          "correct_action_class": "cloudformation-guard-hooks-20261001-primary-action"
+        },
+        {
+          "id": 42,
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion into a production control with a safe rollback.",
+          "question_fingerprint": "For cloudformation-guard-hooks-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-guard-hooks-20261001-design-cause",
+          "correct_action_class": "cloudformation-guard-hooks-20261001-design-action"
+        },
+        {
+          "id": 43,
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For cloudformation-guard-hooks-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cloudformation-guard-hooks-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-guard-hooks-20261001-evidence-cause",
+          "correct_action_class": "cloudformation-guard-hooks-20261001-evidence-action"
+        },
+        {
+          "id": 44,
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For cloudformation-guard-hooks-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-guard-hooks-20261001-approval-gate-cause",
+          "correct_action_class": "cloudformation-guard-hooks-20261001-approval-gate-action"
+        },
+        {
+          "id": 45,
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For cloudformation-guard-hooks-20261001, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-guard-hooks-20261001-state-cause",
+          "correct_action_class": "cloudformation-guard-hooks-20261001-state-action"
+        },
+        {
+          "id": 46,
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "New Pods schedule in two Availability Zones but remain Pending in a third even though the original cluster subnets show free addresses.",
+          "question_fingerprint": "For Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eks-enhanced-subnet-discovery-20261001-primary-cause",
+          "correct_action_class": "eks-enhanced-subnet-discovery-20261001-primary-action"
+        },
+        {
+          "id": 47,
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting into a production control with a safe rollback.",
+          "question_fingerprint": "For eks-enhanced-subnet-discovery-20261001, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eks-enhanced-subnet-discovery-20261001-design-cause",
+          "correct_action_class": "eks-enhanced-subnet-discovery-20261001-design-action"
+        },
+        {
+          "id": 48,
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For eks-enhanced-subnet-discovery-20261001, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the eks-enhanced-subnet-discovery-20261001 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eks-enhanced-subnet-discovery-20261001-evidence-cause",
+          "correct_action_class": "eks-enhanced-subnet-discovery-20261001-evidence-action"
+        },
+        {
+          "id": 49,
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For eks-enhanced-subnet-discovery-20261001, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eks-enhanced-subnet-discovery-20261001-approval-gate-cause",
+          "correct_action_class": "eks-enhanced-subnet-discovery-20261001-approval-gate-action"
+        },
+        {
+          "id": 50,
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For eks-enhanced-subnet-discovery-20261001, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eks-enhanced-subnet-discovery-20261001-state-cause",
+          "correct_action_class": "eks-enhanced-subnet-discovery-20261001-state-action"
+        }
+      ],
+      "sources": [
+        {
+          "target_id": "vpc-bpa-exclusions-20261001",
+          "source_role": "primary_feature",
+          "target": "Amazon VPC foundations",
+          "topic": "Amazon VPC Block Public Access staged enforcement: bidirectional and ingress-only modes, VPC and subnet exclusions, asynchronous status, Network Access Analyzer preflight, and evidence-driven rollback",
+          "title": "Advanced example",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/security-vpc-bpa-example.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/security-vpc-bpa-example.html",
+          "title_topic_fingerprint": "advanced example — amazon vpc block public access staged enforcement: bidirectional and ingress-only modes, vpc and subnet exclusions, asynchronous status, network access analyzer preflight, and evidence-driven rollback",
+          "feature_lesson_fingerprint": "amazon vpc block public access staged enforcement: bidirectional and ingress-only modes, vpc and subnet exclusions, asynchronous status, network access analyzer preflight, and evidence-driven rollback",
+          "source_case": "vpc-bpa-exclusions-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "vpc-bpa-exclusions-20261001",
+          "source_role": "scenario_support",
+          "target": "Amazon VPC foundations",
+          "topic": "Amazon VPC Block Public Access staged enforcement: bidirectional and ingress-only modes, VPC and subnet exclusions, asynchronous status, Network Access Analyzer preflight, and evidence-driven rollback",
+          "title": "VpcBlockPublicAccessExclusion",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcBlockPublicAccessExclusion.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcBlockPublicAccessExclusion.html",
+          "title_topic_fingerprint": "vpcblockpublicaccessexclusion — amazon vpc block public access staged enforcement: bidirectional and ingress-only modes, vpc and subnet exclusions, asynchronous status, network access analyzer preflight, and evidence-driven rollback — scenario",
+          "feature_lesson_fingerprint": "amazon vpc block public access staged enforcement: bidirectional and ingress-only modes, vpc and subnet exclusions, asynchronous status, network access analyzer preflight, and evidence-driven rollback — scenario",
+          "source_case": "vpc-bpa-exclusions-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "dx-resiliency-failover-test-20261001",
+          "source_role": "primary_feature",
+          "target": "Hybrid connectivity",
+          "topic": "AWS Direct Connect resiliency failover testing: virtual-interface ownership, BGP peering withdrawal, bounded test duration, redundant path proof, CloudTrail evidence, and deterministic stop and recovery",
+          "title": "Test AWS Direct Connect resiliency with failover testing",
+          "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/start_failover_test.html",
+          "canonical_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/start_failover_test.html",
+          "title_topic_fingerprint": "test aws direct connect resiliency with failover testing — aws direct connect resiliency failover testing: virtual-interface ownership, bgp peering withdrawal, bounded test duration, redundant path proof, cloudtrail evidence, and deterministic stop and recovery",
+          "feature_lesson_fingerprint": "aws direct connect resiliency failover testing: virtual-interface ownership, bgp peering withdrawal, bounded test duration, redundant path proof, cloudtrail evidence, and deterministic stop and recovery",
+          "source_case": "dx-resiliency-failover-test-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "dx-resiliency-failover-test-20261001",
+          "source_role": "scenario_support",
+          "target": "Hybrid connectivity",
+          "topic": "AWS Direct Connect resiliency failover testing: virtual-interface ownership, BGP peering withdrawal, bounded test duration, redundant path proof, CloudTrail evidence, and deterministic stop and recovery",
+          "title": "View AWS Direct Connect failover test history",
+          "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/view_failover_test.html",
+          "canonical_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/view_failover_test.html",
+          "title_topic_fingerprint": "view aws direct connect failover test history — aws direct connect resiliency failover testing: virtual-interface ownership, bgp peering withdrawal, bounded test duration, redundant path proof, cloudtrail evidence, and deterministic stop and recovery — scenario",
+          "feature_lesson_fingerprint": "aws direct connect resiliency failover testing: virtual-interface ownership, bgp peering withdrawal, bounded test duration, redundant path proof, cloudtrail evidence, and deterministic stop and recovery — scenario",
+          "source_case": "dx-resiliency-failover-test-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "network-manager-route-analyzer-20261001",
+          "source_role": "primary_feature",
+          "target": "Transit and multi-VPC networking",
+          "topic": "AWS Network Manager Route Analyzer for Transit Gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits",
+          "title": "Route Analyzer example",
+          "url": "https://docs.aws.amazon.com/network-manager/latest/tgwnm/example-route-analyzer.html",
+          "canonical_url": "https://docs.aws.amazon.com/network-manager/latest/tgwnm/example-route-analyzer.html",
+          "title_topic_fingerprint": "route analyzer example — aws network manager route analyzer for transit gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits",
+          "feature_lesson_fingerprint": "aws network manager route analyzer for transit gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits",
+          "source_case": "network-manager-route-analyzer-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "network-manager-route-analyzer-20261001",
+          "source_role": "scenario_support",
+          "target": "Transit and multi-VPC networking",
+          "topic": "AWS Network Manager Route Analyzer for Transit Gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits",
+          "title": "Working with Route Analyzer",
+          "url": "https://docs.aws.amazon.com/network-manager/latest/tgwnm/working-with-route-analyzer.html",
+          "canonical_url": "https://docs.aws.amazon.com/network-manager/latest/tgwnm/working-with-route-analyzer.html",
+          "title_topic_fingerprint": "working with route analyzer — aws network manager route analyzer for transit gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits — scenario",
+          "feature_lesson_fingerprint": "aws network manager route analyzer for transit gateway: attachment-to-attachment path analysis, forward and return route-table evidence, blackholes and missing routes, peering scope, and control-plane limits — scenario",
+          "source_case": "network-manager-route-analyzer-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "route53-profile-query-logging-20261001",
+          "source_role": "primary_feature",
+          "target": "DNS and service discovery",
+          "topic": "Route 53 Profiles query-logging association: centralized resource attachment, inherited VPC logging, destination permissions, regional scope, cache-aware validation, and drift evidence",
+          "title": "Associate a query logging configuration to a Route 53 Profile",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profile-associate-query-logging.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profile-associate-query-logging.html",
+          "title_topic_fingerprint": "associate a query logging configuration to a route 53 profile — route 53 profiles query-logging association: centralized resource attachment, inherited vpc logging, destination permissions, regional scope, cache-aware validation, and drift evidence",
+          "feature_lesson_fingerprint": "route 53 profiles query-logging association: centralized resource attachment, inherited vpc logging, destination permissions, regional scope, cache-aware validation, and drift evidence",
+          "source_case": "route53-profile-query-logging-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "route53-profile-query-logging-20261001",
+          "source_role": "scenario_support",
+          "target": "DNS and service discovery",
+          "topic": "Route 53 Profiles query-logging association: centralized resource attachment, inherited VPC logging, destination permissions, regional scope, cache-aware validation, and drift evidence",
+          "title": "Managing Resolver query logging configurations",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logging-configurations-managing.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logging-configurations-managing.html",
+          "title_topic_fingerprint": "managing resolver query logging configurations — route 53 profiles query-logging association: centralized resource attachment, inherited vpc logging, destination permissions, regional scope, cache-aware validation, and drift evidence — scenario",
+          "feature_lesson_fingerprint": "route 53 profiles query-logging association: centralized resource attachment, inherited vpc logging, destination permissions, regional scope, cache-aware validation, and drift evidence — scenario",
+          "source_case": "route53-profile-query-logging-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "lattice-service-network-resource-association-20261001",
+          "source_role": "primary_feature",
+          "target": "Private service and resource access",
+          "topic": "VPC Lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-DNS choice, cross-account ownership, asynchronous state, and client isolation",
+          "title": "Service network resource associations",
+          "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/resource-configuration-associations.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/privatelink/resource-configuration-associations.html",
+          "title_topic_fingerprint": "service network resource associations — vpc lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-dns choice, cross-account ownership, asynchronous state, and client isolation",
+          "feature_lesson_fingerprint": "vpc lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-dns choice, cross-account ownership, asynchronous state, and client isolation",
+          "source_case": "lattice-service-network-resource-association-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "lattice-service-network-resource-association-20261001",
+          "source_role": "scenario_support",
+          "target": "Private service and resource access",
+          "topic": "VPC Lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-DNS choice, cross-account ownership, asynchronous state, and client isolation",
+          "title": "CreateServiceNetworkResourceAssociation",
+          "url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_CreateServiceNetworkResourceAssociation.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_CreateServiceNetworkResourceAssociation.html",
+          "title_topic_fingerprint": "createservicenetworkresourceassociation — vpc lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-dns choice, cross-account ownership, asynchronous state, and client isolation — scenario",
+          "feature_lesson_fingerprint": "vpc lattice service-network resource associations: resource configuration publication, resource-gateway data path, private-dns choice, cross-account ownership, asynchronous state, and client isolation — scenario",
+          "source_case": "lattice-service-network-resource-association-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "nlb-target-health-thresholds-20261001",
+          "source_role": "primary_feature",
+          "target": "Load balancing and service insertion",
+          "topic": "Network Load Balancer target-group health settings: DNS failover and routing failover thresholds, zonal IP withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery",
+          "title": "Configure target group health settings for your Network Load Balancer",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/modify-target-group-health-settings.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/modify-target-group-health-settings.html",
+          "title_topic_fingerprint": "configure target group health settings for your network load balancer — network load balancer target-group health settings: dns failover and routing failover thresholds, zonal ip withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery",
+          "feature_lesson_fingerprint": "network load balancer target-group health settings: dns failover and routing failover thresholds, zonal ip withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery",
+          "source_case": "nlb-target-health-thresholds-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "nlb-target-health-thresholds-20261001",
+          "source_role": "scenario_support",
+          "target": "Load balancing and service insertion",
+          "topic": "Network Load Balancer target-group health settings: DNS failover and routing failover thresholds, zonal IP withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery",
+          "title": "Edit attributes for your Network Load Balancer target group",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/edit-target-group-attributes.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/edit-target-group-attributes.html",
+          "title_topic_fingerprint": "edit attributes for your network load balancer target group — network load balancer target-group health settings: dns failover and routing failover thresholds, zonal ip withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery — scenario",
+          "feature_lesson_fingerprint": "network load balancer target-group health settings: dns failover and routing failover thresholds, zonal ip withdrawal, unhealthy-state routing, cross-zone effects, capacity math, and controlled recovery — scenario",
+          "source_case": "nlb-target-health-thresholds-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "cloudfront-origin-prefix-list-20261001",
+          "source_role": "primary_feature",
+          "target": "Edge and global traffic delivery",
+          "topic": "CloudFront-to-ALB origin restriction with the AWS-managed origin-facing prefix list: security-group quota weight, IPv4 and IPv6 coverage, secret-header enforcement, HTTPS, and rotation-safe deployment",
+          "title": "Work with AWS-managed prefix lists",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html",
+          "title_topic_fingerprint": "work with aws-managed prefix lists — cloudfront-to-alb origin restriction with the aws-managed origin-facing prefix list: security-group quota weight, ipv4 and ipv6 coverage, secret-header enforcement, https, and rotation-safe deployment",
+          "feature_lesson_fingerprint": "cloudfront-to-alb origin restriction with the aws-managed origin-facing prefix list: security-group quota weight, ipv4 and ipv6 coverage, secret-header enforcement, https, and rotation-safe deployment",
+          "source_case": "cloudfront-origin-prefix-list-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "cloudfront-origin-prefix-list-20261001",
+          "source_role": "scenario_support",
+          "target": "Edge and global traffic delivery",
+          "topic": "CloudFront-to-ALB origin restriction with the AWS-managed origin-facing prefix list: security-group quota weight, IPv4 and IPv6 coverage, secret-header enforcement, HTTPS, and rotation-safe deployment",
+          "title": "Restrict access to Application Load Balancers",
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/restrict-access-to-load-balancer.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/restrict-access-to-load-balancer.html",
+          "title_topic_fingerprint": "restrict access to application load balancers — cloudfront-to-alb origin restriction with the aws-managed origin-facing prefix list: security-group quota weight, ipv4 and ipv6 coverage, secret-header enforcement, https, and rotation-safe deployment — scenario",
+          "feature_lesson_fingerprint": "cloudfront-to-alb origin restriction with the aws-managed origin-facing prefix list: security-group quota weight, ipv4 and ipv6 coverage, secret-header enforcement, https, and rotation-safe deployment — scenario",
+          "source_case": "cloudfront-origin-prefix-list-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "dns-firewall-advanced-lists-20261001",
+          "source_role": "primary_feature",
+          "target": "Network inspection and perimeter protection",
+          "topic": "Route 53 Resolver DNS Firewall Advanced Managed Domain Lists: threat and content categories, Alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security",
+          "title": "Advanced Managed Domain Lists",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/firewall-advanced-managed-domain-lists.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/firewall-advanced-managed-domain-lists.html",
+          "title_topic_fingerprint": "advanced managed domain lists — route 53 resolver dns firewall advanced managed domain lists: threat and content categories, alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security",
+          "feature_lesson_fingerprint": "route 53 resolver dns firewall advanced managed domain lists: threat and content categories, alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security",
+          "source_case": "dns-firewall-advanced-lists-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "dns-firewall-advanced-lists-20261001",
+          "source_role": "scenario_support",
+          "target": "Network inspection and perimeter protection",
+          "topic": "Route 53 Resolver DNS Firewall Advanced Managed Domain Lists: threat and content categories, Alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security",
+          "title": "ListFirewallDomainLists",
+          "url": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomainLists.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomainLists.html",
+          "title_topic_fingerprint": "listfirewalldomainlists — route 53 resolver dns firewall advanced managed domain lists: threat and content categories, alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security — scenario",
+          "feature_lesson_fingerprint": "route 53 resolver dns firewall advanced managed domain lists: threat and content categories, alert-first deployment, logs and sampled requests, foundational-list differences, priority-based false-positive exceptions, and layered security — scenario",
+          "source_case": "dns-firewall-advanced-lists-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "source_role": "primary_feature",
+          "target": "Network access control and governance",
+          "topic": "Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery",
+          "title": "Initializing network ACL policies",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-initialization.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-initialization.html",
+          "title_topic_fingerprint": "initializing network acl policies — firewall manager network acl policy initialization and remediation: fmmanaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery",
+          "feature_lesson_fingerprint": "firewall manager network acl policy initialization and remediation: fmmanaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery",
+          "source_case": "fms-nacl-initialization-remediation-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "fms-nacl-initialization-remediation-20261001",
+          "source_role": "scenario_support",
+          "target": "Network access control and governance",
+          "topic": "Firewall Manager network ACL policy initialization and remediation: FMManaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery",
+          "title": "Remediating network ACL policies",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-remediation.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/network-acls-remediation.html",
+          "title_topic_fingerprint": "remediating network acl policies — firewall manager network acl policy initialization and remediation: fmmanaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery — scenario",
+          "feature_lesson_fingerprint": "firewall manager network acl policy initialization and remediation: fmmanaged ownership, first and last rule bands, middle-rule delegation, scope transitions, quota headroom, and compliance recovery — scenario",
+          "source_case": "fms-nacl-initialization-remediation-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "network-synthetic-monitor-20261001",
+          "source_role": "primary_feature",
+          "target": "Network observability and operations",
+          "topic": "CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness",
+          "title": "How Network Synthetic Monitor works",
+          "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-how-it-works.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-how-it-works.html",
+          "title_topic_fingerprint": "how network synthetic monitor works — cloudwatch network synthetic monitor for aws-to-on-premises paths: managed probes, stable enis, icmp and tcp semantics, 30/60-second aggregation, packet loss and rtt, network health indicator interpretation, dual-stack separation, and firewall readiness",
+          "feature_lesson_fingerprint": "cloudwatch network synthetic monitor for aws-to-on-premises paths: managed probes, stable enis, icmp and tcp semantics, 30/60-second aggregation, packet loss and rtt, network health indicator interpretation, dual-stack separation, and firewall readiness",
+          "source_case": "network-synthetic-monitor-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "network-synthetic-monitor-20261001",
+          "source_role": "scenario_support",
+          "target": "Network observability and operations",
+          "topic": "CloudWatch Network Synthetic Monitor for AWS-to-on-premises paths: managed probes, stable ENIs, ICMP and TCP semantics, 30/60-second aggregation, packet loss and RTT, network health indicator interpretation, dual-stack separation, and firewall readiness",
+          "title": "Network Synthetic Monitor dashboards",
+          "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-dashboards.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nw-monitor-dashboards.html",
+          "title_topic_fingerprint": "network synthetic monitor dashboards — cloudwatch network synthetic monitor for aws-to-on-premises paths: managed probes, stable enis, icmp and tcp semantics, 30/60-second aggregation, packet loss and rtt, network health indicator interpretation, dual-stack separation, and firewall readiness — scenario",
+          "feature_lesson_fingerprint": "cloudwatch network synthetic monitor for aws-to-on-premises paths: managed probes, stable enis, icmp and tcp semantics, 30/60-second aggregation, packet loss and rtt, network health indicator interpretation, dual-stack separation, and firewall readiness — scenario",
+          "source_case": "network-synthetic-monitor-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "source_role": "primary_feature",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion",
+          "title": "Use Guard Hooks",
+          "url": "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/guard-hooks.html",
+          "canonical_url": "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/guard-hooks.html",
+          "title_topic_fingerprint": "use guard hooks — cloudformation guard hooks for network guardrails: rule evaluation, account and region activation, warn versus fail behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion",
+          "feature_lesson_fingerprint": "cloudformation guard hooks for network guardrails: rule evaluation, account and region activation, warn versus fail behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion",
+          "source_case": "cloudformation-guard-hooks-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "cloudformation-guard-hooks-20261001",
+          "source_role": "scenario_support",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation Guard Hooks for network guardrails: rule evaluation, account and Region activation, WARN versus FAIL behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion",
+          "title": "Stack level filtering for Hooks",
+          "url": "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-stack-level-filtering.html",
+          "canonical_url": "https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-stack-level-filtering.html",
+          "title_topic_fingerprint": "stack level filtering for hooks — cloudformation guard hooks for network guardrails: rule evaluation, account and region activation, warn versus fail behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion — scenario",
+          "feature_lesson_fingerprint": "cloudformation guard hooks for network guardrails: rule evaluation, account and region activation, warn versus fail behavior, stack-level filtering, include and exclude semantics, evidence, and canary promotion — scenario",
+          "source_case": "cloudformation-guard-hooks-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "source_role": "primary_feature",
+          "target": "Workload and service integration",
+          "topic": "Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting",
+          "title": "Configure subnets for the Amazon VPC CNI plugin",
+          "url": "https://docs.aws.amazon.com/eks/latest/userguide/cni-subnet-selection.html",
+          "canonical_url": "https://docs.aws.amazon.com/eks/latest/userguide/cni-subnet-selection.html",
+          "title_topic_fingerprint": "configure subnets for the amazon vpc cni plugin — amazon eks vpc cni enhanced subnet discovery: kubernetes.io/role/cni tagging, availability zone capacity, eni and ip allocation evidence, custom networking interaction, and network-policy troubleshooting",
+          "feature_lesson_fingerprint": "amazon eks vpc cni enhanced subnet discovery: kubernetes.io/role/cni tagging, availability zone capacity, eni and ip allocation evidence, custom networking interaction, and network-policy troubleshooting",
+          "source_case": "eks-enhanced-subnet-discovery-20261001: feature lesson",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        },
+        {
+          "target_id": "eks-enhanced-subnet-discovery-20261001",
+          "source_role": "scenario_support",
+          "target": "Workload and service integration",
+          "topic": "Amazon EKS VPC CNI enhanced subnet discovery: kubernetes.io/role/cni tagging, Availability Zone capacity, ENI and IP allocation evidence, custom networking interaction, and network-policy troubleshooting",
+          "title": "Troubleshooting Kubernetes network policies for Amazon EKS",
+          "url": "https://docs.aws.amazon.com/eks/latest/userguide/network-policies-troubleshooting.html",
+          "canonical_url": "https://docs.aws.amazon.com/eks/latest/userguide/network-policies-troubleshooting.html",
+          "title_topic_fingerprint": "troubleshooting kubernetes network policies for amazon eks — amazon eks vpc cni enhanced subnet discovery: kubernetes.io/role/cni tagging, availability zone capacity, eni and ip allocation evidence, custom networking interaction, and network-policy troubleshooting — scenario",
+          "feature_lesson_fingerprint": "amazon eks vpc cni enhanced subnet discovery: kubernetes.io/role/cni tagging, availability zone capacity, eni and ip allocation evidence, custom networking interaction, and network-policy troubleshooting — scenario",
+          "source_case": "eks-enhanced-subnet-discovery-20261001: operational scenario",
+          "last_used": "2026-10-01",
+          "earliest_eligible_reuse_date": "2026-10-31"
+        }
+      ]
     }
   ]
 }
