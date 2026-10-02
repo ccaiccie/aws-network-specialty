@@ -13210,6 +13210,1462 @@
           "earliest_eligible_reuse_date": "2026-10-31"
         }
       ]
+    },
+    {
+      "generated_at": "2026-10-02T08:04:00-07:00",
+      "report": "AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-02-08-04.html",
+      "report_url": "https://ccaiccie.github.io/aws-network-specialty/AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-02-08-04.html",
+      "certification_status": {
+        "result": "AWS states ANS-C01 is being retired; the last day to take the exam is December 31, 2026 (checked 2026-10-02).",
+        "source_url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+      },
+      "ledger": {
+        "path": "docs/aws-study-uniqueness-ledger.json",
+        "version": "1.0",
+        "history_checked": true,
+        "rolling_calendar_days": 30
+      },
+      "uniqueness_window": {
+        "days": 30,
+        "block_through": "2026-10-31",
+        "earliest_eligible_reuse_date": "2026-11-01"
+      },
+      "validation": {
+        "mandatory_targets": "12/12",
+        "primary_feature_sources": "12/12",
+        "scenario_support_sources": "12/12",
+        "domain_distribution": "15/13/10/12",
+        "quiz_questions": 50,
+        "images": {
+          "count": 0,
+          "status": "PASS",
+          "note": "No external figures used; no candidate passed necessity and render-verification gates."
+        },
+        "mermaid_diagrams": 12,
+        "uniqueness": "PASS",
+        "quiz_characteristics": {
+          "scenario_based": 50,
+          "support_or_implementation_grounded": 50,
+          "multi_step": 50,
+          "competing_hypotheses": 50,
+          "configuration_or_design_decision": 50,
+          "cross_service_or_cross_account": 50
+        },
+        "mermaid": {
+          "count": 12,
+          "status": "PASS"
+        }
+      },
+      "targets": [
+        {
+          "id": "vpc-route-server-peer-evidence-20261002",
+          "target_number": 1,
+          "target": "Amazon VPC foundations",
+          "feature_topic": "Amazon VPC Route Server peer operations: device-initiated BGP, BFD session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-peer-logging.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-tutorial-initiate-bgp.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-peer-logging.html",
+            "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-tutorial-initiate-bgp.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "dx-four-byte-asn-20261002",
+          "target_number": 2,
+          "target": "Hybrid connectivity",
+          "feature_topic": "AWS Direct Connect four-byte ASN migration: RFC 6793 capability, asplain representation, BGP peer consistency, monitoring interpretation, staged cutover, and rollback evidence",
+          "primary_source": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/long-asn-support.html",
+          "scenario_source": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/ts-long-asn.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/directconnect/latest/UserGuide/long-asn-support.html",
+            "https://docs.aws.amazon.com/directconnect/latest/UserGuide/ts-long-asn.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "tgw-encryption-support-20261002",
+          "target_number": 3,
+          "target": "Transit and multi-VPC networking",
+          "feature_topic": "AWS Transit Gateway encryption support: control-plane enablement, attachment eligibility, Encryption Control interaction, transitional states, unsupported attachments, and zero-interruption change validation",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-encryption-support.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-modifying.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-encryption-support.html",
+            "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-modifying.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "global-resolver-dns-views-20261002",
+          "target_number": 4,
+          "target": "DNS and service discovery",
+          "feature_topic": "Route 53 Global Resolver DNS views: client-group segmentation, authentication, private hosted-zone association, DNS Firewall policy, DNSSEC and EDNS settings, and configuration troubleshooting",
+          "primary_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-manage-dns-views.html",
+          "scenario_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-troubleshoot-configuration-issues.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-manage-dns-views.html",
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-troubleshoot-configuration-issues.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "privatelink-tunnel-endpoints-20261002",
+          "target_number": 5,
+          "target": "Private service and resource access",
+          "feature_topic": "AWS PrivateLink tunnel endpoints for network segments: resource-gateway anchoring, CIDR publication, unidirectional consumer access, route and security boundaries, DNS choices, and overlap-safe validation",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/privatelink/privatelink-access-cidr-ranges.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc-lattice/latest/ug/vpc-resources.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/privatelink/privatelink-access-cidr-ranges.html",
+            "https://docs.aws.amazon.com/vpc-lattice/latest/ug/vpc-resources.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "alb-health-check-logs-20261002",
+          "target_number": 6,
+          "target": "Load balancing and service insertion",
+          "feature_topic": "Application Load Balancer health-check logs: per-target reason evidence, S3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification",
+          "primary_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-health-check-logs.html",
+          "scenario_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/enable-health-check-logging.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-health-check-logs.html",
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/enable-health-check-logging.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "ga-custom-routing-mapping-20261002",
+          "target_number": 7,
+          "target": "Edge and global traffic delivery",
+          "feature_topic": "AWS Global Accelerator custom routing: deterministic listener-port mapping, subnet endpoints, EC2 destination sockets, explicit traffic authorization, IPv4 constraints, and session-allocation governance",
+          "primary_source": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-how-it-works.html",
+          "scenario_source": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-accelerators.creating-editing.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-how-it-works.html",
+            "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-accelerators.creating-editing.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "network-firewall-revocation-evidence-20261002",
+          "target_number": 8,
+          "target": "Network inspection and perimeter protection",
+          "feature_topic": "AWS Network Firewall TLS certificate revocation inspection: outbound OCSP and CRL checks, revoked versus unknown actions, certificate constraints, TLS log evidence, SNI correlation, and failure isolation",
+          "primary_source": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html",
+          "scenario_source": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-logging.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html",
+            "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-logging.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "vpc-layered-control-baseline-20261002",
+          "target_number": 9,
+          "target": "Network access control and governance",
+          "feature_topic": "Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/userguide/network-acl-best-practices.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+            "https://docs.aws.amazon.com/vpc/latest/userguide/network-acl-best-practices.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "reachability-cross-account-20261002",
+          "target_number": 10,
+          "target": "Network observability and operations",
+          "feature_topic": "Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account-troubleshooting.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account.html",
+            "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account-troubleshooting.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cloudformation-drift-aware-changesets-20261002",
+          "target_number": 11,
+          "target": "Deployment and automation",
+          "feature_topic": "CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation",
+          "primary_source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/drift-aware-change-sets.html",
+          "scenario_source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/drift-aware-change-sets.html",
+            "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "lambda-dualstack-egress-20261002",
+          "target_number": 12,
+          "target": "Workload and service integration",
+          "feature_topic": "AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation",
+          "primary_source": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc-internet.html",
+          "scenario_source": "https://docs.aws.amazon.com/lambda/latest/api/API_VpcConfigResponse.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc-internet.html",
+            "https://docs.aws.amazon.com/lambda/latest/api/API_VpcConfigResponse.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        }
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "target_id": "vpc-route-server-peer-evidence-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A replacement appliance shows an available Route Server peer but no learned route appears, while engineers wait for AWS to initiate BGP.",
+          "question_fingerprint": "For Amazon VPC Route Server peer operations: device-initiated BGP, BFD session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-route-server-peer-evidence-20261002-primary-cause",
+          "correct_action_class": "vpc-route-server-peer-evidence-20261002-primary-action"
+        },
+        {
+          "id": 2,
+          "target_id": "vpc-route-server-peer-evidence-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Amazon VPC Route Server peer operations: device-initiated BGP, BFD session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis into a production control with a safe rollback.",
+          "question_fingerprint": "For vpc-route-server-peer-evidence-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-route-server-peer-evidence-20261002-design-cause",
+          "correct_action_class": "vpc-route-server-peer-evidence-20261002-design-action"
+        },
+        {
+          "id": 3,
+          "target_id": "vpc-route-server-peer-evidence-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For vpc-route-server-peer-evidence-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the vpc-route-server-peer-evidence-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-route-server-peer-evidence-20261002-evidence-cause",
+          "correct_action_class": "vpc-route-server-peer-evidence-20261002-evidence-action"
+        },
+        {
+          "id": 4,
+          "target_id": "vpc-route-server-peer-evidence-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Amazon VPC Route Server peer operations: device-initiated BGP, BFD session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For vpc-route-server-peer-evidence-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-route-server-peer-evidence-20261002-approval-gate-cause",
+          "correct_action_class": "vpc-route-server-peer-evidence-20261002-approval-gate-action"
+        },
+        {
+          "id": 5,
+          "target_id": "dx-four-byte-asn-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A four-byte ASN is configured on a Direct Connect virtual interface, but the on-premises BGP session remains idle and automation reports the remote ASN as unexpected.",
+          "question_fingerprint": "For AWS Direct Connect four-byte ASN migration: RFC 6793 capability, asplain representation, BGP peer consistency, monitoring interpretation, staged cutover, and rollback evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-four-byte-asn-20261002-primary-cause",
+          "correct_action_class": "dx-four-byte-asn-20261002-primary-action"
+        },
+        {
+          "id": 6,
+          "target_id": "dx-four-byte-asn-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn AWS Direct Connect four-byte ASN migration: RFC 6793 capability, asplain representation, BGP peer consistency, monitoring interpretation, staged cutover, and rollback evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For dx-four-byte-asn-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-four-byte-asn-20261002-design-cause",
+          "correct_action_class": "dx-four-byte-asn-20261002-design-action"
+        },
+        {
+          "id": 7,
+          "target_id": "dx-four-byte-asn-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For dx-four-byte-asn-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the dx-four-byte-asn-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-four-byte-asn-20261002-evidence-cause",
+          "correct_action_class": "dx-four-byte-asn-20261002-evidence-action"
+        },
+        {
+          "id": 8,
+          "target_id": "dx-four-byte-asn-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for AWS Direct Connect four-byte ASN migration: RFC 6793 capability, asplain representation, BGP peer consistency, monitoring interpretation, staged cutover, and rollback evidence must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For dx-four-byte-asn-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-four-byte-asn-20261002-approval-gate-cause",
+          "correct_action_class": "dx-four-byte-asn-20261002-approval-gate-action"
+        },
+        {
+          "id": 9,
+          "target_id": "tgw-encryption-support-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A central network team enables encryption support and immediately attempts to attach a VPC whose Encryption Control state is still enforcing, but attachment creation is rejected.",
+          "question_fingerprint": "For AWS Transit Gateway encryption support: control-plane enablement, attachment eligibility, Encryption Control interaction, transitional states, unsupported attachments, and zero-interruption change validation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-encryption-support-20261002-primary-cause",
+          "correct_action_class": "tgw-encryption-support-20261002-primary-action"
+        },
+        {
+          "id": 10,
+          "target_id": "tgw-encryption-support-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn AWS Transit Gateway encryption support: control-plane enablement, attachment eligibility, Encryption Control interaction, transitional states, unsupported attachments, and zero-interruption change validation into a production control with a safe rollback.",
+          "question_fingerprint": "For tgw-encryption-support-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-encryption-support-20261002-design-cause",
+          "correct_action_class": "tgw-encryption-support-20261002-design-action"
+        },
+        {
+          "id": 11,
+          "target_id": "tgw-encryption-support-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For tgw-encryption-support-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the tgw-encryption-support-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-encryption-support-20261002-evidence-cause",
+          "correct_action_class": "tgw-encryption-support-20261002-evidence-action"
+        },
+        {
+          "id": 12,
+          "target_id": "tgw-encryption-support-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for AWS Transit Gateway encryption support: control-plane enablement, attachment eligibility, Encryption Control interaction, transitional states, unsupported attachments, and zero-interruption change validation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For tgw-encryption-support-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-encryption-support-20261002-approval-gate-cause",
+          "correct_action_class": "tgw-encryption-support-20261002-approval-gate-action"
+        },
+        {
+          "id": 13,
+          "target_id": "global-resolver-dns-views-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "Remote workers authenticate successfully but receive public answers for an internal service, while branch clients resolve the private record.",
+          "question_fingerprint": "For Route 53 Global Resolver DNS views: client-group segmentation, authentication, private hosted-zone association, DNS Firewall policy, DNSSEC and EDNS settings, and configuration troubleshooting, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "global-resolver-dns-views-20261002-primary-cause",
+          "correct_action_class": "global-resolver-dns-views-20261002-primary-action"
+        },
+        {
+          "id": 14,
+          "target_id": "global-resolver-dns-views-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Route 53 Global Resolver DNS views: client-group segmentation, authentication, private hosted-zone association, DNS Firewall policy, DNSSEC and EDNS settings, and configuration troubleshooting into a production control with a safe rollback.",
+          "question_fingerprint": "For global-resolver-dns-views-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "global-resolver-dns-views-20261002-design-cause",
+          "correct_action_class": "global-resolver-dns-views-20261002-design-action"
+        },
+        {
+          "id": 15,
+          "target_id": "global-resolver-dns-views-20261002",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For global-resolver-dns-views-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the global-resolver-dns-views-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "global-resolver-dns-views-20261002-evidence-cause",
+          "correct_action_class": "global-resolver-dns-views-20261002-evidence-action"
+        },
+        {
+          "id": 16,
+          "target_id": "privatelink-tunnel-endpoints-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A consumer creates a tunnel endpoint to a shared network segment, but traffic follows an existing local route to an overlapping CIDR instead of entering the endpoint.",
+          "question_fingerprint": "For AWS PrivateLink tunnel endpoints for network segments: resource-gateway anchoring, CIDR publication, unidirectional consumer access, route and security boundaries, DNS choices, and overlap-safe validation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "privatelink-tunnel-endpoints-20261002-primary-cause",
+          "correct_action_class": "privatelink-tunnel-endpoints-20261002-primary-action"
+        },
+        {
+          "id": 17,
+          "target_id": "privatelink-tunnel-endpoints-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn AWS PrivateLink tunnel endpoints for network segments: resource-gateway anchoring, CIDR publication, unidirectional consumer access, route and security boundaries, DNS choices, and overlap-safe validation into a production control with a safe rollback.",
+          "question_fingerprint": "For privatelink-tunnel-endpoints-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "privatelink-tunnel-endpoints-20261002-design-cause",
+          "correct_action_class": "privatelink-tunnel-endpoints-20261002-design-action"
+        },
+        {
+          "id": 18,
+          "target_id": "privatelink-tunnel-endpoints-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For privatelink-tunnel-endpoints-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the privatelink-tunnel-endpoints-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "privatelink-tunnel-endpoints-20261002-evidence-cause",
+          "correct_action_class": "privatelink-tunnel-endpoints-20261002-evidence-action"
+        },
+        {
+          "id": 19,
+          "target_id": "alb-health-check-logs-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "The ALB console shows intermittent unhealthy targets, but the health-check log bucket contains only the delivery test file.",
+          "question_fingerprint": "For Application Load Balancer health-check logs: per-target reason evidence, S3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "alb-health-check-logs-20261002-primary-cause",
+          "correct_action_class": "alb-health-check-logs-20261002-primary-action"
+        },
+        {
+          "id": 20,
+          "target_id": "alb-health-check-logs-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn Application Load Balancer health-check logs: per-target reason evidence, S3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification into a production control with a safe rollback.",
+          "question_fingerprint": "For alb-health-check-logs-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "alb-health-check-logs-20261002-design-cause",
+          "correct_action_class": "alb-health-check-logs-20261002-design-action"
+        },
+        {
+          "id": 21,
+          "target_id": "alb-health-check-logs-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For alb-health-check-logs-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the alb-health-check-logs-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "alb-health-check-logs-20261002-evidence-cause",
+          "correct_action_class": "alb-health-check-logs-20261002-evidence-action"
+        },
+        {
+          "id": 22,
+          "target_id": "ga-custom-routing-mapping-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A session broker returns a valid accelerator IP and port, but the client times out while the mapped EC2 server is running.",
+          "question_fingerprint": "For AWS Global Accelerator custom routing: deterministic listener-port mapping, subnet endpoints, EC2 destination sockets, explicit traffic authorization, IPv4 constraints, and session-allocation governance, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ga-custom-routing-mapping-20261002-primary-cause",
+          "correct_action_class": "ga-custom-routing-mapping-20261002-primary-action"
+        },
+        {
+          "id": 23,
+          "target_id": "ga-custom-routing-mapping-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn AWS Global Accelerator custom routing: deterministic listener-port mapping, subnet endpoints, EC2 destination sockets, explicit traffic authorization, IPv4 constraints, and session-allocation governance into a production control with a safe rollback.",
+          "question_fingerprint": "For ga-custom-routing-mapping-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ga-custom-routing-mapping-20261002-design-cause",
+          "correct_action_class": "ga-custom-routing-mapping-20261002-design-action"
+        },
+        {
+          "id": 24,
+          "target_id": "ga-custom-routing-mapping-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For ga-custom-routing-mapping-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the ga-custom-routing-mapping-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ga-custom-routing-mapping-20261002-evidence-cause",
+          "correct_action_class": "ga-custom-routing-mapping-20261002-evidence-action"
+        },
+        {
+          "id": 25,
+          "target_id": "network-firewall-revocation-evidence-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "After revocation checking is enabled with a drop action for unknown status, many valid SaaS destinations become unavailable during an OCSP reachability problem.",
+          "question_fingerprint": "For AWS Network Firewall TLS certificate revocation inspection: outbound OCSP and CRL checks, revoked versus unknown actions, certificate constraints, TLS log evidence, SNI correlation, and failure isolation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-firewall-revocation-evidence-20261002-primary-cause",
+          "correct_action_class": "network-firewall-revocation-evidence-20261002-primary-action"
+        },
+        {
+          "id": 26,
+          "target_id": "network-firewall-revocation-evidence-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn AWS Network Firewall TLS certificate revocation inspection: outbound OCSP and CRL checks, revoked versus unknown actions, certificate constraints, TLS log evidence, SNI correlation, and failure isolation into a production control with a safe rollback.",
+          "question_fingerprint": "For network-firewall-revocation-evidence-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-firewall-revocation-evidence-20261002-design-cause",
+          "correct_action_class": "network-firewall-revocation-evidence-20261002-design-action"
+        },
+        {
+          "id": 27,
+          "target_id": "network-firewall-revocation-evidence-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For network-firewall-revocation-evidence-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the network-firewall-revocation-evidence-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-firewall-revocation-evidence-20261002-evidence-cause",
+          "correct_action_class": "network-firewall-revocation-evidence-20261002-evidence-action"
+        },
+        {
+          "id": 28,
+          "target_id": "network-firewall-revocation-evidence-20261002",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A change review for AWS Network Firewall TLS certificate revocation inspection: outbound OCSP and CRL checks, revoked versus unknown actions, certificate constraints, TLS log evidence, SNI correlation, and failure isolation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For network-firewall-revocation-evidence-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "network-firewall-revocation-evidence-20261002-approval-gate-cause",
+          "correct_action_class": "network-firewall-revocation-evidence-20261002-approval-gate-action"
+        },
+        {
+          "id": 29,
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A team adds a restrictive network ACL rule that allows the application port inbound but production responses fail intermittently for IPv6 clients.",
+          "question_fingerprint": "For Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-layered-control-baseline-20261002-primary-cause",
+          "correct_action_class": "vpc-layered-control-baseline-20261002-primary-action"
+        },
+        {
+          "id": 30,
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions into a production control with a safe rollback.",
+          "question_fingerprint": "For vpc-layered-control-baseline-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-layered-control-baseline-20261002-design-cause",
+          "correct_action_class": "vpc-layered-control-baseline-20261002-design-action"
+        },
+        {
+          "id": 31,
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For vpc-layered-control-baseline-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the vpc-layered-control-baseline-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-layered-control-baseline-20261002-evidence-cause",
+          "correct_action_class": "vpc-layered-control-baseline-20261002-evidence-action"
+        },
+        {
+          "id": 32,
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For vpc-layered-control-baseline-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-layered-control-baseline-20261002-approval-gate-cause",
+          "correct_action_class": "vpc-layered-control-baseline-20261002-approval-gate-action"
+        },
+        {
+          "id": 33,
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For vpc-layered-control-baseline-20261002, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-layered-control-baseline-20261002-state-cause",
+          "correct_action_class": "vpc-layered-control-baseline-20261002-state-action"
+        },
+        {
+          "id": 34,
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An engineer is mapping evidence for Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions.",
+          "question_fingerprint": "For vpc-layered-control-baseline-20261002, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpc-layered-control-baseline-20261002-signal-map-cause",
+          "correct_action_class": "vpc-layered-control-baseline-20261002-signal-map-action"
+        },
+        {
+          "id": 35,
+          "target_id": "reachability-cross-account-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A delegated administrator receives Error fetching resources for one member account while analyses for other accounts succeed.",
+          "question_fingerprint": "For Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "reachability-cross-account-20261002-primary-cause",
+          "correct_action_class": "reachability-cross-account-20261002-primary-action"
+        },
+        {
+          "id": 36,
+          "target_id": "reachability-cross-account-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting into a production control with a safe rollback.",
+          "question_fingerprint": "For reachability-cross-account-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "reachability-cross-account-20261002-design-cause",
+          "correct_action_class": "reachability-cross-account-20261002-design-action"
+        },
+        {
+          "id": 37,
+          "target_id": "reachability-cross-account-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For reachability-cross-account-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the reachability-cross-account-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "reachability-cross-account-20261002-evidence-cause",
+          "correct_action_class": "reachability-cross-account-20261002-evidence-action"
+        },
+        {
+          "id": 38,
+          "target_id": "reachability-cross-account-20261002",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For reachability-cross-account-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "reachability-cross-account-20261002-approval-gate-cause",
+          "correct_action_class": "reachability-cross-account-20261002-approval-gate-action"
+        },
+        {
+          "id": 39,
+          "target_id": "reachability-cross-account-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For reachability-cross-account-20261002, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "reachability-cross-account-20261002-state-cause",
+          "correct_action_class": "reachability-cross-account-20261002-state-action"
+        },
+        {
+          "id": 40,
+          "target_id": "reachability-cross-account-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An engineer is mapping evidence for Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting.",
+          "question_fingerprint": "For reachability-cross-account-20261002, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "reachability-cross-account-20261002-signal-map-cause",
+          "correct_action_class": "reachability-cross-account-20261002-signal-map-action"
+        },
+        {
+          "id": 41,
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A drift-aware change set proposes replacing a network attachment that was manually modified during an incident, and an unattended pipeline is ready to execute it.",
+          "question_fingerprint": "For CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-drift-aware-changesets-20261002-primary-cause",
+          "correct_action_class": "cloudformation-drift-aware-changesets-20261002-primary-action"
+        },
+        {
+          "id": 42,
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation into a production control with a safe rollback.",
+          "question_fingerprint": "For cloudformation-drift-aware-changesets-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-drift-aware-changesets-20261002-design-cause",
+          "correct_action_class": "cloudformation-drift-aware-changesets-20261002-design-action"
+        },
+        {
+          "id": 43,
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For cloudformation-drift-aware-changesets-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cloudformation-drift-aware-changesets-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-drift-aware-changesets-20261002-evidence-cause",
+          "correct_action_class": "cloudformation-drift-aware-changesets-20261002-evidence-action"
+        },
+        {
+          "id": 44,
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For cloudformation-drift-aware-changesets-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-drift-aware-changesets-20261002-approval-gate-cause",
+          "correct_action_class": "cloudformation-drift-aware-changesets-20261002-approval-gate-action"
+        },
+        {
+          "id": 45,
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For cloudformation-drift-aware-changesets-20261002, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudformation-drift-aware-changesets-20261002-state-cause",
+          "correct_action_class": "cloudformation-drift-aware-changesets-20261002-state-action"
+        },
+        {
+          "id": 46,
+          "target_id": "lambda-dualstack-egress-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A function is configured with IPv6AllowedForDualStack=true across three subnets, but the update fails because one selected subnet is IPv4-only.",
+          "question_fingerprint": "For AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lambda-dualstack-egress-20261002-primary-cause",
+          "correct_action_class": "lambda-dualstack-egress-20261002-primary-action"
+        },
+        {
+          "id": 47,
+          "target_id": "lambda-dualstack-egress-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation into a production control with a safe rollback.",
+          "question_fingerprint": "For lambda-dualstack-egress-20261002, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lambda-dualstack-egress-20261002-design-cause",
+          "correct_action_class": "lambda-dualstack-egress-20261002-design-action"
+        },
+        {
+          "id": 48,
+          "target_id": "lambda-dualstack-egress-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For lambda-dualstack-egress-20261002, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the lambda-dualstack-egress-20261002 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lambda-dualstack-egress-20261002-evidence-cause",
+          "correct_action_class": "lambda-dualstack-egress-20261002-evidence-action"
+        },
+        {
+          "id": 49,
+          "target_id": "lambda-dualstack-egress-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For lambda-dualstack-egress-20261002, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lambda-dualstack-egress-20261002-approval-gate-cause",
+          "correct_action_class": "lambda-dualstack-egress-20261002-approval-gate-action"
+        },
+        {
+          "id": 50,
+          "target_id": "lambda-dualstack-egress-20261002",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For lambda-dualstack-egress-20261002, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "lambda-dualstack-egress-20261002-state-cause",
+          "correct_action_class": "lambda-dualstack-egress-20261002-state-action"
+        }
+      ],
+      "sources": [
+        {
+          "target_id": "vpc-route-server-peer-evidence-20261002",
+          "source_role": "primary_feature",
+          "target": "Amazon VPC foundations",
+          "topic": "Amazon VPC Route Server peer operations: device-initiated BGP, BFD session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis",
+          "title": "Route server peer logging",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-peer-logging.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-peer-logging.html",
+          "title_topic_fingerprint": "route server peer logging — amazon vpc route server peer operations: device-initiated bgp, bfd session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis",
+          "feature_lesson_fingerprint": "amazon vpc route server peer operations: device-initiated bgp, bfd session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis",
+          "source_case": "vpc-route-server-peer-evidence-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "vpc-route-server-peer-evidence-20261002",
+          "source_role": "scenario_support",
+          "target": "Amazon VPC foundations",
+          "topic": "Amazon VPC Route Server peer operations: device-initiated BGP, BFD session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis",
+          "title": "Step 7: Initiate BGP sessions from the devices",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-tutorial-initiate-bgp.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/route-server-tutorial-initiate-bgp.html",
+          "title_topic_fingerprint": "step 7: initiate bgp sessions from the devices — amazon vpc route server peer operations: device-initiated bgp, bfd session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis — scenario",
+          "feature_lesson_fingerprint": "amazon vpc route server peer operations: device-initiated bgp, bfd session evidence, best-path propagation, route-table verification, peer logging, and bounded failover diagnosis — scenario",
+          "source_case": "vpc-route-server-peer-evidence-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "dx-four-byte-asn-20261002",
+          "source_role": "primary_feature",
+          "target": "Hybrid connectivity",
+          "topic": "AWS Direct Connect four-byte ASN migration: RFC 6793 capability, asplain representation, BGP peer consistency, monitoring interpretation, staged cutover, and rollback evidence",
+          "title": "Long ASN support in Direct Connect",
+          "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/long-asn-support.html",
+          "canonical_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/long-asn-support.html",
+          "title_topic_fingerprint": "long asn support in direct connect — aws direct connect four-byte asn migration: rfc 6793 capability, asplain representation, bgp peer consistency, monitoring interpretation, staged cutover, and rollback evidence",
+          "feature_lesson_fingerprint": "aws direct connect four-byte asn migration: rfc 6793 capability, asplain representation, bgp peer consistency, monitoring interpretation, staged cutover, and rollback evidence",
+          "source_case": "dx-four-byte-asn-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "dx-four-byte-asn-20261002",
+          "source_role": "scenario_support",
+          "target": "Hybrid connectivity",
+          "topic": "AWS Direct Connect four-byte ASN migration: RFC 6793 capability, asplain representation, BGP peer consistency, monitoring interpretation, staged cutover, and rollback evidence",
+          "title": "Troubleshoot long ASN issues",
+          "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/ts-long-asn.html",
+          "canonical_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/ts-long-asn.html",
+          "title_topic_fingerprint": "troubleshoot long asn issues — aws direct connect four-byte asn migration: rfc 6793 capability, asplain representation, bgp peer consistency, monitoring interpretation, staged cutover, and rollback evidence — scenario",
+          "feature_lesson_fingerprint": "aws direct connect four-byte asn migration: rfc 6793 capability, asplain representation, bgp peer consistency, monitoring interpretation, staged cutover, and rollback evidence — scenario",
+          "source_case": "dx-four-byte-asn-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "tgw-encryption-support-20261002",
+          "source_role": "primary_feature",
+          "target": "Transit and multi-VPC networking",
+          "topic": "AWS Transit Gateway encryption support: control-plane enablement, attachment eligibility, Encryption Control interaction, transitional states, unsupported attachments, and zero-interruption change validation",
+          "title": "Encryption Support for AWS Transit Gateway",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-encryption-support.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-encryption-support.html",
+          "title_topic_fingerprint": "encryption support for aws transit gateway — aws transit gateway encryption support: control-plane enablement, attachment eligibility, encryption control interaction, transitional states, unsupported attachments, and zero-interruption change validation",
+          "feature_lesson_fingerprint": "aws transit gateway encryption support: control-plane enablement, attachment eligibility, encryption control interaction, transitional states, unsupported attachments, and zero-interruption change validation",
+          "source_case": "tgw-encryption-support-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "tgw-encryption-support-20261002",
+          "source_role": "scenario_support",
+          "target": "Transit and multi-VPC networking",
+          "topic": "AWS Transit Gateway encryption support: control-plane enablement, attachment eligibility, Encryption Control interaction, transitional states, unsupported attachments, and zero-interruption change validation",
+          "title": "Modify a transit gateway in AWS Transit Gateway",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-modifying.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-modifying.html",
+          "title_topic_fingerprint": "modify a transit gateway in aws transit gateway — aws transit gateway encryption support: control-plane enablement, attachment eligibility, encryption control interaction, transitional states, unsupported attachments, and zero-interruption change validation — scenario",
+          "feature_lesson_fingerprint": "aws transit gateway encryption support: control-plane enablement, attachment eligibility, encryption control interaction, transitional states, unsupported attachments, and zero-interruption change validation — scenario",
+          "source_case": "tgw-encryption-support-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "global-resolver-dns-views-20261002",
+          "source_role": "primary_feature",
+          "target": "DNS and service discovery",
+          "topic": "Route 53 Global Resolver DNS views: client-group segmentation, authentication, private hosted-zone association, DNS Firewall policy, DNSSEC and EDNS settings, and configuration troubleshooting",
+          "title": "Managing DNS views with Route 53 Global Resolver",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-manage-dns-views.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-manage-dns-views.html",
+          "title_topic_fingerprint": "managing dns views with route 53 global resolver — route 53 global resolver dns views: client-group segmentation, authentication, private hosted-zone association, dns firewall policy, dnssec and edns settings, and configuration troubleshooting",
+          "feature_lesson_fingerprint": "route 53 global resolver dns views: client-group segmentation, authentication, private hosted-zone association, dns firewall policy, dnssec and edns settings, and configuration troubleshooting",
+          "source_case": "global-resolver-dns-views-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "global-resolver-dns-views-20261002",
+          "source_role": "scenario_support",
+          "target": "DNS and service discovery",
+          "topic": "Route 53 Global Resolver DNS views: client-group segmentation, authentication, private hosted-zone association, DNS Firewall policy, DNSSEC and EDNS settings, and configuration troubleshooting",
+          "title": "Troubleshoot configuration issues in Route 53 Global Resolver",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-troubleshoot-configuration-issues.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/gr-troubleshoot-configuration-issues.html",
+          "title_topic_fingerprint": "troubleshoot configuration issues in route 53 global resolver — route 53 global resolver dns views: client-group segmentation, authentication, private hosted-zone association, dns firewall policy, dnssec and edns settings, and configuration troubleshooting — scenario",
+          "feature_lesson_fingerprint": "route 53 global resolver dns views: client-group segmentation, authentication, private hosted-zone association, dns firewall policy, dnssec and edns settings, and configuration troubleshooting — scenario",
+          "source_case": "global-resolver-dns-views-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "privatelink-tunnel-endpoints-20261002",
+          "source_role": "primary_feature",
+          "target": "Private service and resource access",
+          "topic": "AWS PrivateLink tunnel endpoints for network segments: resource-gateway anchoring, CIDR publication, unidirectional consumer access, route and security boundaries, DNS choices, and overlap-safe validation",
+          "title": "Access network segments through AWS PrivateLink",
+          "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/privatelink-access-cidr-ranges.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/privatelink/privatelink-access-cidr-ranges.html",
+          "title_topic_fingerprint": "access network segments through aws privatelink — aws privatelink tunnel endpoints for network segments: resource-gateway anchoring, cidr publication, unidirectional consumer access, route and security boundaries, dns choices, and overlap-safe validation",
+          "feature_lesson_fingerprint": "aws privatelink tunnel endpoints for network segments: resource-gateway anchoring, cidr publication, unidirectional consumer access, route and security boundaries, dns choices, and overlap-safe validation",
+          "source_case": "privatelink-tunnel-endpoints-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "privatelink-tunnel-endpoints-20261002",
+          "source_role": "scenario_support",
+          "target": "Private service and resource access",
+          "topic": "AWS PrivateLink tunnel endpoints for network segments: resource-gateway anchoring, CIDR publication, unidirectional consumer access, route and security boundaries, DNS choices, and overlap-safe validation",
+          "title": "VPC resources in Amazon VPC Lattice",
+          "url": "https://docs.aws.amazon.com/vpc-lattice/latest/ug/vpc-resources.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc-lattice/latest/ug/vpc-resources.html",
+          "title_topic_fingerprint": "vpc resources in amazon vpc lattice — aws privatelink tunnel endpoints for network segments: resource-gateway anchoring, cidr publication, unidirectional consumer access, route and security boundaries, dns choices, and overlap-safe validation — scenario",
+          "feature_lesson_fingerprint": "aws privatelink tunnel endpoints for network segments: resource-gateway anchoring, cidr publication, unidirectional consumer access, route and security boundaries, dns choices, and overlap-safe validation — scenario",
+          "source_case": "privatelink-tunnel-endpoints-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "alb-health-check-logs-20261002",
+          "source_role": "primary_feature",
+          "target": "Load balancing and service insertion",
+          "topic": "Application Load Balancer health-check logs: per-target reason evidence, S3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification",
+          "title": "Health check logs",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-health-check-logs.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-health-check-logs.html",
+          "title_topic_fingerprint": "health check logs — application load balancer health-check logs: per-target reason evidence, s3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification",
+          "feature_lesson_fingerprint": "application load balancer health-check logs: per-target reason evidence, s3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification",
+          "source_case": "alb-health-check-logs-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "alb-health-check-logs-20261002",
+          "source_role": "scenario_support",
+          "target": "Load balancing and service insertion",
+          "topic": "Application Load Balancer health-check logs: per-target reason evidence, S3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification",
+          "title": "Enable health check logs for your Application Load Balancer",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/enable-health-check-logging.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/enable-health-check-logging.html",
+          "title_topic_fingerprint": "enable health check logs for your application load balancer — application load balancer health-check logs: per-target reason evidence, s3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification — scenario",
+          "feature_lesson_fingerprint": "application load balancer health-check logs: per-target reason evidence, s3 delivery permissions, parser forward compatibility, sampling cadence, cross-account buckets, and recovery verification — scenario",
+          "source_case": "alb-health-check-logs-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "ga-custom-routing-mapping-20261002",
+          "source_role": "primary_feature",
+          "target": "Edge and global traffic delivery",
+          "topic": "AWS Global Accelerator custom routing: deterministic listener-port mapping, subnet endpoints, EC2 destination sockets, explicit traffic authorization, IPv4 constraints, and session-allocation governance",
+          "title": "How custom routing accelerators work in Global Accelerator",
+          "url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-how-it-works.html",
+          "canonical_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-how-it-works.html",
+          "title_topic_fingerprint": "how custom routing accelerators work in global accelerator — aws global accelerator custom routing: deterministic listener-port mapping, subnet endpoints, ec2 destination sockets, explicit traffic authorization, ipv4 constraints, and session-allocation governance",
+          "feature_lesson_fingerprint": "aws global accelerator custom routing: deterministic listener-port mapping, subnet endpoints, ec2 destination sockets, explicit traffic authorization, ipv4 constraints, and session-allocation governance",
+          "source_case": "ga-custom-routing-mapping-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "ga-custom-routing-mapping-20261002",
+          "source_role": "scenario_support",
+          "target": "Edge and global traffic delivery",
+          "topic": "AWS Global Accelerator custom routing: deterministic listener-port mapping, subnet endpoints, EC2 destination sockets, explicit traffic authorization, IPv4 constraints, and session-allocation governance",
+          "title": "Create a custom routing accelerator in Global Accelerator",
+          "url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-accelerators.creating-editing.html",
+          "canonical_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-accelerators.creating-editing.html",
+          "title_topic_fingerprint": "create a custom routing accelerator in global accelerator — aws global accelerator custom routing: deterministic listener-port mapping, subnet endpoints, ec2 destination sockets, explicit traffic authorization, ipv4 constraints, and session-allocation governance — scenario",
+          "feature_lesson_fingerprint": "aws global accelerator custom routing: deterministic listener-port mapping, subnet endpoints, ec2 destination sockets, explicit traffic authorization, ipv4 constraints, and session-allocation governance — scenario",
+          "source_case": "ga-custom-routing-mapping-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "network-firewall-revocation-evidence-20261002",
+          "source_role": "primary_feature",
+          "target": "Network inspection and perimeter protection",
+          "topic": "AWS Network Firewall TLS certificate revocation inspection: outbound OCSP and CRL checks, revoked versus unknown actions, certificate constraints, TLS log evidence, SNI correlation, and failure isolation",
+          "title": "Using SSL/TLS certificates with TLS inspection configurations in AWS Network Firewall",
+          "url": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html",
+          "canonical_url": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html",
+          "title_topic_fingerprint": "using ssl/tls certificates with tls inspection configurations in aws network firewall — aws network firewall tls certificate revocation inspection: outbound ocsp and crl checks, revoked versus unknown actions, certificate constraints, tls log evidence, sni correlation, and failure isolation",
+          "feature_lesson_fingerprint": "aws network firewall tls certificate revocation inspection: outbound ocsp and crl checks, revoked versus unknown actions, certificate constraints, tls log evidence, sni correlation, and failure isolation",
+          "source_case": "network-firewall-revocation-evidence-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "network-firewall-revocation-evidence-20261002",
+          "source_role": "scenario_support",
+          "target": "Network inspection and perimeter protection",
+          "topic": "AWS Network Firewall TLS certificate revocation inspection: outbound OCSP and CRL checks, revoked versus unknown actions, certificate constraints, TLS log evidence, SNI correlation, and failure isolation",
+          "title": "Logging for TLS inspection in AWS Network Firewall",
+          "url": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-logging.html",
+          "canonical_url": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-logging.html",
+          "title_topic_fingerprint": "logging for tls inspection in aws network firewall — aws network firewall tls certificate revocation inspection: outbound ocsp and crl checks, revoked versus unknown actions, certificate constraints, tls log evidence, sni correlation, and failure isolation — scenario",
+          "feature_lesson_fingerprint": "aws network firewall tls certificate revocation inspection: outbound ocsp and crl checks, revoked versus unknown actions, certificate constraints, tls log evidence, sni correlation, and failure isolation — scenario",
+          "source_case": "network-firewall-revocation-evidence-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "source_role": "primary_feature",
+          "target": "Network access control and governance",
+          "topic": "Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions",
+          "title": "Security best practices for your VPC",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "title_topic_fingerprint": "security best practices for your vpc — amazon vpc layered access governance: security-group least privilege, stateless network acl ordering, ipv4 and ipv6 parity, default-resource hygiene, flow logs, reachability analyzer, and evidence-based exceptions",
+          "feature_lesson_fingerprint": "amazon vpc layered access governance: security-group least privilege, stateless network acl ordering, ipv4 and ipv6 parity, default-resource hygiene, flow logs, reachability analyzer, and evidence-based exceptions",
+          "source_case": "vpc-layered-control-baseline-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "vpc-layered-control-baseline-20261002",
+          "source_role": "scenario_support",
+          "target": "Network access control and governance",
+          "topic": "Amazon VPC layered access governance: security-group least privilege, stateless network ACL ordering, IPv4 and IPv6 parity, default-resource hygiene, Flow Logs, Reachability Analyzer, and evidence-based exceptions",
+          "title": "Network ACL best practices",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/network-acl-best-practices.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/network-acl-best-practices.html",
+          "title_topic_fingerprint": "network acl best practices — amazon vpc layered access governance: security-group least privilege, stateless network acl ordering, ipv4 and ipv6 parity, default-resource hygiene, flow logs, reachability analyzer, and evidence-based exceptions — scenario",
+          "feature_lesson_fingerprint": "amazon vpc layered access governance: security-group least privilege, stateless network acl ordering, ipv4 and ipv6 parity, default-resource hygiene, flow logs, reachability analyzer, and evidence-based exceptions — scenario",
+          "source_case": "vpc-layered-control-baseline-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "reachability-cross-account-20261002",
+          "source_role": "primary_feature",
+          "target": "Network observability and operations",
+          "topic": "Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting",
+          "title": "Cross-account analyses for Reachability Analyzer",
+          "url": "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account.html",
+          "title_topic_fingerprint": "cross-account analyses for reachability analyzer — cross-account vpc reachability analyzer: organizations trusted access, delegated administrators, stacksets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting",
+          "feature_lesson_fingerprint": "cross-account vpc reachability analyzer: organizations trusted access, delegated administrators, stacksets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting",
+          "source_case": "reachability-cross-account-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "reachability-cross-account-20261002",
+          "source_role": "scenario_support",
+          "target": "Network observability and operations",
+          "topic": "Cross-account VPC Reachability Analyzer: Organizations trusted access, delegated administrators, StackSets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting",
+          "title": "Troubleshoot cross-account analyses in Reachability Analyzer",
+          "url": "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account-troubleshooting.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/reachability/multi-account-troubleshooting.html",
+          "title_topic_fingerprint": "troubleshoot cross-account analyses in reachability analyzer — cross-account vpc reachability analyzer: organizations trusted access, delegated administrators, stacksets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting — scenario",
+          "feature_lesson_fingerprint": "cross-account vpc reachability analyzer: organizations trusted access, delegated administrators, stacksets-deployed roles, modeled path scope, explanation evidence, and role-deployment troubleshooting — scenario",
+          "source_case": "reachability-cross-account-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "source_role": "primary_feature",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation",
+          "title": "Using drift-aware change sets",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/drift-aware-change-sets.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/drift-aware-change-sets.html",
+          "title_topic_fingerprint": "using drift-aware change sets — cloudformation drift-aware change sets for network infrastructure: revert_drift intent, live-state comparison, resource target definitions, aws-managed properties, replacement risk, review gates, and controlled reconciliation",
+          "feature_lesson_fingerprint": "cloudformation drift-aware change sets for network infrastructure: revert_drift intent, live-state comparison, resource target definitions, aws-managed properties, replacement risk, review gates, and controlled reconciliation",
+          "source_case": "cloudformation-drift-aware-changesets-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "cloudformation-drift-aware-changesets-20261002",
+          "source_role": "scenario_support",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation drift-aware change sets for network infrastructure: REVERT_DRIFT intent, live-state comparison, resource target definitions, AWS-managed properties, replacement risk, review gates, and controlled reconciliation",
+          "title": "CreateChangeSet",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html",
+          "title_topic_fingerprint": "createchangeset — cloudformation drift-aware change sets for network infrastructure: revert_drift intent, live-state comparison, resource target definitions, aws-managed properties, replacement risk, review gates, and controlled reconciliation — scenario",
+          "feature_lesson_fingerprint": "cloudformation drift-aware change sets for network infrastructure: revert_drift intent, live-state comparison, resource target definitions, aws-managed properties, replacement risk, review gates, and controlled reconciliation — scenario",
+          "source_case": "cloudformation-drift-aware-changesets-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "lambda-dualstack-egress-20261002",
+          "source_role": "primary_feature",
+          "target": "Workload and service integration",
+          "topic": "AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation",
+          "title": "Enable internet access for VPC-connected Lambda functions",
+          "url": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc-internet.html",
+          "canonical_url": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc-internet.html",
+          "title_topic_fingerprint": "enable internet access for vpc-connected lambda functions — aws lambda dual-stack vpc internet egress: private-subnet attachment, nat for ipv4, egress-only internet gateway for ipv6, all-subnet dual-stack requirements, eni permissions, and protocol-specific validation",
+          "feature_lesson_fingerprint": "aws lambda dual-stack vpc internet egress: private-subnet attachment, nat for ipv4, egress-only internet gateway for ipv6, all-subnet dual-stack requirements, eni permissions, and protocol-specific validation",
+          "source_case": "lambda-dualstack-egress-20261002: feature lesson",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        },
+        {
+          "target_id": "lambda-dualstack-egress-20261002",
+          "source_role": "scenario_support",
+          "target": "Workload and service integration",
+          "topic": "AWS Lambda dual-stack VPC internet egress: private-subnet attachment, NAT for IPv4, egress-only internet gateway for IPv6, all-subnet dual-stack requirements, ENI permissions, and protocol-specific validation",
+          "title": "VpcConfigResponse",
+          "url": "https://docs.aws.amazon.com/lambda/latest/api/API_VpcConfigResponse.html",
+          "canonical_url": "https://docs.aws.amazon.com/lambda/latest/api/API_VpcConfigResponse.html",
+          "title_topic_fingerprint": "vpcconfigresponse — aws lambda dual-stack vpc internet egress: private-subnet attachment, nat for ipv4, egress-only internet gateway for ipv6, all-subnet dual-stack requirements, eni permissions, and protocol-specific validation — scenario",
+          "feature_lesson_fingerprint": "aws lambda dual-stack vpc internet egress: private-subnet attachment, nat for ipv4, egress-only internet gateway for ipv6, all-subnet dual-stack requirements, eni permissions, and protocol-specific validation — scenario",
+          "source_case": "lambda-dualstack-egress-20261002: operational scenario",
+          "last_used": "2026-10-02",
+          "earliest_eligible_reuse_date": "2026-11-01"
+        }
+      ]
     }
   ]
 }
