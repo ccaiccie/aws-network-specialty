@@ -16122,6 +16122,1462 @@
           "earliest_eligible_reuse_date": "2026-11-02"
         }
       ]
+    },
+    {
+      "generated_at": "2026-10-04T07:58:00-07:00",
+      "report": "AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-04-07-58.html",
+      "report_url": "https://ccaiccie.github.io/aws-network-specialty/AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-04-07-58.html",
+      "certification_status": {
+        "result": "AWS states ANS-C01 is being retired; the last day to take the exam is December 31, 2026 (checked 2026-10-04).",
+        "source_url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+      },
+      "ledger": {
+        "path": "docs/aws-study-uniqueness-ledger.json",
+        "version": "1.0",
+        "history_checked": true,
+        "rolling_calendar_days": 30
+      },
+      "uniqueness_window": {
+        "days": 30,
+        "block_through": "2026-11-02",
+        "earliest_eligible_reuse_date": "2026-11-03"
+      },
+      "validation": {
+        "mandatory_targets": "12/12",
+        "primary_feature_sources": "12/12",
+        "scenario_support_sources": "12/12",
+        "domain_distribution": "15/13/10/12",
+        "quiz_questions": 50,
+        "images": {
+          "count": 0,
+          "status": "PASS",
+          "note": "No external figures used; no candidate passed necessity and render-verification gates."
+        },
+        "mermaid_diagrams": 12,
+        "uniqueness": "PASS",
+        "quiz_characteristics": {
+          "scenario_based": 50,
+          "support_or_implementation_grounded": 50,
+          "multi_step": 50,
+          "competing_hypotheses": 50,
+          "configuration_or_design_decision": 50,
+          "cross_service_or_cross_account": 50
+        },
+        "mermaid": {
+          "count": 12,
+          "status": "PASS"
+        }
+      },
+      "targets": [
+        {
+          "id": "eni-primary-ipv6-20261004",
+          "target_number": 1,
+          "target": "Amazon VPC foundations",
+          "feature_topic": "EC2 primary IPv6 addresses on ENIs: stable GUA identity, irreversible enablement, first-address selection, interface lifecycle, DNS evidence, and dual-stack migration safety",
+          "primary_source": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterfaceIpv6Address.html",
+          "scenario_source": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyNetworkInterfaceAttribute.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterfaceIpv6Address.html",
+            "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyNetworkInterfaceAttribute.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "dx-vif-migration-20261004",
+          "target_number": 2,
+          "target": "Hybrid connectivity",
+          "feature_topic": "Direct Connect virtual interface migration: same-Region connection or LAG moves, brief BGP interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence",
+          "primary_source": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/migratevirtualinterface.html",
+          "scenario_source": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/directconnect/latest/UserGuide/migratevirtualinterface.html",
+            "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "tgw-drop-metrics-20261004",
+          "target_number": 3,
+          "target": "Transit and multi-VPC networking",
+          "feature_topic": "Transit Gateway drop telemetry: blackhole, no-route, no-policy, and TTL-expired metrics; attachment and AZ dimensions; route-table search; alarm semantics; and evidence-led fault isolation",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-cloudwatch-metrics.html",
+          "scenario_source": "https://docs.aws.amazon.com/cli/latest/reference/ec2/search-transit-gateway-routes.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-cloudwatch-metrics.html",
+            "https://docs.aws.amazon.com/cli/latest/reference/ec2/search-transit-gateway-routes.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "resolver-best-practices-20261004",
+          "target_number": 4,
+          "target": "DNS and service discovery",
+          "feature_topic": "Route 53 VPC Resolver safe topology: loop prevention, endpoint security-group scaling, multi-AZ availability, rule specificity, subnet compatibility, and query-path evidence",
+          "primary_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver.html",
+          "scenario_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-vpc-to-network-where-to-forward-queries.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver.html",
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-vpc-to-network-where-to-forward-queries.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "vpce-address-dns-options-20261004",
+          "target_number": 5,
+          "target": "Private service and resource access",
+          "feature_topic": "VPC endpoint address-family and DNS-option mutation: IPv4, IPv6, and dual-stack compatibility, subnet configuration, private DNS association, partial states, retry safety, and consumer cutover evidence",
+          "primary_source": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcEndpoint.html",
+          "scenario_source": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcEndpoint.html",
+            "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "elb-listener-idle-timeout-20261004",
+          "target_number": 6,
+          "target": "Load balancing and service insertion",
+          "feature_topic": "NLB and GWLB listener idle-timeout attributes: 60–6000 second bounds, 350-second default, GWLB TCP-reset behavior, stateful flow consequences, API validation, and staged client testing",
+          "primary_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ListenerAttribute.html",
+          "scenario_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ModifyListenerAttributes.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ListenerAttribute.html",
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ModifyListenerAttributes.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cloudfront-response-headers-20261004",
+          "target_number": 7,
+          "target": "Edge and global traffic delivery",
+          "feature_topic": "CloudFront response headers policies: origin-header removal and override, CORS and security headers, Server-Timing, viewer-only cache directives, managed-policy IDs, and cache-behavior canaries",
+          "primary_source": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html",
+          "scenario_source": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html",
+            "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "waf-logging-pipeline-20261004",
+          "target_number": 8,
+          "target": "Network inspection and perimeter protection",
+          "feature_topic": "AWS WAF logging configuration: one destination per web ACL, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control",
+          "primary_source": "https://docs.aws.amazon.com/waf/latest/developerguide/logging-management-configure.html",
+          "scenario_source": "https://docs.aws.amazon.com/waf/latest/APIReference/API_LoggingConfiguration.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/waf/latest/developerguide/logging-management-configure.html",
+            "https://docs.aws.amazon.com/waf/latest/APIReference/API_LoggingConfiguration.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "fms-admin-scope-20261004",
+          "target_number": 9,
+          "target": "Network access control and governance",
+          "feature_topic": "Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence",
+          "primary_source": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-administrators.html",
+          "scenario_source": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-creating-administrators.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/waf/latest/developerguide/fms-administrators.html",
+            "https://docs.aws.amazon.com/waf/latest/developerguide/fms-creating-administrators.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "flowlogs-s3-layout-20261004",
+          "target_number": 10,
+          "target": "Network observability and operations",
+          "feature_topic": "VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3-path.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html",
+            "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3-path.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "cfn-deployment-time-20261004",
+          "target_number": 11,
+          "target": "Deployment and automation",
+          "feature_topic": "CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts",
+          "primary_source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-deployment-time.html",
+          "scenario_source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-attribute-dependson.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-deployment-time.html",
+            "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-attribute-dependson.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        },
+        {
+          "id": "ecs-eni-trunking-20261004",
+          "target_number": 12,
+          "target": "Workload and service integration",
+          "feature_topic": "Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof",
+          "primary_source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html",
+          "scenario_source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/eni-trunking-supported-instance-types.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html",
+            "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/eni-trunking-supported-instance-types.html"
+          ],
+          "image_urls": [],
+          "image_url": null
+        }
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "target_id": "eni-primary-ipv6-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A blue-green rollout enables primary IPv6 on an existing ENI, but the service continues announcing a different secondary IPv6 address and clients lose connectivity after a restart.",
+          "question_fingerprint": "For EC2 primary IPv6 addresses on ENIs: stable GUA identity, irreversible enablement, first-address selection, interface lifecycle, DNS evidence, and dual-stack migration safety, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eni-primary-ipv6-20261004-primary-cause",
+          "correct_action_class": "eni-primary-ipv6-20261004-primary-action"
+        },
+        {
+          "id": 2,
+          "target_id": "eni-primary-ipv6-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn EC2 primary IPv6 addresses on ENIs: stable GUA identity, irreversible enablement, first-address selection, interface lifecycle, DNS evidence, and dual-stack migration safety into a production control with a safe rollback.",
+          "question_fingerprint": "For eni-primary-ipv6-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eni-primary-ipv6-20261004-design-cause",
+          "correct_action_class": "eni-primary-ipv6-20261004-design-action"
+        },
+        {
+          "id": 3,
+          "target_id": "eni-primary-ipv6-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For eni-primary-ipv6-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the eni-primary-ipv6-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eni-primary-ipv6-20261004-evidence-cause",
+          "correct_action_class": "eni-primary-ipv6-20261004-evidence-action"
+        },
+        {
+          "id": 4,
+          "target_id": "eni-primary-ipv6-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for EC2 primary IPv6 addresses on ENIs: stable GUA identity, irreversible enablement, first-address selection, interface lifecycle, DNS evidence, and dual-stack migration safety must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For eni-primary-ipv6-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "eni-primary-ipv6-20261004-approval-gate-cause",
+          "correct_action_class": "eni-primary-ipv6-20261004-approval-gate-action"
+        },
+        {
+          "id": 5,
+          "target_id": "dx-vif-migration-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A production private VIF is moved to a replacement LAG and BGP returns, but large application flows fail while small probes succeed.",
+          "question_fingerprint": "For Direct Connect virtual interface migration: same-Region connection or LAG moves, brief BGP interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-vif-migration-20261004-primary-cause",
+          "correct_action_class": "dx-vif-migration-20261004-primary-action"
+        },
+        {
+          "id": 6,
+          "target_id": "dx-vif-migration-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Direct Connect virtual interface migration: same-Region connection or LAG moves, brief BGP interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For dx-vif-migration-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-vif-migration-20261004-design-cause",
+          "correct_action_class": "dx-vif-migration-20261004-design-action"
+        },
+        {
+          "id": 7,
+          "target_id": "dx-vif-migration-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For dx-vif-migration-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the dx-vif-migration-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-vif-migration-20261004-evidence-cause",
+          "correct_action_class": "dx-vif-migration-20261004-evidence-action"
+        },
+        {
+          "id": 8,
+          "target_id": "dx-vif-migration-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Direct Connect virtual interface migration: same-Region connection or LAG moves, brief BGP interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For dx-vif-migration-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "dx-vif-migration-20261004-approval-gate-cause",
+          "correct_action_class": "dx-vif-migration-20261004-approval-gate-action"
+        },
+        {
+          "id": 9,
+          "target_id": "tgw-drop-metrics-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "Only one Availability Zone loses east-west connectivity after a policy change, while aggregate Transit Gateway throughput remains normal.",
+          "question_fingerprint": "For Transit Gateway drop telemetry: blackhole, no-route, no-policy, and TTL-expired metrics; attachment and AZ dimensions; route-table search; alarm semantics; and evidence-led fault isolation, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-drop-metrics-20261004-primary-cause",
+          "correct_action_class": "tgw-drop-metrics-20261004-primary-action"
+        },
+        {
+          "id": 10,
+          "target_id": "tgw-drop-metrics-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Transit Gateway drop telemetry: blackhole, no-route, no-policy, and TTL-expired metrics; attachment and AZ dimensions; route-table search; alarm semantics; and evidence-led fault isolation into a production control with a safe rollback.",
+          "question_fingerprint": "For tgw-drop-metrics-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-drop-metrics-20261004-design-cause",
+          "correct_action_class": "tgw-drop-metrics-20261004-design-action"
+        },
+        {
+          "id": 11,
+          "target_id": "tgw-drop-metrics-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For tgw-drop-metrics-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the tgw-drop-metrics-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-drop-metrics-20261004-evidence-cause",
+          "correct_action_class": "tgw-drop-metrics-20261004-evidence-action"
+        },
+        {
+          "id": 12,
+          "target_id": "tgw-drop-metrics-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A change review for Transit Gateway drop telemetry: blackhole, no-route, no-policy, and TTL-expired metrics; attachment and AZ dimensions; route-table search; alarm semantics; and evidence-led fault isolation must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For tgw-drop-metrics-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "tgw-drop-metrics-20261004-approval-gate-cause",
+          "correct_action_class": "tgw-drop-metrics-20261004-approval-gate-action"
+        },
+        {
+          "id": 13,
+          "target_id": "resolver-best-practices-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A newly shared forwarding rule causes intermittent SERVFAIL responses and a sudden increase in endpoint query volume across two accounts.",
+          "question_fingerprint": "For Route 53 VPC Resolver safe topology: loop prevention, endpoint security-group scaling, multi-AZ availability, rule specificity, subnet compatibility, and query-path evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "resolver-best-practices-20261004-primary-cause",
+          "correct_action_class": "resolver-best-practices-20261004-primary-action"
+        },
+        {
+          "id": 14,
+          "target_id": "resolver-best-practices-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An architect must turn Route 53 VPC Resolver safe topology: loop prevention, endpoint security-group scaling, multi-AZ availability, rule specificity, subnet compatibility, and query-path evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For resolver-best-practices-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "resolver-best-practices-20261004-design-cause",
+          "correct_action_class": "resolver-best-practices-20261004-design-action"
+        },
+        {
+          "id": 15,
+          "target_id": "resolver-best-practices-20261004",
+          "domain": "Network Design",
+          "scenario_fingerprint": "For resolver-best-practices-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the resolver-best-practices-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "resolver-best-practices-20261004-evidence-cause",
+          "correct_action_class": "resolver-best-practices-20261004-evidence-action"
+        },
+        {
+          "id": 16,
+          "target_id": "vpce-address-dns-options-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An interface endpoint is changed to dual-stack, but IPv6-capable clients time out while IPv4-only clients remain healthy.",
+          "question_fingerprint": "For VPC endpoint address-family and DNS-option mutation: IPv4, IPv6, and dual-stack compatibility, subnet configuration, private DNS association, partial states, retry safety, and consumer cutover evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpce-address-dns-options-20261004-primary-cause",
+          "correct_action_class": "vpce-address-dns-options-20261004-primary-action"
+        },
+        {
+          "id": 17,
+          "target_id": "vpce-address-dns-options-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn VPC endpoint address-family and DNS-option mutation: IPv4, IPv6, and dual-stack compatibility, subnet configuration, private DNS association, partial states, retry safety, and consumer cutover evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For vpce-address-dns-options-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpce-address-dns-options-20261004-design-cause",
+          "correct_action_class": "vpce-address-dns-options-20261004-design-action"
+        },
+        {
+          "id": 18,
+          "target_id": "vpce-address-dns-options-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For vpce-address-dns-options-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the vpce-address-dns-options-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "vpce-address-dns-options-20261004-evidence-cause",
+          "correct_action_class": "vpce-address-dns-options-20261004-evidence-action"
+        },
+        {
+          "id": 19,
+          "target_id": "elb-listener-idle-timeout-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A database client behind an NLB disconnects every few minutes even though targets remain healthy and no security-group rejects appear.",
+          "question_fingerprint": "For NLB and GWLB listener idle-timeout attributes: 60–6000 second bounds, 350-second default, GWLB TCP-reset behavior, stateful flow consequences, API validation, and staged client testing, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "elb-listener-idle-timeout-20261004-primary-cause",
+          "correct_action_class": "elb-listener-idle-timeout-20261004-primary-action"
+        },
+        {
+          "id": 20,
+          "target_id": "elb-listener-idle-timeout-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn NLB and GWLB listener idle-timeout attributes: 60–6000 second bounds, 350-second default, GWLB TCP-reset behavior, stateful flow consequences, API validation, and staged client testing into a production control with a safe rollback.",
+          "question_fingerprint": "For elb-listener-idle-timeout-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "elb-listener-idle-timeout-20261004-design-cause",
+          "correct_action_class": "elb-listener-idle-timeout-20261004-design-action"
+        },
+        {
+          "id": 21,
+          "target_id": "elb-listener-idle-timeout-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For elb-listener-idle-timeout-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the elb-listener-idle-timeout-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "elb-listener-idle-timeout-20261004-evidence-cause",
+          "correct_action_class": "elb-listener-idle-timeout-20261004-evidence-action"
+        },
+        {
+          "id": 22,
+          "target_id": "cloudfront-response-headers-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A team attaches SecurityHeadersPolicy expecting it to replace a weak origin HSTS header, but browsers continue receiving the origin value.",
+          "question_fingerprint": "For CloudFront response headers policies: origin-header removal and override, CORS and security headers, Server-Timing, viewer-only cache directives, managed-policy IDs, and cache-behavior canaries, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudfront-response-headers-20261004-primary-cause",
+          "correct_action_class": "cloudfront-response-headers-20261004-primary-action"
+        },
+        {
+          "id": 23,
+          "target_id": "cloudfront-response-headers-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn CloudFront response headers policies: origin-header removal and override, CORS and security headers, Server-Timing, viewer-only cache directives, managed-policy IDs, and cache-behavior canaries into a production control with a safe rollback.",
+          "question_fingerprint": "For cloudfront-response-headers-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudfront-response-headers-20261004-design-cause",
+          "correct_action_class": "cloudfront-response-headers-20261004-design-action"
+        },
+        {
+          "id": 24,
+          "target_id": "cloudfront-response-headers-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For cloudfront-response-headers-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cloudfront-response-headers-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cloudfront-response-headers-20261004-evidence-cause",
+          "correct_action_class": "cloudfront-response-headers-20261004-evidence-action"
+        },
+        {
+          "id": 25,
+          "target_id": "waf-logging-pipeline-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "During an attack, investigators find that all blocked requests are absent from WAF logs even though the web ACL metrics show a large block count.",
+          "question_fingerprint": "For AWS WAF logging configuration: one destination per web ACL, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-logging-pipeline-20261004-primary-cause",
+          "correct_action_class": "waf-logging-pipeline-20261004-primary-action"
+        },
+        {
+          "id": 26,
+          "target_id": "waf-logging-pipeline-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An architect must turn AWS WAF logging configuration: one destination per web ACL, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control into a production control with a safe rollback.",
+          "question_fingerprint": "For waf-logging-pipeline-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-logging-pipeline-20261004-design-cause",
+          "correct_action_class": "waf-logging-pipeline-20261004-design-action"
+        },
+        {
+          "id": 27,
+          "target_id": "waf-logging-pipeline-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "For waf-logging-pipeline-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the waf-logging-pipeline-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-logging-pipeline-20261004-evidence-cause",
+          "correct_action_class": "waf-logging-pipeline-20261004-evidence-action"
+        },
+        {
+          "id": 28,
+          "target_id": "waf-logging-pipeline-20261004",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A change review for AWS WAF logging configuration: one destination per web ACL, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For waf-logging-pipeline-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "waf-logging-pipeline-20261004-approval-gate-cause",
+          "correct_action_class": "waf-logging-pipeline-20261004-approval-gate-action"
+        },
+        {
+          "id": 29,
+          "target_id": "fms-admin-scope-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A regional security team can view organization-wide policies but cannot remediate a Network Firewall policy in its assigned OU.",
+          "question_fingerprint": "For Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-admin-scope-20261004-primary-cause",
+          "correct_action_class": "fms-admin-scope-20261004-primary-action"
+        },
+        {
+          "id": 30,
+          "target_id": "fms-admin-scope-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence into a production control with a safe rollback.",
+          "question_fingerprint": "For fms-admin-scope-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-admin-scope-20261004-design-cause",
+          "correct_action_class": "fms-admin-scope-20261004-design-action"
+        },
+        {
+          "id": 31,
+          "target_id": "fms-admin-scope-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For fms-admin-scope-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the fms-admin-scope-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-admin-scope-20261004-evidence-cause",
+          "correct_action_class": "fms-admin-scope-20261004-evidence-action"
+        },
+        {
+          "id": 32,
+          "target_id": "fms-admin-scope-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For fms-admin-scope-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-admin-scope-20261004-approval-gate-cause",
+          "correct_action_class": "fms-admin-scope-20261004-approval-gate-action"
+        },
+        {
+          "id": 33,
+          "target_id": "fms-admin-scope-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For fms-admin-scope-20261004, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-admin-scope-20261004-state-cause",
+          "correct_action_class": "fms-admin-scope-20261004-state-action"
+        },
+        {
+          "id": 34,
+          "target_id": "fms-admin-scope-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An engineer is mapping evidence for Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence.",
+          "question_fingerprint": "For fms-admin-scope-20261004, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "fms-admin-scope-20261004-signal-map-cause",
+          "correct_action_class": "fms-admin-scope-20261004-signal-map-action"
+        },
+        {
+          "id": 35,
+          "target_id": "flowlogs-s3-layout-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "Athena shows zero rejects during an outage even though S3 contains recent Flow Logs objects for the VPC.",
+          "question_fingerprint": "For VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "flowlogs-s3-layout-20261004-primary-cause",
+          "correct_action_class": "flowlogs-s3-layout-20261004-primary-action"
+        },
+        {
+          "id": 36,
+          "target_id": "flowlogs-s3-layout-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An architect must turn VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations into a production control with a safe rollback.",
+          "question_fingerprint": "For flowlogs-s3-layout-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "flowlogs-s3-layout-20261004-design-cause",
+          "correct_action_class": "flowlogs-s3-layout-20261004-design-action"
+        },
+        {
+          "id": 37,
+          "target_id": "flowlogs-s3-layout-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "For flowlogs-s3-layout-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the flowlogs-s3-layout-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "flowlogs-s3-layout-20261004-evidence-cause",
+          "correct_action_class": "flowlogs-s3-layout-20261004-evidence-action"
+        },
+        {
+          "id": 38,
+          "target_id": "flowlogs-s3-layout-20261004",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A change review for VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For flowlogs-s3-layout-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "flowlogs-s3-layout-20261004-approval-gate-cause",
+          "correct_action_class": "flowlogs-s3-layout-20261004-approval-gate-action"
+        },
+        {
+          "id": 39,
+          "target_id": "flowlogs-s3-layout-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For flowlogs-s3-layout-20261004, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "flowlogs-s3-layout-20261004-state-cause",
+          "correct_action_class": "flowlogs-s3-layout-20261004-state-action"
+        },
+        {
+          "id": 40,
+          "target_id": "flowlogs-s3-layout-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An engineer is mapping evidence for VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations.",
+          "question_fingerprint": "For flowlogs-s3-layout-20261004, match each signal or control to the conclusion it supports.",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "flowlogs-s3-layout-20261004-signal-map-cause",
+          "correct_action_class": "flowlogs-s3-layout-20261004-signal-map-action"
+        },
+        {
+          "id": 41,
+          "target_id": "cfn-deployment-time-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A network stack grows from 12 to 40 minutes after an engineer adds one shared DependsOn list to every route, listener, endpoint, and alarm.",
+          "question_fingerprint": "For CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-deployment-time-20261004-primary-cause",
+          "correct_action_class": "cfn-deployment-time-20261004-primary-action"
+        },
+        {
+          "id": 42,
+          "target_id": "cfn-deployment-time-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts into a production control with a safe rollback.",
+          "question_fingerprint": "For cfn-deployment-time-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-deployment-time-20261004-design-cause",
+          "correct_action_class": "cfn-deployment-time-20261004-design-action"
+        },
+        {
+          "id": 43,
+          "target_id": "cfn-deployment-time-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For cfn-deployment-time-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the cfn-deployment-time-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-deployment-time-20261004-evidence-cause",
+          "correct_action_class": "cfn-deployment-time-20261004-evidence-action"
+        },
+        {
+          "id": 44,
+          "target_id": "cfn-deployment-time-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For cfn-deployment-time-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-deployment-time-20261004-approval-gate-cause",
+          "correct_action_class": "cfn-deployment-time-20261004-approval-gate-action"
+        },
+        {
+          "id": 45,
+          "target_id": "cfn-deployment-time-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For cfn-deployment-time-20261004, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "cfn-deployment-time-20261004-state-cause",
+          "correct_action_class": "cfn-deployment-time-20261004-state-action"
+        },
+        {
+          "id": 46,
+          "target_id": "ecs-eni-trunking-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "After enabling awsvpcTrunking, new instances join the Auto Scaling group but never receive tasks and appear as REGISTRATION_FAILED in ECS.",
+          "question_fingerprint": "For Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof, which response best addresses the documented failure boundary?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-eni-trunking-20261004-primary-cause",
+          "correct_action_class": "ecs-eni-trunking-20261004-primary-action"
+        },
+        {
+          "id": 47,
+          "target_id": "ecs-eni-trunking-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architect must turn Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof into a production control with a safe rollback.",
+          "question_fingerprint": "For ecs-eni-trunking-20261004, which statement is the strongest design decision?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-eni-trunking-20261004-design-cause",
+          "correct_action_class": "ecs-eni-trunking-20261004-design-action"
+        },
+        {
+          "id": 48,
+          "target_id": "ecs-eni-trunking-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For ecs-eni-trunking-20261004, operations has one successful small test but a representative production transaction still fails.",
+          "question_fingerprint": "What should the ecs-eni-trunking-20261004 operations team conclude?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-eni-trunking-20261004-evidence-cause",
+          "correct_action_class": "ecs-eni-trunking-20261004-evidence-action"
+        },
+        {
+          "id": 49,
+          "target_id": "ecs-eni-trunking-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A change review for Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof must select checks that establish both configuration and behavior.",
+          "question_fingerprint": "For ecs-eni-trunking-20261004, which THREE checks belong in the approval gate? (Select three.)",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-eni-trunking-20261004-approval-gate-cause",
+          "correct_action_class": "ecs-eni-trunking-20261004-approval-gate-action"
+        },
+        {
+          "id": 50,
+          "target_id": "ecs-eni-trunking-20261004",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "For Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof, a dashboard shows the resource available or enabled, but users report intermittent failures.",
+          "question_fingerprint": "For ecs-eni-trunking-20261004, what is the most defensible interpretation?",
+          "difficulty": "advanced scenario/design reasoning",
+          "characteristics": {
+            "scenario_based": true,
+            "support_or_implementation_grounded": true,
+            "multi_step": true,
+            "competing_hypotheses": true,
+            "configuration_or_design_decision": true,
+            "cross_service_or_cross_account": true
+          },
+          "root_cause_class": "ecs-eni-trunking-20261004-state-cause",
+          "correct_action_class": "ecs-eni-trunking-20261004-state-action"
+        }
+      ],
+      "sources": [
+        {
+          "target_id": "eni-primary-ipv6-20261004",
+          "source_role": "primary_feature",
+          "target": "Amazon VPC foundations",
+          "topic": "EC2 primary IPv6 addresses on ENIs: stable GUA identity, irreversible enablement, first-address selection, interface lifecycle, DNS evidence, and dual-stack migration safety",
+          "title": "NetworkInterfaceIpv6Address",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterfaceIpv6Address.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterfaceIpv6Address.html",
+          "title_topic_fingerprint": "networkinterfaceipv6address — ec2 primary ipv6 addresses on enis: stable gua identity, irreversible enablement, first-address selection, interface lifecycle, dns evidence, and dual-stack migration safety",
+          "feature_lesson_fingerprint": "ec2 primary ipv6 addresses on enis: stable gua identity, irreversible enablement, first-address selection, interface lifecycle, dns evidence, and dual-stack migration safety",
+          "source_case": "eni-primary-ipv6-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "eni-primary-ipv6-20261004",
+          "source_role": "scenario_support",
+          "target": "Amazon VPC foundations",
+          "topic": "EC2 primary IPv6 addresses on ENIs: stable GUA identity, irreversible enablement, first-address selection, interface lifecycle, DNS evidence, and dual-stack migration safety",
+          "title": "ModifyNetworkInterfaceAttribute",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyNetworkInterfaceAttribute.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyNetworkInterfaceAttribute.html",
+          "title_topic_fingerprint": "modifynetworkinterfaceattribute — ec2 primary ipv6 addresses on enis: stable gua identity, irreversible enablement, first-address selection, interface lifecycle, dns evidence, and dual-stack migration safety — scenario",
+          "feature_lesson_fingerprint": "ec2 primary ipv6 addresses on enis: stable gua identity, irreversible enablement, first-address selection, interface lifecycle, dns evidence, and dual-stack migration safety — scenario",
+          "source_case": "eni-primary-ipv6-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "dx-vif-migration-20261004",
+          "source_role": "primary_feature",
+          "target": "Hybrid connectivity",
+          "topic": "Direct Connect virtual interface migration: same-Region connection or LAG moves, brief BGP interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence",
+          "title": "Migrate a Direct Connect virtual interface",
+          "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/migratevirtualinterface.html",
+          "canonical_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/migratevirtualinterface.html",
+          "title_topic_fingerprint": "migrate a direct connect virtual interface — direct connect virtual interface migration: same-region connection or lag moves, brief bgp interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence",
+          "feature_lesson_fingerprint": "direct connect virtual interface migration: same-region connection or lag moves, brief bgp interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence",
+          "source_case": "dx-vif-migration-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "dx-vif-migration-20261004",
+          "source_role": "scenario_support",
+          "target": "Hybrid connectivity",
+          "topic": "Direct Connect virtual interface migration: same-Region connection or LAG moves, brief BGP interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence",
+          "title": "UpdateVirtualInterfaceAttributes",
+          "url": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html",
+          "canonical_url": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html",
+          "title_topic_fingerprint": "updatevirtualinterfaceattributes — direct connect virtual interface migration: same-region connection or lag moves, brief bgp interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence — scenario",
+          "feature_lesson_fingerprint": "direct connect virtual interface migration: same-region connection or lag moves, brief bgp interruption, hosted-connection constraints, configuration preservation, pre-staging, and post-cutover evidence — scenario",
+          "source_case": "dx-vif-migration-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "tgw-drop-metrics-20261004",
+          "source_role": "primary_feature",
+          "target": "Transit and multi-VPC networking",
+          "topic": "Transit Gateway drop telemetry: blackhole, no-route, no-policy, and TTL-expired metrics; attachment and AZ dimensions; route-table search; alarm semantics; and evidence-led fault isolation",
+          "title": "CloudWatch metrics in AWS Transit Gateway",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-cloudwatch-metrics.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-cloudwatch-metrics.html",
+          "title_topic_fingerprint": "cloudwatch metrics in aws transit gateway — transit gateway drop telemetry: blackhole, no-route, no-policy, and ttl-expired metrics; attachment and az dimensions; route-table search; alarm semantics; and evidence-led fault isolation",
+          "feature_lesson_fingerprint": "transit gateway drop telemetry: blackhole, no-route, no-policy, and ttl-expired metrics; attachment and az dimensions; route-table search; alarm semantics; and evidence-led fault isolation",
+          "source_case": "tgw-drop-metrics-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "tgw-drop-metrics-20261004",
+          "source_role": "scenario_support",
+          "target": "Transit and multi-VPC networking",
+          "topic": "Transit Gateway drop telemetry: blackhole, no-route, no-policy, and TTL-expired metrics; attachment and AZ dimensions; route-table search; alarm semantics; and evidence-led fault isolation",
+          "title": "search-transit-gateway-routes",
+          "url": "https://docs.aws.amazon.com/cli/latest/reference/ec2/search-transit-gateway-routes.html",
+          "canonical_url": "https://docs.aws.amazon.com/cli/latest/reference/ec2/search-transit-gateway-routes.html",
+          "title_topic_fingerprint": "search-transit-gateway-routes — transit gateway drop telemetry: blackhole, no-route, no-policy, and ttl-expired metrics; attachment and az dimensions; route-table search; alarm semantics; and evidence-led fault isolation — scenario",
+          "feature_lesson_fingerprint": "transit gateway drop telemetry: blackhole, no-route, no-policy, and ttl-expired metrics; attachment and az dimensions; route-table search; alarm semantics; and evidence-led fault isolation — scenario",
+          "source_case": "tgw-drop-metrics-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "resolver-best-practices-20261004",
+          "source_role": "primary_feature",
+          "target": "DNS and service discovery",
+          "topic": "Route 53 VPC Resolver safe topology: loop prevention, endpoint security-group scaling, multi-AZ availability, rule specificity, subnet compatibility, and query-path evidence",
+          "title": "Best practices for VPC Resolver",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver.html",
+          "title_topic_fingerprint": "best practices for vpc resolver — route 53 vpc resolver safe topology: loop prevention, endpoint security-group scaling, multi-az availability, rule specificity, subnet compatibility, and query-path evidence",
+          "feature_lesson_fingerprint": "route 53 vpc resolver safe topology: loop prevention, endpoint security-group scaling, multi-az availability, rule specificity, subnet compatibility, and query-path evidence",
+          "source_case": "resolver-best-practices-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "resolver-best-practices-20261004",
+          "source_role": "scenario_support",
+          "target": "DNS and service discovery",
+          "topic": "Route 53 VPC Resolver safe topology: loop prevention, endpoint security-group scaling, multi-AZ availability, rule specificity, subnet compatibility, and query-path evidence",
+          "title": "How VPC Resolver determines where to forward DNS queries",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-vpc-to-network-where-to-forward-queries.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-vpc-to-network-where-to-forward-queries.html",
+          "title_topic_fingerprint": "how vpc resolver determines where to forward dns queries — route 53 vpc resolver safe topology: loop prevention, endpoint security-group scaling, multi-az availability, rule specificity, subnet compatibility, and query-path evidence — scenario",
+          "feature_lesson_fingerprint": "route 53 vpc resolver safe topology: loop prevention, endpoint security-group scaling, multi-az availability, rule specificity, subnet compatibility, and query-path evidence — scenario",
+          "source_case": "resolver-best-practices-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "vpce-address-dns-options-20261004",
+          "source_role": "primary_feature",
+          "target": "Private service and resource access",
+          "topic": "VPC endpoint address-family and DNS-option mutation: IPv4, IPv6, and dual-stack compatibility, subnet configuration, private DNS association, partial states, retry safety, and consumer cutover evidence",
+          "title": "VpcEndpoint",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcEndpoint.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcEndpoint.html",
+          "title_topic_fingerprint": "vpcendpoint — vpc endpoint address-family and dns-option mutation: ipv4, ipv6, and dual-stack compatibility, subnet configuration, private dns association, partial states, retry safety, and consumer cutover evidence",
+          "feature_lesson_fingerprint": "vpc endpoint address-family and dns-option mutation: ipv4, ipv6, and dual-stack compatibility, subnet configuration, private dns association, partial states, retry safety, and consumer cutover evidence",
+          "source_case": "vpce-address-dns-options-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "vpce-address-dns-options-20261004",
+          "source_role": "scenario_support",
+          "target": "Private service and resource access",
+          "topic": "VPC endpoint address-family and DNS-option mutation: IPv4, IPv6, and dual-stack compatibility, subnet configuration, private DNS association, partial states, retry safety, and consumer cutover evidence",
+          "title": "ModifyVpcEndpoint",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html",
+          "title_topic_fingerprint": "modifyvpcendpoint — vpc endpoint address-family and dns-option mutation: ipv4, ipv6, and dual-stack compatibility, subnet configuration, private dns association, partial states, retry safety, and consumer cutover evidence — scenario",
+          "feature_lesson_fingerprint": "vpc endpoint address-family and dns-option mutation: ipv4, ipv6, and dual-stack compatibility, subnet configuration, private dns association, partial states, retry safety, and consumer cutover evidence — scenario",
+          "source_case": "vpce-address-dns-options-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "elb-listener-idle-timeout-20261004",
+          "source_role": "primary_feature",
+          "target": "Load balancing and service insertion",
+          "topic": "NLB and GWLB listener idle-timeout attributes: 60–6000 second bounds, 350-second default, GWLB TCP-reset behavior, stateful flow consequences, API validation, and staged client testing",
+          "title": "ListenerAttribute",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ListenerAttribute.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ListenerAttribute.html",
+          "title_topic_fingerprint": "listenerattribute — nlb and gwlb listener idle-timeout attributes: 60–6000 second bounds, 350-second default, gwlb tcp-reset behavior, stateful flow consequences, api validation, and staged client testing",
+          "feature_lesson_fingerprint": "nlb and gwlb listener idle-timeout attributes: 60–6000 second bounds, 350-second default, gwlb tcp-reset behavior, stateful flow consequences, api validation, and staged client testing",
+          "source_case": "elb-listener-idle-timeout-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "elb-listener-idle-timeout-20261004",
+          "source_role": "scenario_support",
+          "target": "Load balancing and service insertion",
+          "topic": "NLB and GWLB listener idle-timeout attributes: 60–6000 second bounds, 350-second default, GWLB TCP-reset behavior, stateful flow consequences, API validation, and staged client testing",
+          "title": "ModifyListenerAttributes",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ModifyListenerAttributes.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ModifyListenerAttributes.html",
+          "title_topic_fingerprint": "modifylistenerattributes — nlb and gwlb listener idle-timeout attributes: 60–6000 second bounds, 350-second default, gwlb tcp-reset behavior, stateful flow consequences, api validation, and staged client testing — scenario",
+          "feature_lesson_fingerprint": "nlb and gwlb listener idle-timeout attributes: 60–6000 second bounds, 350-second default, gwlb tcp-reset behavior, stateful flow consequences, api validation, and staged client testing — scenario",
+          "source_case": "elb-listener-idle-timeout-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "cloudfront-response-headers-20261004",
+          "source_role": "primary_feature",
+          "target": "Edge and global traffic delivery",
+          "topic": "CloudFront response headers policies: origin-header removal and override, CORS and security headers, Server-Timing, viewer-only cache directives, managed-policy IDs, and cache-behavior canaries",
+          "title": "Add or remove HTTP headers in CloudFront responses with a policy",
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html",
+          "title_topic_fingerprint": "add or remove http headers in cloudfront responses with a policy — cloudfront response headers policies: origin-header removal and override, cors and security headers, server-timing, viewer-only cache directives, managed-policy ids, and cache-behavior canaries",
+          "feature_lesson_fingerprint": "cloudfront response headers policies: origin-header removal and override, cors and security headers, server-timing, viewer-only cache directives, managed-policy ids, and cache-behavior canaries",
+          "source_case": "cloudfront-response-headers-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "cloudfront-response-headers-20261004",
+          "source_role": "scenario_support",
+          "target": "Edge and global traffic delivery",
+          "topic": "CloudFront response headers policies: origin-header removal and override, CORS and security headers, Server-Timing, viewer-only cache directives, managed-policy IDs, and cache-behavior canaries",
+          "title": "Use managed response headers policies",
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html",
+          "title_topic_fingerprint": "use managed response headers policies — cloudfront response headers policies: origin-header removal and override, cors and security headers, server-timing, viewer-only cache directives, managed-policy ids, and cache-behavior canaries — scenario",
+          "feature_lesson_fingerprint": "cloudfront response headers policies: origin-header removal and override, cors and security headers, server-timing, viewer-only cache directives, managed-policy ids, and cache-behavior canaries — scenario",
+          "source_case": "cloudfront-response-headers-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "waf-logging-pipeline-20261004",
+          "source_role": "primary_feature",
+          "target": "Network inspection and perimeter protection",
+          "topic": "AWS WAF logging configuration: one destination per web ACL, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control",
+          "title": "Configuring logging for a protection pack (web ACL)",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/logging-management-configure.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/logging-management-configure.html",
+          "title_topic_fingerprint": "configuring logging for a protection pack (web acl) — aws waf logging configuration: one destination per web acl, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control",
+          "feature_lesson_fingerprint": "aws waf logging configuration: one destination per web acl, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control",
+          "source_case": "waf-logging-pipeline-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "waf-logging-pipeline-20261004",
+          "source_role": "scenario_support",
+          "target": "Network inspection and perimeter protection",
+          "topic": "AWS WAF logging configuration: one destination per web ACL, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control",
+          "title": "LoggingConfiguration",
+          "url": "https://docs.aws.amazon.com/waf/latest/APIReference/API_LoggingConfiguration.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/APIReference/API_LoggingConfiguration.html",
+          "title_topic_fingerprint": "loggingconfiguration — aws waf logging configuration: one destination per web acl, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control — scenario",
+          "feature_lesson_fingerprint": "aws waf logging configuration: one destination per web acl, destination naming and policy side effects, ordered keep/drop filters, field redaction, data protection, and evidence-preserving cost control — scenario",
+          "source_case": "waf-logging-pipeline-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "fms-admin-scope-20261004",
+          "source_role": "primary_feature",
+          "target": "Network access control and governance",
+          "topic": "Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence",
+          "title": "Using AWS Firewall Manager administrators",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-administrators.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-administrators.html",
+          "title_topic_fingerprint": "using aws firewall manager administrators — firewall manager multi-administrator scope: default and delegated administrators, ou, region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence",
+          "feature_lesson_fingerprint": "firewall manager multi-administrator scope: default and delegated administrators, ou, region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence",
+          "source_case": "fms-admin-scope-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "fms-admin-scope-20261004",
+          "source_role": "scenario_support",
+          "target": "Network access control and governance",
+          "topic": "Firewall Manager multi-administrator scope: default and delegated administrators, OU, Region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence",
+          "title": "Creating a Firewall Manager administrator account",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-creating-administrators.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-creating-administrators.html",
+          "title_topic_fingerprint": "creating a firewall manager administrator account — firewall manager multi-administrator scope: default and delegated administrators, ou, region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence — scenario",
+          "feature_lesson_fingerprint": "firewall manager multi-administrator scope: default and delegated administrators, ou, region, and policy-type restrictions, least privilege, third-party firewall boundary, onboarding order, and governance evidence — scenario",
+          "source_case": "fms-admin-scope-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "flowlogs-s3-layout-20261004",
+          "source_role": "primary_feature",
+          "target": "Network observability and operations",
+          "topic": "VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations",
+          "title": "Publish flow logs to Amazon S3",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html",
+          "title_topic_fingerprint": "publish flow logs to amazon s3 — vpc flow logs delivery to s3: hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations",
+          "feature_lesson_fingerprint": "vpc flow logs delivery to s3: hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations",
+          "source_case": "flowlogs-s3-layout-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "flowlogs-s3-layout-20261004",
+          "source_role": "scenario_support",
+          "target": "Network observability and operations",
+          "topic": "VPC Flow Logs delivery to S3: Hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations",
+          "title": "Flow log files",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3-path.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3-path.html",
+          "title_topic_fingerprint": "flow log files — vpc flow logs delivery to s3: hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations — scenario",
+          "feature_lesson_fingerprint": "vpc flow logs delivery to s3: hive-compatible prefixes, hourly file layout, resource and delivery ownership, parquet or text selection, eventual arrival, bucket-policy proof, and partition-aware investigations — scenario",
+          "source_case": "flowlogs-s3-layout-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "cfn-deployment-time-20261004",
+          "source_role": "primary_feature",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts",
+          "title": "Understand stack deployment time",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-deployment-time.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-deployment-time.html",
+          "title_topic_fingerprint": "understand stack deployment time — cloudformation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit dependson only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts",
+          "feature_lesson_fingerprint": "cloudformation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit dependson only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts",
+          "source_case": "cfn-deployment-time-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "cfn-deployment-time-20261004",
+          "source_role": "scenario_support",
+          "target": "Deployment and automation",
+          "topic": "CloudFormation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit DependsOn only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts",
+          "title": "DependsOn attribute",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-attribute-dependson.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-attribute-dependson.html",
+          "title_topic_fingerprint": "dependson attribute — cloudformation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit dependson only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts — scenario",
+          "feature_lesson_fingerprint": "cloudformation stack deployment-time engineering: dependency graphs, stabilization waiters, explicit dependson only where needed, parallelism, critical-path measurement, timeout evidence, and safe network rollouts — scenario",
+          "source_case": "cfn-deployment-time-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "ecs-eni-trunking-20261004",
+          "source_role": "primary_feature",
+          "target": "Workload and service integration",
+          "topic": "Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof",
+          "title": "Increasing Amazon ECS Linux container instance network interfaces",
+          "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html",
+          "title_topic_fingerprint": "increasing amazon ecs linux container instance network interfaces — amazon ecs awsvpctrunking: trunk and branch enis, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof",
+          "feature_lesson_fingerprint": "amazon ecs awsvpctrunking: trunk and branch enis, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof",
+          "source_case": "ecs-eni-trunking-20261004: feature lesson",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        },
+        {
+          "target_id": "ecs-eni-trunking-20261004",
+          "source_role": "scenario_support",
+          "target": "Workload and service integration",
+          "topic": "Amazon ECS awsvpcTrunking: trunk and branch ENIs, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof",
+          "title": "Supported instances for increased Amazon ECS container network interfaces",
+          "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/eni-trunking-supported-instance-types.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/eni-trunking-supported-instance-types.html",
+          "title_topic_fingerprint": "supported instances for increased amazon ecs container network interfaces — amazon ecs awsvpctrunking: trunk and branch enis, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof — scenario",
+          "feature_lesson_fingerprint": "amazon ecs awsvpctrunking: trunk and branch enis, task-density gains, account opt-in, service-linked role, supported instance types, default-security-group exposure, registration failures, and subnet capacity proof — scenario",
+          "source_case": "ecs-eni-trunking-20261004: operational scenario",
+          "last_used": "2026-10-04",
+          "earliest_eligible_reuse_date": "2026-11-03"
+        }
+      ]
     }
   ]
 }
