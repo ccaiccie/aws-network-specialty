@@ -17578,6 +17578,1092 @@
           "earliest_eligible_reuse_date": "2026-11-03"
         }
       ]
+    },
+    {
+      "generated_at": "2026-10-05T07:59:00-07:00",
+      "report": "AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-05-07-59.html",
+      "report_url": "https://ccaiccie.github.io/aws-network-specialty/AWS_Advanced_Networking_Specialty_Daily_Study_Quiz_2026-10-05-07-59.html",
+      "certification_status": {
+        "result": "AWS states ANS-C01 is being retired; the last day to take the exam is December 31, 2026 (checked 2026-10-05).",
+        "source_url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+      },
+      "ledger": {
+        "path": "docs/aws-study-uniqueness-ledger.json",
+        "version": "1.0",
+        "history_checked": true,
+        "rolling_calendar_days": 30
+      },
+      "uniqueness_window": {
+        "days": 30,
+        "block_through": "2026-11-03",
+        "earliest_eligible_reuse_date": "2026-11-04"
+      },
+      "validation": {
+        "mandatory_targets": "12/12",
+        "primary_feature_sources": "12/12",
+        "scenario_support_sources": "12/12",
+        "domain_distribution": "15/13/10/12",
+        "quiz_questions": 50,
+        "images": {
+          "count": 3,
+          "status": "PASS",
+          "note": "Three AWS-hosted PNG figures were verified and rendered; all have visible source provenance."
+        },
+        "mermaid_diagrams": 12,
+        "uniqueness": "PASS",
+        "quiz_characteristics": {
+          "scenario_based": 50,
+          "support_or_implementation_grounded": 50,
+          "multi_step": 50,
+          "competing_hypotheses": 50,
+          "configuration_or_design_decision": 50,
+          "cross_service_or_cross_account": 50
+        },
+        "mermaid": {
+          "count": 12,
+          "status": "PASS"
+        }
+      },
+      "targets": [
+        {
+          "id": "dhcp",
+          "target_number": 1,
+          "target": "VPC foundations",
+          "feature_topic": "DHCP option sets, DNS delivery, and VPC-level network configuration",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSetConcepts.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSet.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSetConcepts.html",
+            "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSet.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "vpn",
+          "target_number": 2,
+          "target": "Hybrid connectivity",
+          "feature_topic": "Site-to-Site VPN tunnel options, failure behavior, and endpoint replacement",
+          "primary_source": "https://docs.aws.amazon.com/vpn/latest/s2svpn/tunnel-configure.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpn/latest/s2svpn/endpoint-replacements.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpn/latest/s2svpn/tunnel-configure.html",
+            "https://docs.aws.amazon.com/vpn/latest/s2svpn/endpoint-replacements.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "tgw-peering",
+          "target_number": 3,
+          "target": "Transit Gateway",
+          "feature_topic": "Transit Gateway peering attachments, route ownership, and cross-Region reachability",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering-accept-reject.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering.html",
+            "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering-accept-reject.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "resolver",
+          "target_number": 4,
+          "target": "DNS and traffic steering",
+          "feature_topic": "Route 53 Resolver outbound forwarding, hybrid DNS paths, and loop prevention",
+          "primary_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-forwarding-outbound-queries.html",
+          "scenario_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver-endpoints.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-forwarding-outbound-queries.html",
+            "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver-endpoints.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "privatelink-provider",
+          "target_number": 5,
+          "target": "PrivateLink service publishing",
+          "feature_topic": "PrivateLink provider-side endpoint services, permissions, and connection lifecycle",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/privatelink/create-endpoint-service.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html",
+            "https://docs.aws.amazon.com/vpc/latest/privatelink/create-endpoint-service.html"
+          ],
+          "image_url": "https://docs.aws.amazon.com/images/vpc/latest/privatelink/images/privatelink-concepts.png",
+          "image_urls": [
+            "https://docs.aws.amazon.com/images/vpc/latest/privatelink/images/privatelink-concepts.png"
+          ]
+        },
+        {
+          "id": "alb",
+          "target_number": 6,
+          "target": "Load balancing",
+          "feature_topic": "Application Load Balancer listeners, listener rules, and target diagnosis",
+          "primary_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html",
+          "scenario_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html",
+            "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "cloudfront",
+          "target_number": 7,
+          "target": "Edge networking",
+          "feature_topic": "CloudFront origin groups, cache-miss failover, and high-availability behavior",
+          "primary_source": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html",
+          "scenario_source": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorOriginGroups.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html",
+            "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorOriginGroups.html"
+          ],
+          "image_url": "https://docs.aws.amazon.com/images/AmazonCloudFront/latest/DeveloperGuide/images/origingroups-overview.png",
+          "image_urls": [
+            "https://docs.aws.amazon.com/images/AmazonCloudFront/latest/DeveloperGuide/images/origingroups-overview.png"
+          ]
+        },
+        {
+          "id": "waf",
+          "target_number": 8,
+          "target": "Traffic inspection",
+          "feature_topic": "AWS WAF rule priority, terminating actions, and safe protection tuning",
+          "primary_source": "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-processing-order.html",
+          "scenario_source": "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing-activities.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-processing-order.html",
+            "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing-activities.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "fms",
+          "target_number": 9,
+          "target": "Network governance",
+          "feature_topic": "AWS Firewall Manager security group policies, auditing, and centralized remediation",
+          "primary_source": "https://docs.aws.amazon.com/waf/latest/developerguide/security-group-policies.html",
+          "scenario_source": "https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-fms-security-group.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/waf/latest/developerguide/security-group-policies.html",
+            "https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-fms-security-group.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "reachability",
+          "target_number": 10,
+          "target": "Network observability",
+          "feature_topic": "VPC Reachability Analyzer path analysis and evidence-driven troubleshooting",
+          "primary_source": "https://docs.aws.amazon.com/vpc/latest/reachability/what-is-reachability-analyzer.html",
+          "scenario_source": "https://docs.aws.amazon.com/vpc/latest/userguide/reachability-analyzer.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/vpc/latest/reachability/what-is-reachability-analyzer.html",
+            "https://docs.aws.amazon.com/vpc/latest/userguide/reachability-analyzer.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        },
+        {
+          "id": "stacksets",
+          "target_number": 11,
+          "target": "Network automation",
+          "feature_topic": "CloudFormation StackSets, Organizations integration, and controlled multi-account rollout",
+          "primary_source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "scenario_source": "https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+            "https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html"
+          ],
+          "image_url": "https://docs.aws.amazon.com/images/AWSCloudFormation/latest/UserGuide/images/stack_sets_operations_stacks_sv.png",
+          "image_urls": [
+            "https://docs.aws.amazon.com/images/AWSCloudFormation/latest/UserGuide/images/stack_sets_operations_stacks_sv.png"
+          ]
+        },
+        {
+          "id": "lambda-vpc",
+          "target_number": 12,
+          "target": "Workload networking",
+          "feature_topic": "Lambda VPC attachment, Hyperplane ENIs, private egress, and networking diagnosis",
+          "primary_source": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html",
+          "scenario_source": "https://docs.aws.amazon.com/lambda/latest/dg/troubleshooting-networking.html",
+          "mermaid_source_urls": [
+            "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html",
+            "https://docs.aws.amazon.com/lambda/latest/dg/troubleshooting-networking.html"
+          ],
+          "image_url": null,
+          "image_urls": []
+        }
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "target_id": "dhcp",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A two-AZ production VPC moves a corporate application to a new DNS search suffix.",
+          "question_fingerprint": "Which statement correctly describes a DHCP option set in a VPC?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 2,
+          "target_id": "dhcp",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A shared-services account reports private hosted-zone lookups changed after a VPC-wide association.",
+          "question_fingerprint": "A team needs corporate names and AWS private names to resolve from one VPC. What is the strongest design?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 3,
+          "target_id": "dhcp",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A deployment succeeds in one subnet but a representative workload receives unexpected resolver settings.",
+          "question_fingerprint": "After associating a new DHCP option set, what evidence is most direct?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 4,
+          "target_id": "dhcp",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A compliance review finds that an unreviewed role can alter DNS delivery for every workload in a VPC.",
+          "question_fingerprint": "Which control most directly limits unauthorized VPC-wide DNS delivery changes?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 5,
+          "target_id": "vpn",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A hybrid application has a planned maintenance window while one customer-gateway peer is under change control.",
+          "question_fingerprint": "What is the resilience baseline for an AWS Site-to-Site VPN connection?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 6,
+          "target_id": "vpn",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A data-center router receives route updates while engineers compare BGP convergence with static-route tracking.",
+          "question_fingerprint": "Which approach normally supplies dynamic hybrid route exchange for a VPN?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 7,
+          "target_id": "vpn",
+          "domain": "Network Design",
+          "scenario_fingerprint": "AWS notifies the team of a tunnel endpoint replacement before the next business-critical release.",
+          "question_fingerprint": "During a scheduled tunnel endpoint replacement, what should be validated before the window?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 8,
+          "target_id": "vpn",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An incident bridge needs to share tunnel evidence without exposing secrets or weakening the control plane.",
+          "question_fingerprint": "A hybrid-connectivity design review asks you to select TWO security practices that should remain true during VPN troubleshooting.",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 9,
+          "target_id": "tgw-peering",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A workload VPC in one Region must reach shared services in another Region through an already accepted peer.",
+          "question_fingerprint": "A cross-Region Transit Gateway peer is accepted but application traffic still fails. Match each control-plane/data-plane item to the requirement that restores intended reachability.",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 10,
+          "target_id": "tgw-peering",
+          "domain": "Network Design",
+          "scenario_fingerprint": "Two transit domains have non-overlapping CIDRs and must preserve route-table ownership boundaries.",
+          "question_fingerprint": "What architectural statement about Transit Gateway peering is accurate?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 11,
+          "target_id": "tgw-peering",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A route-change review needs evidence that the new peer does not create unintended spoke-to-spoke transit.",
+          "question_fingerprint": "Which evidence best confirms a peering route change did not cause unexpected transit?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 12,
+          "target_id": "tgw-peering",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A centralized inspection VPC handles stateful flows between Region-specific transit gateways.",
+          "question_fingerprint": "When stateful inspection is inserted around a transit design, which property is especially important?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 13,
+          "target_id": "resolver",
+          "domain": "Network Design",
+          "scenario_fingerprint": "An application in two private subnets must resolve a corporate suffix over established hybrid connectivity.",
+          "question_fingerprint": "What does a Route 53 Resolver outbound rule select?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 14,
+          "target_id": "resolver",
+          "domain": "Network Design",
+          "scenario_fingerprint": "The DNS teams on each side are designing reciprocal conditional forwarding boundaries.",
+          "question_fingerprint": "How should a hybrid DNS design avoid forwarding loops?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 15,
+          "target_id": "resolver",
+          "domain": "Network Design",
+          "scenario_fingerprint": "A production lookup for a corporate name times out while unrelated public and private AWS names remain healthy.",
+          "question_fingerprint": "A query timeout occurs for a corporate suffix. Which evidence distinguishes a timeout from an authoritative negative answer?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 16,
+          "target_id": "resolver",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A security review is limiting which on-premises resolvers may query through an outbound endpoint.",
+          "question_fingerprint": "What should protect outbound endpoint ENIs?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 17,
+          "target_id": "privatelink-provider",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A provider publishes an internal service for separately owned consumer accounts.",
+          "question_fingerprint": "What is the provider-side boundary created by an AWS PrivateLink endpoint service?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 18,
+          "target_id": "privatelink-provider",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A consumer creates an interface endpoint and the provider controls its approval lifecycle.",
+          "question_fingerprint": "A consumer endpoint is pending acceptance. Which provider-side action may be required?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 19,
+          "target_id": "privatelink-provider",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A launch checklist separates service state, listener health, DNS, and security policy checks.",
+          "question_fingerprint": "What is the most useful diagnosis order for a new PrivateLink consumer connection?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 20,
+          "target_id": "privatelink-provider",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "The platform team must grant access to a new account without exposing the provider VPC broadly.",
+          "question_fingerprint": "A PrivateLink provider wants a controlled multi-account onboarding process. Select TWO actions that support that design.",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 21,
+          "target_id": "alb",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A multi-service HTTPS entry point routes customer traffic by host and path.",
+          "question_fingerprint": "What does an ALB listener rule primarily determine?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 22,
+          "target_id": "alb",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A newly released API has healthy targets but production requests reach the older service.",
+          "question_fingerprint": "Healthy targets serve the wrong application. What should be inspected first?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 23,
+          "target_id": "alb",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "An on-call engineer has ALB access logs, target-health state, and backend logs during an incident.",
+          "question_fingerprint": "Which pair provides complementary ALB diagnosis evidence?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 24,
+          "target_id": "alb",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A private workload requires the ALB to be its only supported inbound path.",
+          "question_fingerprint": "Which security-group path is normally desired for private ALB targets?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 25,
+          "target_id": "cloudfront",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A regional origin outage affects an application with a CloudFront distribution and an origin group.",
+          "question_fingerprint": "When does CloudFront origin failover evaluate the primary origin?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 26,
+          "target_id": "cloudfront",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A release engineer chooses the server-error conditions that should cause fallback to a secondary.",
+          "question_fingerprint": "What must be configured for an origin group to fail over on server errors?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 27,
+          "target_id": "cloudfront",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A game-day uses a controlled uncached object to exercise origin behavior safely.",
+          "question_fingerprint": "A failover test only fetches a cached page. What is the correct next step?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 28,
+          "target_id": "cloudfront",
+          "domain": "Network Implementation",
+          "scenario_fingerprint": "A disaster-recovery review compares primary and secondary origin access and TLS posture.",
+          "question_fingerprint": "Which security requirement applies to a CloudFront secondary origin?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 29,
+          "target_id": "waf",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A public API is protected by a web ACL with managed and custom rules.",
+          "question_fingerprint": "What determines AWS WAF rule evaluation order?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 30,
+          "target_id": "waf",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A new web ACL rule is introduced in Count before it is allowed to terminate production requests.",
+          "question_fingerprint": "What is the purpose of Count during WAF rule tuning?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 31,
+          "target_id": "waf",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "An upload endpoint is blocked and engineers must avoid disabling unrelated protections.",
+          "question_fingerprint": "A web ACL change must reduce false positives without leaving protections unobserved. Select TWO sound tuning steps.",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 32,
+          "target_id": "waf",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A narrow exception is designed to coexist with a broad terminating rule at a predictable priority.",
+          "question_fingerprint": "Why can an allow exception fail to work even when its condition is correct?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 33,
+          "target_id": "waf",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A service owner reviews the request path that reaches the web ACL default action.",
+          "question_fingerprint": "Which statement is true about a web ACL default action?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 34,
+          "target_id": "fms",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A central security team governs application accounts in multiple organizational units.",
+          "question_fingerprint": "What is a central benefit of Firewall Manager security group policies?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 35,
+          "target_id": "fms",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A pilot OU is evaluating automatic security-group remediation before expansion.",
+          "question_fingerprint": "Before enabling broad automatic remediation, what rollout approach is prudent?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 36,
+          "target_id": "fms",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A product team deploys network controls through infrastructure as code while a central policy also acts.",
+          "question_fingerprint": "A workload template recreates a group that Firewall Manager remediates. What does this show?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 37,
+          "target_id": "fms",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A delegated-administration review examines who can change organization-wide network policies.",
+          "question_fingerprint": "Which administrative protection is appropriate for Firewall Manager?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 38,
+          "target_id": "reachability",
+          "domain": "Network Management and Operation",
+          "scenario_fingerprint": "A workload in one subnet needs a TCP connection to a private service after a routing change.",
+          "question_fingerprint": "What type of evidence does Reachability Analyzer provide?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 39,
+          "target_id": "reachability",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An architecture review models an exact client-to-service flow instead of a vague VPC-to-VPC assertion.",
+          "question_fingerprint": "Which analysis input is most useful for a TCP application problem?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 40,
+          "target_id": "reachability",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A path-analysis result says the configuration is reachable while the runtime application still reports failure.",
+          "question_fingerprint": "Analyzer reports the path reachable, but the app still fails. What should follow?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 41,
+          "target_id": "reachability",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A segmentation review discovers a route/policy combination that reaches a destination unexpectedly.",
+          "question_fingerprint": "What is a security-relevant unexpected Reachability Analyzer result?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 42,
+          "target_id": "stacksets",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A platform team deploys the same networking foundation across selected accounts and Regions.",
+          "question_fingerprint": "A networking foundation StackSet is rolling out across an Organization. Match each StackSets component to its role in a controlled deployment.",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 43,
+          "target_id": "stacksets",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A rollout owner must cap concurrency and contain failure impact while updating shared networking.",
+          "question_fingerprint": "What should control the blast radius of a cross-account network rollout?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 44,
+          "target_id": "stacksets",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "Some target Regions use different endpoint identifiers than the template assumes.",
+          "question_fingerprint": "A regional identifier is fixed in a StackSet template and some targets fail. What is the proper remedy?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 45,
+          "target_id": "stacksets",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A delegated administrator can launch a change that affects multiple member accounts.",
+          "question_fingerprint": "Which privilege concern is especially important for StackSets?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 46,
+          "target_id": "lambda-vpc",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A VPC-attached Lambda function invokes a private database and a third-party public API.",
+          "question_fingerprint": "A VPC-attached Lambda must reach a private database and a public IPv4 API. Select TWO design statements that should be true.",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 47,
+          "target_id": "lambda-vpc",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A function in selected subnets times out to the internet while an EC2 test host has different routing.",
+          "question_fingerprint": "A VPC-attached Lambda needs to call a public IPv4 API. What route design is commonly required?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 48,
+          "target_id": "lambda-vpc",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A production networking change needs a canary from the exact Lambda configuration.",
+          "question_fingerprint": "What should be tested after a Lambda networking change?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 49,
+          "target_id": "lambda-vpc",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "A security review reduces the function’s allowed network destinations to its real dependencies.",
+          "question_fingerprint": "Which principle best applies to a Lambda security group?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        },
+        {
+          "id": 50,
+          "target_id": "lambda-vpc",
+          "domain": "Network Security, Compliance, and Governance",
+          "scenario_fingerprint": "An operator investigates how Lambda provides VPC network interfaces without customer-managed ENIs.",
+          "question_fingerprint": "Which statement about Lambda Hyperplane ENIs is accurate?",
+          "difficulty": "advanced scenario/design reasoning",
+          "root_cause_class": "feature-boundary decision",
+          "correct_action_class": "source-backed configuration/diagnosis action"
+        }
+      ],
+      "sources": [
+        {
+          "target_id": "dhcp",
+          "target": "VPC foundations",
+          "title": "DHCP option set concepts",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSetConcepts.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSetConcepts.html",
+          "topic_fingerprint": "DHCP option sets, DNS delivery, and VPC-level network configuration",
+          "feature_lesson_fingerprint": "dhcp option sets, dns delivery, and vpc-level network configuration",
+          "source_case": "dhcp: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "DHCP option sets, DNS delivery, and VPC-level network configuration",
+          "title_topic_fingerprint": "dhcp option set concepts — dhcp option sets, dns delivery, and vpc-level network configuration"
+        },
+        {
+          "target_id": "dhcp",
+          "target": "VPC foundations",
+          "title": "Work with DHCP option sets",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSet.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/DHCPOptionSet.html",
+          "topic_fingerprint": "DHCP option sets, DNS delivery, and VPC-level network configuration scenario",
+          "feature_lesson_fingerprint": "dhcp option sets, dns delivery, and vpc-level network configuration — scenario",
+          "source_case": "dhcp: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "DHCP option sets, DNS delivery, and VPC-level network configuration",
+          "title_topic_fingerprint": "work with dhcp option sets — dhcp option sets, dns delivery, and vpc-level network configuration — scenario"
+        },
+        {
+          "target_id": "vpn",
+          "target": "Hybrid connectivity",
+          "title": "Configure tunnel options for AWS Site-to-Site VPN",
+          "url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/tunnel-configure.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/tunnel-configure.html",
+          "topic_fingerprint": "Site-to-Site VPN tunnel options, failure behavior, and endpoint replacement",
+          "feature_lesson_fingerprint": "site-to-site vpn tunnel options, failure behavior, and endpoint replacement",
+          "source_case": "vpn: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "Site-to-Site VPN tunnel options, failure behavior, and endpoint replacement",
+          "title_topic_fingerprint": "configure tunnel options for aws site-to-site vpn — site-to-site vpn tunnel options, failure behavior, and endpoint replacement"
+        },
+        {
+          "target_id": "vpn",
+          "target": "Hybrid connectivity",
+          "title": "AWS Site-to-Site VPN tunnel endpoint replacements",
+          "url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/endpoint-replacements.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/endpoint-replacements.html",
+          "topic_fingerprint": "Site-to-Site VPN tunnel options, failure behavior, and endpoint replacement scenario",
+          "feature_lesson_fingerprint": "site-to-site vpn tunnel options, failure behavior, and endpoint replacement — scenario",
+          "source_case": "vpn: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "Site-to-Site VPN tunnel options, failure behavior, and endpoint replacement",
+          "title_topic_fingerprint": "aws site-to-site vpn tunnel endpoint replacements — site-to-site vpn tunnel options, failure behavior, and endpoint replacement — scenario"
+        },
+        {
+          "target_id": "tgw-peering",
+          "target": "Transit Gateway",
+          "title": "Transit gateway peering attachments",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering.html",
+          "topic_fingerprint": "Transit Gateway peering attachments, route ownership, and cross-Region reachability",
+          "feature_lesson_fingerprint": "transit gateway peering attachments, route ownership, and cross-region reachability",
+          "source_case": "tgw-peering: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "Transit Gateway peering attachments, route ownership, and cross-Region reachability",
+          "title_topic_fingerprint": "transit gateway peering attachments — transit gateway peering attachments, route ownership, and cross-region reachability"
+        },
+        {
+          "target_id": "tgw-peering",
+          "target": "Transit Gateway",
+          "title": "Accept or reject a transit gateway peering attachment",
+          "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering-accept-reject.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-peering-accept-reject.html",
+          "topic_fingerprint": "Transit Gateway peering attachments, route ownership, and cross-Region reachability scenario",
+          "feature_lesson_fingerprint": "transit gateway peering attachments, route ownership, and cross-region reachability — scenario",
+          "source_case": "tgw-peering: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "Transit Gateway peering attachments, route ownership, and cross-Region reachability",
+          "title_topic_fingerprint": "accept or reject a transit gateway peering attachment — transit gateway peering attachments, route ownership, and cross-region reachability — scenario"
+        },
+        {
+          "target_id": "resolver",
+          "target": "DNS and traffic steering",
+          "title": "Forwarding outbound DNS queries to your network",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-forwarding-outbound-queries.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-forwarding-outbound-queries.html",
+          "topic_fingerprint": "Route 53 Resolver outbound forwarding, hybrid DNS paths, and loop prevention",
+          "feature_lesson_fingerprint": "route 53 resolver outbound forwarding, hybrid dns paths, and loop prevention",
+          "source_case": "resolver: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "Route 53 Resolver outbound forwarding, hybrid DNS paths, and loop prevention",
+          "title_topic_fingerprint": "forwarding outbound dns queries to your network — route 53 resolver outbound forwarding, hybrid dns paths, and loop prevention"
+        },
+        {
+          "target_id": "resolver",
+          "target": "DNS and traffic steering",
+          "title": "Avoid loop configurations with Resolver endpoints",
+          "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver-endpoints.html",
+          "canonical_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-resolver-endpoints.html",
+          "topic_fingerprint": "Route 53 Resolver outbound forwarding, hybrid DNS paths, and loop prevention scenario",
+          "feature_lesson_fingerprint": "route 53 resolver outbound forwarding, hybrid dns paths, and loop prevention — scenario",
+          "source_case": "resolver: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "Route 53 Resolver outbound forwarding, hybrid DNS paths, and loop prevention",
+          "title_topic_fingerprint": "avoid loop configurations with resolver endpoints — route 53 resolver outbound forwarding, hybrid dns paths, and loop prevention — scenario"
+        },
+        {
+          "target_id": "privatelink-provider",
+          "target": "PrivateLink service publishing",
+          "title": "AWS PrivateLink concepts",
+          "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html",
+          "topic_fingerprint": "PrivateLink provider-side endpoint services, permissions, and connection lifecycle",
+          "feature_lesson_fingerprint": "privatelink provider-side endpoint services, permissions, and connection lifecycle",
+          "source_case": "privatelink-provider: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "PrivateLink provider-side endpoint services, permissions, and connection lifecycle",
+          "title_topic_fingerprint": "aws privatelink concepts — privatelink provider-side endpoint services, permissions, and connection lifecycle"
+        },
+        {
+          "target_id": "privatelink-provider",
+          "target": "PrivateLink service publishing",
+          "title": "Create an endpoint service",
+          "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/create-endpoint-service.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/privatelink/create-endpoint-service.html",
+          "topic_fingerprint": "PrivateLink provider-side endpoint services, permissions, and connection lifecycle scenario",
+          "feature_lesson_fingerprint": "privatelink provider-side endpoint services, permissions, and connection lifecycle — scenario",
+          "source_case": "privatelink-provider: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "PrivateLink provider-side endpoint services, permissions, and connection lifecycle",
+          "title_topic_fingerprint": "create an endpoint service — privatelink provider-side endpoint services, permissions, and connection lifecycle — scenario"
+        },
+        {
+          "target_id": "alb",
+          "target": "Load balancing",
+          "title": "Listeners for Application Load Balancers",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html",
+          "topic_fingerprint": "Application Load Balancer listeners, listener rules, and target diagnosis",
+          "feature_lesson_fingerprint": "application load balancer listeners, listener rules, and target diagnosis",
+          "source_case": "alb: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "Application Load Balancer listeners, listener rules, and target diagnosis",
+          "title_topic_fingerprint": "listeners for application load balancers — application load balancer listeners, listener rules, and target diagnosis"
+        },
+        {
+          "target_id": "alb",
+          "target": "Load balancing",
+          "title": "Troubleshoot Application Load Balancers",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html",
+          "canonical_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html",
+          "topic_fingerprint": "Application Load Balancer listeners, listener rules, and target diagnosis scenario",
+          "feature_lesson_fingerprint": "application load balancer listeners, listener rules, and target diagnosis — scenario",
+          "source_case": "alb: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "Application Load Balancer listeners, listener rules, and target diagnosis",
+          "title_topic_fingerprint": "troubleshoot application load balancers — application load balancer listeners, listener rules, and target diagnosis — scenario"
+        },
+        {
+          "target_id": "cloudfront",
+          "target": "Edge networking",
+          "title": "Optimize high availability with CloudFront origin failover",
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html",
+          "topic_fingerprint": "CloudFront origin groups, cache-miss failover, and high-availability behavior",
+          "feature_lesson_fingerprint": "cloudfront origin groups, cache-miss failover, and high-availability behavior",
+          "source_case": "cloudfront: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "CloudFront origin groups, cache-miss failover, and high-availability behavior",
+          "title_topic_fingerprint": "optimize high availability with cloudfront origin failover — cloudfront origin groups, cache-miss failover, and high-availability behavior"
+        },
+        {
+          "target_id": "cloudfront",
+          "target": "Edge networking",
+          "title": "Request and response behavior for origin groups",
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorOriginGroups.html",
+          "canonical_url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorOriginGroups.html",
+          "topic_fingerprint": "CloudFront origin groups, cache-miss failover, and high-availability behavior scenario",
+          "feature_lesson_fingerprint": "cloudfront origin groups, cache-miss failover, and high-availability behavior — scenario",
+          "source_case": "cloudfront: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "CloudFront origin groups, cache-miss failover, and high-availability behavior",
+          "title_topic_fingerprint": "request and response behavior for origin groups — cloudfront origin groups, cache-miss failover, and high-availability behavior — scenario"
+        },
+        {
+          "target_id": "waf",
+          "target": "Traffic inspection",
+          "title": "Setting rule priority",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-processing-order.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-processing-order.html",
+          "topic_fingerprint": "AWS WAF rule priority, terminating actions, and safe protection tuning",
+          "feature_lesson_fingerprint": "aws waf rule priority, terminating actions, and safe protection tuning",
+          "source_case": "waf: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "AWS WAF rule priority, terminating actions, and safe protection tuning",
+          "title_topic_fingerprint": "setting rule priority — aws waf rule priority, terminating actions, and safe protection tuning"
+        },
+        {
+          "target_id": "waf",
+          "target": "Traffic inspection",
+          "title": "Monitoring and tuning AWS WAF protections",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing-activities.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing-activities.html",
+          "topic_fingerprint": "AWS WAF rule priority, terminating actions, and safe protection tuning scenario",
+          "feature_lesson_fingerprint": "aws waf rule priority, terminating actions, and safe protection tuning — scenario",
+          "source_case": "waf: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "AWS WAF rule priority, terminating actions, and safe protection tuning",
+          "title_topic_fingerprint": "monitoring and tuning aws waf protections — aws waf rule priority, terminating actions, and safe protection tuning — scenario"
+        },
+        {
+          "target_id": "fms",
+          "target": "Network governance",
+          "title": "Using security group policies in Firewall Manager",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/security-group-policies.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/security-group-policies.html",
+          "topic_fingerprint": "AWS Firewall Manager security group policies, auditing, and centralized remediation",
+          "feature_lesson_fingerprint": "aws firewall manager security group policies, auditing, and centralized remediation",
+          "source_case": "fms: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "AWS Firewall Manager security group policies, auditing, and centralized remediation",
+          "title_topic_fingerprint": "using security group policies in firewall manager — aws firewall manager security group policies, auditing, and centralized remediation"
+        },
+        {
+          "target_id": "fms",
+          "target": "Network governance",
+          "title": "Setting up AWS Firewall Manager VPC security group policies",
+          "url": "https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-fms-security-group.html",
+          "canonical_url": "https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-fms-security-group.html",
+          "topic_fingerprint": "AWS Firewall Manager security group policies, auditing, and centralized remediation scenario",
+          "feature_lesson_fingerprint": "aws firewall manager security group policies, auditing, and centralized remediation — scenario",
+          "source_case": "fms: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "AWS Firewall Manager security group policies, auditing, and centralized remediation",
+          "title_topic_fingerprint": "setting up aws firewall manager vpc security group policies — aws firewall manager security group policies, auditing, and centralized remediation — scenario"
+        },
+        {
+          "target_id": "reachability",
+          "target": "Network observability",
+          "title": "What is Reachability Analyzer?",
+          "url": "https://docs.aws.amazon.com/vpc/latest/reachability/what-is-reachability-analyzer.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/reachability/what-is-reachability-analyzer.html",
+          "topic_fingerprint": "VPC Reachability Analyzer path analysis and evidence-driven troubleshooting",
+          "feature_lesson_fingerprint": "vpc reachability analyzer path analysis and evidence-driven troubleshooting",
+          "source_case": "reachability: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "VPC Reachability Analyzer path analysis and evidence-driven troubleshooting",
+          "title_topic_fingerprint": "what is reachability analyzer? — vpc reachability analyzer path analysis and evidence-driven troubleshooting"
+        },
+        {
+          "target_id": "reachability",
+          "target": "Network observability",
+          "title": "Troubleshoot reachability issues using Reachability Analyzer",
+          "url": "https://docs.aws.amazon.com/vpc/latest/userguide/reachability-analyzer.html",
+          "canonical_url": "https://docs.aws.amazon.com/vpc/latest/userguide/reachability-analyzer.html",
+          "topic_fingerprint": "VPC Reachability Analyzer path analysis and evidence-driven troubleshooting scenario",
+          "feature_lesson_fingerprint": "vpc reachability analyzer path analysis and evidence-driven troubleshooting — scenario",
+          "source_case": "reachability: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "VPC Reachability Analyzer path analysis and evidence-driven troubleshooting",
+          "title_topic_fingerprint": "troubleshoot reachability issues using reachability analyzer — vpc reachability analyzer path analysis and evidence-driven troubleshooting — scenario"
+        },
+        {
+          "target_id": "stacksets",
+          "target": "Network automation",
+          "title": "StackSets concepts",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "canonical_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "topic_fingerprint": "CloudFormation StackSets, Organizations integration, and controlled multi-account rollout",
+          "feature_lesson_fingerprint": "cloudformation stacksets, organizations integration, and controlled multi-account rollout",
+          "source_case": "stacksets: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "CloudFormation StackSets, Organizations integration, and controlled multi-account rollout",
+          "title_topic_fingerprint": "stacksets concepts — cloudformation stacksets, organizations integration, and controlled multi-account rollout"
+        },
+        {
+          "target_id": "stacksets",
+          "target": "Network automation",
+          "title": "AWS CloudFormation StackSets and AWS Organizations",
+          "url": "https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html",
+          "canonical_url": "https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html",
+          "topic_fingerprint": "CloudFormation StackSets, Organizations integration, and controlled multi-account rollout scenario",
+          "feature_lesson_fingerprint": "cloudformation stacksets, organizations integration, and controlled multi-account rollout — scenario",
+          "source_case": "stacksets: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "CloudFormation StackSets, Organizations integration, and controlled multi-account rollout",
+          "title_topic_fingerprint": "aws cloudformation stacksets and aws organizations — cloudformation stacksets, organizations integration, and controlled multi-account rollout — scenario"
+        },
+        {
+          "target_id": "lambda-vpc",
+          "target": "Workload networking",
+          "title": "Giving Lambda functions access to resources in a VPC",
+          "url": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html",
+          "canonical_url": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html",
+          "topic_fingerprint": "Lambda VPC attachment, Hyperplane ENIs, private egress, and networking diagnosis",
+          "feature_lesson_fingerprint": "lambda vpc attachment, hyperplane enis, private egress, and networking diagnosis",
+          "source_case": "lambda-vpc: feature lesson",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "primary_feature",
+          "topic": "Lambda VPC attachment, Hyperplane ENIs, private egress, and networking diagnosis",
+          "title_topic_fingerprint": "giving lambda functions access to resources in a vpc — lambda vpc attachment, hyperplane enis, private egress, and networking diagnosis"
+        },
+        {
+          "target_id": "lambda-vpc",
+          "target": "Workload networking",
+          "title": "Troubleshoot networking issues in Lambda",
+          "url": "https://docs.aws.amazon.com/lambda/latest/dg/troubleshooting-networking.html",
+          "canonical_url": "https://docs.aws.amazon.com/lambda/latest/dg/troubleshooting-networking.html",
+          "topic_fingerprint": "Lambda VPC attachment, Hyperplane ENIs, private egress, and networking diagnosis scenario",
+          "feature_lesson_fingerprint": "lambda vpc attachment, hyperplane enis, private egress, and networking diagnosis — scenario",
+          "source_case": "lambda-vpc: operational scenario",
+          "last_used": "2026-10-05",
+          "earliest_eligible_reuse_date": "2026-11-04",
+          "source_role": "scenario_support",
+          "topic": "Lambda VPC attachment, Hyperplane ENIs, private egress, and networking diagnosis",
+          "title_topic_fingerprint": "troubleshoot networking issues in lambda — lambda vpc attachment, hyperplane enis, private egress, and networking diagnosis — scenario"
+        }
+      ]
     }
   ]
 }
