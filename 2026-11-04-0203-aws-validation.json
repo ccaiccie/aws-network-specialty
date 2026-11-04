@@ -1,0 +1,62 @@
+[
+  {
+    "page": 1,
+    "title": "01 Network Firewall \u2014 zonal egress before NAT",
+    "overflow": []
+  },
+  {
+    "page": 2,
+    "title": "02 Network Firewall \u2014 public ingress and edge routes",
+    "overflow": []
+  },
+  {
+    "page": 3,
+    "title": "03 TGW \u2014 inspection VPC with separate route domains",
+    "overflow": []
+  },
+  {
+    "page": 4,
+    "title": "04 TGW-attached Network Firewall \u2014 managed attachment",
+    "overflow": []
+  },
+  {
+    "page": 5,
+    "title": "05 Distributed GWLBE \u2014 centralized appliance service",
+    "overflow": []
+  },
+  {
+    "page": 6,
+    "title": "06 Direct NVA and VPC Route Server",
+    "overflow": []
+  },
+  {
+    "page": 7,
+    "title": "07 Cloud WAN \u2014 send-via and send-to",
+    "overflow": []
+  },
+  {
+    "page": 8,
+    "title": "08 Hybrid \u2014 Direct Connect or Site-to-Site VPN to TGW",
+    "overflow": []
+  },
+  {
+    "page": 9,
+    "title": "09 Web ingress \u2014 ALB/WAF versus NLB passthrough",
+    "overflow": []
+  },
+  {
+    "page": 10,
+    "title": "10 Network Firewall rules and TLS inspection",
+    "overflow": []
+  },
+  {
+    "page": 11,
+    "title": "11 GWLB overlay routing \u2014 vendor DMZ variant",
+    "overflow": []
+  },
+  {
+    "page": 12,
+    "title": "12 Native Terraform lab topology",
+    "overflow": []
+  }
+]

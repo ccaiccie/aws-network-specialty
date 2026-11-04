@@ -1,0 +1,1142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-04T02:03:00Z" version="24.7.17" compressed="false">
+  <diagram id="aws-01" name="01 Network Firewall — zonal egress before NAT">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  01 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Network Firewall — zonal egress before NAT" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Private VM 10.10.1.10:51000 → Internet TCP/443" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Private workload&lt;/b&gt;&lt;br&gt;&lt;br&gt;The instance SG permits a new outbound connection. The subnet route selects a same-AZ Network Firewall endpoint." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  Firewall endpoint&lt;/b&gt;&lt;br&gt;&lt;br&gt;AWS delivers the original private tuple to the managed firewall. Dedicated firewall subnets separate pre-inspection and post-inspection routing." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Inspection engine&lt;/b&gt;&lt;br&gt;&lt;br&gt;Stateless actions determine whether traffic reaches stateful processing. Stateful stream rules, domain policy and optional TLS inspection apply according to the selected policy." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  NAT Gateway&lt;/b&gt;&lt;br&gt;&lt;br&gt;The endpoint subnet default points to the same-AZ NAT Gateway. NAT creates the outbound public mapping after inspection, retaining workload attribution at the firewall." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  IGW and server&lt;/b&gt;&lt;br&gt;&lt;br&gt;The NAT subnet reaches the Internet Gateway. The remote server responds to the NAT public address and allocated port." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Workload response&lt;/b&gt;&lt;br&gt;&lt;br&gt;SG state admits the response. Stateless NACL rules must also allow the return traffic." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Private subnet&lt;/b&gt;&lt;br&gt;&lt;br&gt;After inspection, the endpoint subnet routes to the workload CIDR." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Firewall state&lt;/b&gt;&lt;br&gt;&lt;br&gt;The restored private destination and reverse tuple traverse the matching zonal firewall path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  NAT return&lt;/b&gt;&lt;br&gt;&lt;br&gt;The NAT mapping restores destination 10.10.1.10. Its subnet route for that workload prefix points back to the firewall endpoint." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Internet reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;IGW delivers the reply to the NAT Gateway that owns the mapping." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Workload 0/0 → firewall endpoint; firewall 0/0 → NAT; NAT 0/0 → IGW; NAT workload-prefix → firewall endpoint. Use dedicated route tables per AZ. Endpoint subnet local routing completes the return." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Network Firewall does not supply the NAT Gateway function. SGs are stateful; NACLs are stateless. Passing stateless inspection is not automatically a stateful allow. Track addresses before and after NAT separately." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inspect firewall flow/alert logs, NAT metrics and route tables. Check both SYN and SYN-ACK on the same stateful path. Failure tests must cover endpoint readiness, AZ loss and SNAT port pressure." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/network-firewall/latest/developerguide/asymmetric-routing.html&quot;&gt;https://docs.aws.amazon.com/network-firewall/latest/developerguide/asymmetric-routing.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://docs.aws.amazon.com/network-firewall/latest/developerguide/architectures.html&quot;&gt;https://docs.aws.amazon.com/network-firewall/latest/developerguide/architectures.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-02" name="02 Network Firewall — public ingress and edge routes">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  02 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Network Firewall — public ingress and edge routes" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Internet → IGW edge route → firewall endpoint → public application" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Internet request&lt;/b&gt;&lt;br&gt;&lt;br&gt;The client targets the application&amp;#x27;s public address. IGW address mapping and edge-associated routing bring the flow into the VPC." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  IGW route table&lt;/b&gt;&lt;br&gt;&lt;br&gt;The ingress route for the application subnet targets the firewall endpoint. This edge association is separate from the application subnet route table." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Managed inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;The firewall sees the packet on the selected zonal endpoint and applies its rule policy. TLS payload remains encrypted unless supported decryption is configured." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  Application subnet&lt;/b&gt;&lt;br&gt;&lt;br&gt;The firewall subnet resolves the destination through VPC routing. The workload SG and NACL must permit the effective client tuple." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Application&lt;/b&gt;&lt;br&gt;&lt;br&gt;The backend responds toward the Internet client. Its default route sends the reply to the firewall endpoint, not directly to the IGW." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Internet client&lt;/b&gt;&lt;br&gt;&lt;br&gt;The reply reaches the public service tuple the client contacted." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  IGW egress&lt;/b&gt;&lt;br&gt;&lt;br&gt;Post-inspection traffic leaves through the IGW and applicable public mapping." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Firewall reverse&lt;/b&gt;&lt;br&gt;&lt;br&gt;The reverse connection crosses the same stateful inspection path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Application default&lt;/b&gt;&lt;br&gt;&lt;br&gt;0/0 → firewall endpoint forces the response back through inspection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Application reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;A directly attached public IP does not remove the need for the reverse route." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Create an IGW edge-associated route table with a valid application-prefix endpoint route. Keep the firewall subnet&amp;#x27;s onward Internet route distinct from the workload subnet default. This page is a direct public-workload example; ALB proxying changes tuples." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Limit ingress policy and workload SG to the intended source/service. A packet can be allowed by Network Firewall and still be dropped by SG/NACL. Content visibility depends on TLS termination placement." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Test allowed and denied source/port pairs. Verify the edge association exists and that the return does not bypass inspection. Do not expose an administrative port just to prove reachability." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/network-firewall/latest/developerguide/vpc-config-route-tables.html&quot;&gt;https://docs.aws.amazon.com/network-firewall/latest/developerguide/vpc-config-route-tables.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-03" name="03 TGW — inspection VPC with separate route domains">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  03 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="TGW — inspection VPC with separate route domains" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Spoke A 10.10/16 → spoke B 10.20/16 • firewall endpoint or GWLBE" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Spoke attachment&lt;/b&gt;&lt;br&gt;&lt;br&gt;The source subnet sends the remote spoke prefix to TGW. The attachment&amp;#x27;s associated TGW table is the pre-inspection routing domain." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  TGW pre-inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;Remote destinations select the inspection VPC attachment. Do not propagate direct spoke routes here if they would beat the inspection route." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Inspection VPC&lt;/b&gt;&lt;br&gt;&lt;br&gt;TGW attachment subnet routes steer to the local firewall endpoint or GWLBE. The security engine examines the original private flow." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  TGW post-inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;Endpoint subnet routes send remote prefixes back to TGW. The inspection attachment uses a different TGW table with destination-spoke reachability." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Destination spoke&lt;/b&gt;&lt;br&gt;&lt;br&gt;The destination subnet delivers to the workload. Its return remote-prefix route again selects TGW and the pre-inspection domain." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Source workload&lt;/b&gt;&lt;br&gt;&lt;br&gt;The source receives the inspected reverse flow." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  TGW post table&lt;/b&gt;&lt;br&gt;&lt;br&gt;The post-inspection table resolves source spoke A." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Same stateful path&lt;/b&gt;&lt;br&gt;&lt;br&gt;Return crosses the compatible endpoint/appliance state domain." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  TGW pre table&lt;/b&gt;&lt;br&gt;&lt;br&gt;Traffic arriving from spoke B again selects inspection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Destination reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;10.20.x.x → 10.10.x.x. Reversing addresses does not bypass the pre-inspection domain." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Spoke attachments associate with the pre table; inspection attachment associates with the post table. Enable appliance mode on the inspection VPC attachment for the supported stateful topology. VPC subnet tables still need both onward routes." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Appliance mode helps keep AZ selection stable; it does not manufacture missing routes or replicate firewall state. Choose Network Firewall or GWLB deliberately; their endpoint provisioning and policy ownership differ." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inspect TGW associations, propagations, active routes and blackholes. Compare both VPC route-table stages. A loop often means post-inspection traffic re-enters the pre-inspection table." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html&quot;&gt;https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-04" name="04 TGW-attached Network Firewall — managed attachment">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  04 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="TGW-attached Network Firewall — managed attachment" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Native network-function attachment • different from an inspection VPC" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Source attachment&lt;/b&gt;&lt;br&gt;&lt;br&gt;The spoke forwards toward TGW. The associated route table determines whether this flow is inspected." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  TGW steering&lt;/b&gt;&lt;br&gt;&lt;br&gt;A route selects the Network Firewall network-function attachment instead of a customer inspection VPC attachment." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Managed firewall&lt;/b&gt;&lt;br&gt;&lt;br&gt;AWS provisions the integrated inspection path and applies the firewall policy. The customer does not build the traditional endpoint-subnet plumbing for this attachment." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  Post-inspection domain&lt;/b&gt;&lt;br&gt;&lt;br&gt;The firewall attachment&amp;#x27;s TGW route-table association must resolve the final destination without re-entering the same inspection path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Destination&lt;/b&gt;&lt;br&gt;&lt;br&gt;The remote attachment forwards to its workload. The response must also be steered through the managed firewall attachment." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Source attachment&lt;/b&gt;&lt;br&gt;&lt;br&gt;TGW resolves the original source after inspection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Post-inspection lookup&lt;/b&gt;&lt;br&gt;&lt;br&gt;The associated table provides a source route." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Firewall state&lt;/b&gt;&lt;br&gt;&lt;br&gt;The managed service inspects the reverse flow." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Destination TGW table&lt;/b&gt;&lt;br&gt;&lt;br&gt;The response route selects the firewall attachment." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Remote reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;The same insertion policy must hold for the return traffic class." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Keep pre-inspection and post-inspection route roles explicit. Read the service&amp;#x27;s current regional, account-sharing and attachment constraints. This is not the same resource model as firewall endpoints in your own VPC." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Firewall ownership and TGW ownership can differ through supported sharing. Policy remains managed by the firewall owner. Reachability is not evidence that the TGW route chose the network-function attachment." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inspect the attachment state, TGW associated tables and firewall logs. Test a denied flow and route withdrawal. Do not apply VPC appliance-mode instructions mechanically to a different attachment type." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/network-firewall/latest/developerguide/tgw-firewall.html&quot;&gt;https://docs.aws.amazon.com/network-firewall/latest/developerguide/tgw-firewall.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-05" name="05 Distributed GWLBE — centralized appliance service">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  05 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Distributed GWLBE — centralized appliance service" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Consumer VPC endpoint • provider GWLB • GENEVE UDP/6081" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Consumer workload&lt;/b&gt;&lt;br&gt;&lt;br&gt;A subnet route selects a local GWLBE for the target prefix. The endpoint occupies a separate subnet so post-inspection forwarding can differ." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  GWLBE service link&lt;/b&gt;&lt;br&gt;&lt;br&gt;The endpoint connects to the accepted provider endpoint service. This is transparent service insertion, not an application PrivateLink interface endpoint." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Provider GWLB&lt;/b&gt;&lt;br&gt;&lt;br&gt;GWLB selects a healthy appliance and encapsulates the original packet in GENEVE on UDP/6081. Outer addresses identify the service transport." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  NVA inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;A GENEVE-capable appliance decapsulates, evaluates the inner packet and returns permitted traffic with the required encapsulation metadata." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Consumer onward route&lt;/b&gt;&lt;br&gt;&lt;br&gt;Traffic returns through GWLBE; the endpoint subnet route sends it onward to NAT, TGW or another valid destination." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Consumer source&lt;/b&gt;&lt;br&gt;&lt;br&gt;The response reaches the originating workload." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Endpoint onward&lt;/b&gt;&lt;br&gt;&lt;br&gt;After reverse inspection, normal consumer routing reaches the source." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Same appliance flow&lt;/b&gt;&lt;br&gt;&lt;br&gt;GWLB flow stickiness selects the compatible target for the reverse flow while that flow remains mapped." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Return GWLBE route&lt;/b&gt;&lt;br&gt;&lt;br&gt;The reverse subnet/edge path must explicitly select the endpoint." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Remote response&lt;/b&gt;&lt;br&gt;&lt;br&gt;The response enters the consumer routing domain; routing, not the endpoint service alone, creates symmetry." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Consumer route tables make GWLBE inline. Provider and consumer AZ mapping matters across accounts; use AZ IDs where matching zones. Endpoint service permission/acceptance and target health must all be ready." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;GWLB does not provide firewall policy or session synchronization. Preserve GENEVE options and supported MTU. The appliance should not become a NAT owner unless the vendor design specifically calls for it." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Check endpoint availability, service acceptance, target health and UDP/6081 captures. Test a blocked inner flow and target loss. Healthy TCP probes alone do not prove GENEVE forwarding." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html&quot;&gt;https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-load-balancer-endpoints.html&quot;&gt;https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-load-balancer-endpoints.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-06" name="06 Direct NVA and VPC Route Server">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  06 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Direct NVA and VPC Route Server" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Two variants • static ENI routes or BGP-installed routes" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Workload route&lt;/b&gt;&lt;br&gt;&lt;br&gt;The effective subnet or IGW route selects the appliance ENI. Static insertion configures that route directly; dynamic insertion uses eligible BGP-learned routes." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  NVA ingress&lt;/b&gt;&lt;br&gt;&lt;br&gt;The appliance accepts transit traffic with EC2 source/destination checks disabled on the forwarding interfaces. SGs must allow the transport and intended data." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Vendor inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;The firewall owns security state, optional TLS decryption and NAT. The cloud next hop does not replace the appliance routing table." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  NVA onward route&lt;/b&gt;&lt;br&gt;&lt;br&gt;The appliance forwards toward the destination through an appropriate interface/route. Avoid matching its emitted traffic back to itself." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Destination&lt;/b&gt;&lt;br&gt;&lt;br&gt;The remote endpoint responds using a route that selects the same or supported synchronized firewall state." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Client&lt;/b&gt;&lt;br&gt;&lt;br&gt;The restored flow returns to the original socket." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Appliance route&lt;/b&gt;&lt;br&gt;&lt;br&gt;The NVA resolves the source prefix after inspection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  NVA state&lt;/b&gt;&lt;br&gt;&lt;br&gt;Reverse traffic must match session and any NAT state." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Return routing&lt;/b&gt;&lt;br&gt;&lt;br&gt;A static route or learned route selects the inspection ENI." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Remote reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;A BGP failover can move new flows while old sessions still belong to the failed appliance." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;CONTROL PLANE: NVA BGP → VPC Route Server endpoint → propagation to associated eligible VPC/IGW route tables. Route Server is not a data-plane hop and does not program TGW route tables; TGW Connect is a different feature." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Static ENI next hops need explicit failover automation. Dynamic routing reduces route-update work, but does not synchronize state. Do not confuse GWLB overlay routing with BGP route-server insertion." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Verify peer status, learned route, propagation and installed next hop. Withdraw a route and test both new and existing flows. Source/destination-check errors can look like firewall policy drops." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/vpc/latest/userguide/dynamic-routing-route-server.html&quot;&gt;https://docs.aws.amazon.com/vpc/latest/userguide/dynamic-routing-route-server.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-07" name="07 Cloud WAN — send-via and send-to">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  07 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Cloud WAN — send-via and send-to" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Policy selects network-function attachments; the attached firewall still inspects" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Source segment&lt;/b&gt;&lt;br&gt;&lt;br&gt;A workload attachment belongs to the intended Cloud WAN segment. Attachment-policy tags and acceptance determine that association." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  Core-network policy&lt;/b&gt;&lt;br&gt;&lt;br&gt;send-via steers selected segment traffic through a network function group. send-to is used for the appropriate service/egress attachment pattern." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Function attachment&lt;/b&gt;&lt;br&gt;&lt;br&gt;The chosen inspection VPC attachment receives the packet. Its subnet routes must still deliver the flow to the actual firewall endpoint/NVA." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  Firewall + onward&lt;/b&gt;&lt;br&gt;&lt;br&gt;The firewall permits or blocks. Post-inspection routing returns traffic to the core or sends it toward the designed egress destination." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Destination segment&lt;/b&gt;&lt;br&gt;&lt;br&gt;The destination attachment receives the inspected flow. Single-hop versus dual-hop inter-region design changes how many security functions are traversed." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Source segment&lt;/b&gt;&lt;br&gt;&lt;br&gt;The original segment receives the inspected response." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Core onward path&lt;/b&gt;&lt;br&gt;&lt;br&gt;The return destination resolves after service insertion." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Function state&lt;/b&gt;&lt;br&gt;&lt;br&gt;The reverse direction must encounter compatible firewall state and translation." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Reverse insertion&lt;/b&gt;&lt;br&gt;&lt;br&gt;The live policy selects the required network function path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Destination reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;Do not assume segment sharing alone creates an inspection chain." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Network function group membership, attachment policy, segment action and live policy version form the control plane. Build and inspect the core-network policy change set before execution. Initial core creation and service-insertion activation have different sequencing requirements." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cloud WAN steers to network functions; it does not replace their subnet routes, rule policy or NAT. The exact send-via/send-to JSON must match the current policy schema and intended segment pair." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Check LIVE policy, function attachment acceptance, core routes and firewall logs. Test intra-region, inter-region and egress separately. A pending policy version is not the active data-plane policy." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/network-manager/latest/cloudwan/cloudwan-policy-service-insertion.html&quot;&gt;https://docs.aws.amazon.com/network-manager/latest/cloudwan/cloudwan-policy-service-insertion.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-08" name="08 Hybrid — Direct Connect or Site-to-Site VPN to TGW">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  08 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Hybrid — Direct Connect or Site-to-Site VPN to TGW" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="On-premises → TGW → inspection → spoke" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Branch router&lt;/b&gt;&lt;br&gt;&lt;br&gt;Direct Connect uses the selected VIF/DX gateway/TGW relationship; VPN uses the selected tunnels. BGP advertises only the intended prefixes." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  TGW hybrid arrival&lt;/b&gt;&lt;br&gt;&lt;br&gt;The hybrid attachment&amp;#x27;s associated table selects the inspection attachment for the workload prefix." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Inspection tier&lt;/b&gt;&lt;br&gt;&lt;br&gt;The inspection VPC or supported Network Firewall attachment applies security policy to the private tuple." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  TGW post-inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;The post table resolves the workload attachment. Inspection VPC variants also need correct endpoint-subnet routes back to TGW." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Spoke workload&lt;/b&gt;&lt;br&gt;&lt;br&gt;The workload SG/NACL permits the on-premises source. Its return route sends the branch prefix to TGW." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Branch host&lt;/b&gt;&lt;br&gt;&lt;br&gt;The branch receives the response over the selected hybrid path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Hybrid attachment&lt;/b&gt;&lt;br&gt;&lt;br&gt;Post-inspection routing selects DX/VPN reachability." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Firewall session&lt;/b&gt;&lt;br&gt;&lt;br&gt;The reverse private tuple is inspected." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Spoke pre table&lt;/b&gt;&lt;br&gt;&lt;br&gt;TGW steers the branch destination through inspection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Workload reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;The return must not use a propagated direct branch route that bypasses the firewall." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;DX private VIF→VGW is not the same as transit VIF→DX gateway→TGW. Choose the actual attachment topology. VPN backup route priorities must retain the inspection domain after failover." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;DX private connectivity is not application encryption or firewall inspection. VPN encrypts between tunnel endpoints; payload inspection requires the separate firewall and any TLS decryption configuration." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Check advertised/accepted prefixes, TGW associations, appliance mode where applicable and forward/return endpoint logs. Test DX-to-VPN failover without introducing a direct bypass route." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html&quot;&gt;https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://docs.aws.amazon.com/directconnect/latest/UserGuide/WorkingWithVirtualInterfaces.html&quot;&gt;https://docs.aws.amazon.com/directconnect/latest/UserGuide/WorkingWithVirtualInterfaces.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-09" name="09 Web ingress — ALB/WAF versus NLB passthrough">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  09 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Web ingress — ALB/WAF versus NLB passthrough" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Choose where TLS terminates and which tuple the firewall sees" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Public client&lt;/b&gt;&lt;br&gt;&lt;br&gt;The client addresses an ALB/CloudFront application endpoint, or an NLB transport endpoint. These are distinct variants." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  Frontend security&lt;/b&gt;&lt;br&gt;&lt;br&gt;AWS WAF attaches to supported application resources such as ALB/CloudFront. It is not directly attached to NLB as a generic TCP firewall." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Proxy or passthrough&lt;/b&gt;&lt;br&gt;&lt;br&gt;ALB terminates HTTP/S and creates a backend connection. NLB behavior depends on listener type, target type and client-IP-preservation configuration." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  Optional inline tier&lt;/b&gt;&lt;br&gt;&lt;br&gt;A supported post-LB route may steer the backend flow through an endpoint. The inspected source may be the proxy rather than the original client." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Backend&lt;/b&gt;&lt;br&gt;&lt;br&gt;The app receives the effective tuple and trusted forwarding metadata. X-Forwarded-For is application data, not proof of the packet&amp;#x27;s network source." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Client response&lt;/b&gt;&lt;br&gt;&lt;br&gt;The frontend completes the appropriate client-side connection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Frontend state&lt;/b&gt;&lt;br&gt;&lt;br&gt;ALB maps its backend response onto the client request; NLB follows its configured connection mapping." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Reverse inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;If an inline tier was inserted, the backend response must traverse its matching state." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Backend route&lt;/b&gt;&lt;br&gt;&lt;br&gt;A route selects the required inline hop before reaching the load balancer path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Application reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;The response destination is the backend connection&amp;#x27;s actual peer." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Draw pre-LB and post-LB inspection as separate stages. ALB requires two TCP legs; a TLS NLB listener also terminates TLS. Avoid asserting universal client-IP preservation for all NLB target combinations." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;WAF inspects supported HTTP/S request components within configured limits. Network Firewall/GWLB provide different transport inspection. Encrypted payload visibility depends on the termination or TLS-inspection location." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Compare access logs, WAF logs, firewall tuples and target captures. Test origin/backend bypass, health checks and a benign WAF test rule. One connection tuple cannot describe the entire ALB proxy chain." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html&quot;&gt;https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://docs.aws.amazon.com/elasticloadbalancing/latest/network/edit-target-group-attributes.html&quot;&gt;https://docs.aws.amazon.com/elasticloadbalancing/latest/network/edit-target-group-attributes.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-10" name="10 Network Firewall rules and TLS inspection">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  10 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="Network Firewall rules and TLS inspection" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="Engine walk • logical processing stages rather than physical appliances" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Stateless rules&lt;/b&gt;&lt;br&gt;&lt;br&gt;Packets are evaluated against stateless rules and defaults. forward_to_sfe sends traffic to the stateful engine; a stateless pass can bypass that engine." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  Stateful stream&lt;/b&gt;&lt;br&gt;&lt;br&gt;The firewall tracks/reassembles supported flows. Strict-order and default-action-order policies evaluate rule groups differently; choose deliberately." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  TLS inspection&lt;/b&gt;&lt;br&gt;&lt;br&gt;For configured supported TLS flows, the service terminates and re-establishes TLS using the TLS inspection configuration and certificates." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  Content verdict&lt;/b&gt;&lt;br&gt;&lt;br&gt;Suricata-compatible rules and configured application/domain criteria inspect available data. Encrypted bypass traffic has less visibility." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Forward or drop&lt;/b&gt;&lt;br&gt;&lt;br&gt;Allowed traffic continues along the endpoint route. A rule log and a delivered response are different pieces of evidence." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Client receive&lt;/b&gt;&lt;br&gt;&lt;br&gt;Client receives permitted data on the expected connection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  Client TLS leg&lt;/b&gt;&lt;br&gt;&lt;br&gt;When decrypted, the service re-encrypts toward the client." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Reverse stream&lt;/b&gt;&lt;br&gt;&lt;br&gt;Stateful processing evaluates the reverse stream as applicable." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  Server TLS leg&lt;/b&gt;&lt;br&gt;&lt;br&gt;The independent origin session delivers the response to the inspection service." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Server response&lt;/b&gt;&lt;br&gt;&lt;br&gt;Without TLS inspection, payload remains opaque even though connection metadata is visible." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Both directions must traverse the compatible firewall endpoint. Set HOME_NET and rule variables for all inspected source domains in centralized designs; the inspection VPC CIDR alone may not describe spoke clients." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;Strict-order drop-established defaults allow application identification before a final verdict in suitable designs. Broad IP pass rules can prevent intended application restrictions. Validate the exact Suricata semantics of each rule." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Test plaintext, decrypted TLS, unsupported/pinned clients and an explicit deny. Verify certificate trust, TLS logs, alert logs and application outcome. Do not use real malware for acceptance tests." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.aws.amazon.com/network-firewall/latest/developerguide/firewall-rules-engines.html&quot;&gt;https://docs.aws.amazon.com/network-firewall/latest/developerguide/firewall-rules-engines.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html&quot;&gt;https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-11" name="11 GWLB overlay routing — vendor DMZ variant">
+    <mxGraphModel dx="2400" dy="1740" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eyebrow" value="AWS  /  PACKET INSPECTION ATLAS  /  11 OF 12" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="30" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="title" value="GWLB overlay routing — vendor DMZ variant" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="84" width="2280" height="76" />
+        </mxCell>
+        <mxCell id="scope" value="VM-Series-specific architecture • not a universal GWLB feature" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=26;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="170" width="2280" height="50" />
+        </mxCell>
+        <mxCell id="fwd" value="FORWARD   →   Read steps 1–5 from left to right" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="240" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="f0" value="&lt;b&gt;01  Ingress endpoint&lt;/b&gt;&lt;br&gt;&lt;br&gt;AWS route selection sends the flow to the designated GWLBE. Endpoint identity identifies the service-chain entry context." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;b&gt;02  GENEVE delivery&lt;/b&gt;&lt;br&gt;&lt;br&gt;GWLB carries the original packet and service metadata to VM-Series. Vendor plugin/configuration maps supported endpoint context to the intended zone." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f2" value="&lt;b&gt;03  Inner-header routing&lt;/b&gt;&lt;br&gt;&lt;br&gt;With the supported overlay-routing feature configured, PAN-OS performs an inner-packet route lookup and security policy processing." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f3" value="&lt;b&gt;04  DMZ / trust egress&lt;/b&gt;&lt;br&gt;&lt;br&gt;The appliance forwards to the configured routed destination instead of assuming every design is simple transparent return-to-source-endpoint inspection." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="f4" value="&lt;b&gt;05  Application&lt;/b&gt;&lt;br&gt;&lt;br&gt;The backend receives the selected translated or original tuple. Its return route must lead into the correct vendor session and zone context." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#80a9d5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="300" width="400" height="330" />
+        </mxCell>
+        <mxCell id="fe0" parent="1" source="f0" target="f1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe1" parent="1" source="f1" target="f2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe2" parent="1" source="f2" target="f3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fe3" parent="1" source="f3" target="f4" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#2466a8;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rev" value="RETURN   ←   Start at step 6 on the right; follow steps 6–10 back to the source" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="680" width="2280" height="42" />
+        </mxCell>
+        <mxCell id="r0" value="&lt;b&gt;10  Original client&lt;/b&gt;&lt;br&gt;&lt;br&gt;Reverse NAT/session processing restores the expected service tuple." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;09  AWS egress path&lt;/b&gt;&lt;br&gt;&lt;br&gt;The supported vendor/AWS design delivers the response through the correct endpoint/public path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="520" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;08  Vendor session&lt;/b&gt;&lt;br&gt;&lt;br&gt;PAN-OS matches security zones, routing and NAT state." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="980" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;07  DMZ return route&lt;/b&gt;&lt;br&gt;&lt;br&gt;The backend reaches the correct inspection interface or endpoint path." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1440" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;b&gt;06  Backend reply&lt;/b&gt;&lt;br&gt;&lt;br&gt;A generic GWLB stickiness claim does not establish this routed return design." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#77ad95;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1900" y="740" width="400" height="255" />
+        </mxCell>
+        <mxCell id="re0" parent="1" source="r1" target="r0" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re1" parent="1" source="r2" target="r1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re2" parent="1" source="r3" target="r2" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="re3" parent="1" source="r4" target="r3" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=4;strokeColor=#25825b;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;ROUTING / CONTROL PLANE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Treat endpoint-to-zone mapping, plugin/version requirements and the PAN-OS virtual-router configuration as mandatory prerequisites. TGW Connect GRE/BGP is a separate overlay mechanism." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="60" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="policy" value="&lt;b&gt;INSPECTION / IDENTITY&lt;/b&gt;&lt;br&gt;&lt;br&gt;The earlier knowledge material includes this vendor-specific case. Validate against the selected VM-Series release rather than translating it to another vendor or enabling it on a basic transparent lab." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff7e7;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="840" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="failure" value="&lt;b&gt;FAILURE / PROOF&lt;/b&gt;&lt;br&gt;&lt;br&gt;Record endpoint ID, ingress zone, inner destination, chosen route, egress zone and NAT rule for both directions. Test an explicit DMZ deny and session recovery after target failure." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=#fff0ef;strokeColor=#cbd5e1;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1620" y="1060" width="720" height="365" />
+        </mxCell>
+        <mxCell id="sources" value="REFERENCES — full clickable source links and validation commands are in the companion Markdown report." vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=24;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1470" width="2280" height="40" />
+        </mxCell>
+        <mxCell id="sourcelinks" value="&lt;a href=&quot;https://docs.paloaltonetworks.com/vm-series/11-1/vm-series-deployment/set-up-the-vm-series-firewall-on-aws/vm-series-integration-with-gateway-load-balancer&quot;&gt;https://docs.paloaltonetworks.com/vm-series/11-1/vm-series-deployment/set-up-the-vm-series-firewall-on-aws/vm-series-integration-with-gateway-load-balancer&lt;/a&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=21;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1520" width="2280" height="105" />
+        </mxCell>
+        <mxCell id="footer" value="Illustrative addresses • logical service hops • blue = initiating traffic • green = response • control-plane notes are not packet hops" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=22;fontFamily=Arial;fontSize=22;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1660" width="2280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aws-lab-topology" name="12 Native Terraform lab topology">
+    <mxGraphModel page="1" pageScale="1" pageWidth="2400" pageHeight="1740" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" vertex="1" value="AWS — native Terraform lab topology" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=44;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="45" width="2280" height="80" />
+        </mxCell>
+        <mxCell id="s" parent="1" vertex="1" value="Concrete resource boundaries and route ownership • blue = initiating packet • green = reply • purple dashed = policy/control" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="145" width="2280" height="60" />
+        </mxCell>
+        <mxCell id="vpc" parent="1" vertex="1" value="LAB VPC 10.10.0.0/16 — one Availability Zone" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=30;fontColor=#15283f;fillColor=#f8fafc;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="50" y="240" width="2300" height="800" />
+        </mxCell>
+        <mxCell id="s1" parent="1" vertex="1" value="WORKLOAD SUBNET 10.10.1.0/24" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#ffffff;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="90" y="330" width="660" height="650" />
+        </mxCell>
+        <mxCell id="s2" parent="1" vertex="1" value="FIREWALL SUBNET 10.10.2.0/24" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#ffffff;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="860" y="330" width="660" height="650" />
+        </mxCell>
+        <mxCell id="s3" parent="1" vertex="1" value="PUBLIC NAT SUBNET 10.10.3.0/24" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#ffffff;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1630" y="330" width="660" height="650" />
+        </mxCell>
+        <mxCell id="vm" parent="1" vertex="1" value="&lt;b&gt;Private EC2 / SSM&lt;/b&gt;&lt;br&gt;t3.micro • no inbound SG rule&lt;br&gt;TCP/80 and TCP/443 test traffic" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#eff6ff;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="150" y="440" width="540" height="170" />
+        </mxCell>
+        <mxCell id="fw" parent="1" vertex="1" value="&lt;b&gt;Network Firewall endpoint&lt;/b&gt;&lt;br&gt;Same-AZ managed inspection&lt;br&gt;Original source before NAT" style="shape=hexagon;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#fff0dc;strokeColor=#7fa2c5;strokeWidth=2;align=center;">
+          <mxGeometry as="geometry" x="920" y="440" width="540" height="170" />
+        </mxCell>
+        <mxCell id="nat" parent="1" vertex="1" value="&lt;b&gt;NAT Gateway&lt;/b&gt;&lt;br&gt;Public EIP owns translation&lt;br&gt;Private workload source → EIP" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1690" y="440" width="540" height="170" />
+        </mxCell>
+        <mxCell id="rt1" parent="1" vertex="1" value="&lt;b&gt;Workload route table&lt;/b&gt;&lt;br&gt;0.0.0.0/0 → firewall endpoint&lt;br&gt;VPC local route unchanged&lt;br&gt;SG allows egress; no ingress opening" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="150" y="720" width="540" height="200" />
+        </mxCell>
+        <mxCell id="rt2" parent="1" vertex="1" value="&lt;b&gt;Endpoint route table&lt;/b&gt;&lt;br&gt;0.0.0.0/0 → NAT Gateway&lt;br&gt;10.10.0.0/16 → local&lt;br&gt;After inspection, continue onward" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="920" y="720" width="540" height="200" />
+        </mxCell>
+        <mxCell id="rt3" parent="1" vertex="1" value="&lt;b&gt;NAT subnet route table&lt;/b&gt;&lt;br&gt;0.0.0.0/0 → IGW&lt;br&gt;10.10.1.0/24 → firewall endpoint&lt;br&gt;Return is inspected after reverse NAT" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1690" y="720" width="540" height="200" />
+        </mxCell>
+        <mxCell id="a" parent="1" edge="1" source="vm" target="fw" value="1 • endpoint route" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#2466a8;fontColor=#2466a8;fontSize=22;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;entryX=0;entryY=0.25;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="b" parent="1" edge="1" source="fw" target="nat" value="2 • post route" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#2466a8;fontColor=#2466a8;fontSize=22;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;entryX=0;entryY=0.25;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="c" parent="1" edge="1" source="nat" target="fw" value="5 • reverse NAT" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#25825b;fontColor=#25825b;fontSize=22;labelBackgroundColor=#ffffff;exitX=0;exitY=0.75;entryX=1;entryY=0.75;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="d" parent="1" edge="1" source="fw" target="vm" value="6 • stateful reply" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#25825b;fontColor=#25825b;fontSize=22;labelBackgroundColor=#ffffff;exitX=0;exitY=0.75;entryX=1;entryY=0.75;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="pol" parent="1" vertex="1" value="&lt;b&gt;Policy and evidence&lt;/b&gt;&lt;br&gt;Stateless defaults → stateful engine&lt;br&gt;Strict order; transport allows TCP/80 and TCP/443&lt;br&gt;Drop-established default for other established traffic&lt;br&gt;CloudWatch FLOW and ALERT logs" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#f2f0fa;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="90" y="1150" width="1000" height="270" />
+        </mxCell>
+        <mxCell id="igw" parent="1" vertex="1" value="&lt;b&gt;Internet Gateway&lt;/b&gt;&lt;br&gt;VPC edge" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#f8fafc;strokeColor=#7fa2c5;strokeWidth=2;">
+          <mxGeometry as="geometry" x="1390" y="1190" width="350" height="150" />
+        </mxCell>
+        <mxCell id="net" parent="1" vertex="1" value="&lt;b&gt;Internet server&lt;/b&gt;&lt;br&gt;Reply to NAT EIP" style="shape=cloud;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=#eef9f4;strokeColor=#7fa2c5;strokeWidth=2;align=center;">
+          <mxGeometry as="geometry" x="1880" y="1160" width="400" height="210" />
+        </mxCell>
+        <mxCell id="e" parent="1" edge="1" source="nat" target="igw" value="3 • public egress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#2466a8;fontColor=#2466a8;fontSize=22;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2320" y="525" />
+              <mxPoint x="2320" y="1090" />
+              <mxPoint x="1560" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f" parent="1" edge="1" source="igw" target="net" value="4 • request / response" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#2466a8;fontColor=#2466a8;fontSize=22;labelBackgroundColor=#ffffff;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="cp" parent="1" edge="1" source="pol" target="fw" value="Policy association" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeWidth=4;endArrow=block;endFill=1;strokeColor=#7c56a0;fontColor=#7c56a0;fontSize=22;labelBackgroundColor=#ffffff;dashed=1;exitX=1;exitY=0.2;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1180" y="1200" />
+              <mxPoint x="1180" y="1080" />
+              <mxPoint x="800" y="1080" />
+              <mxPoint x="800" y="660" />
+              <mxPoint x="1190" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="foot" parent="1" vertex="1" value="Use the linked Terraform root and scenario-specific inputs. Resource health, policy hits and a completed packet exchange are separate checks." style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=25;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1510" width="2280" height="75" />
+        </mxCell>
+        <mxCell id="scope" parent="1" vertex="1" value="Lab-only reference • no cloud apply performed • public examples and resource names must be replaced with your own test values" style="shape=rectangle;rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=23;fontColor=#15283f;fillColor=none;strokeColor=none;strokeWidth=2;spacing=0;">
+          <mxGeometry as="geometry" x="60" y="1620" width="2280" height="60" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

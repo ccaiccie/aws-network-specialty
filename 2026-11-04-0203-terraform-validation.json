@@ -1,0 +1,62 @@
+[
+  {
+    "lab": "cloud-wan-policy",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "endpoint-routes",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "route-server",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "native-egress",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "tls-inspection",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "gwlb-service",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "nva-routes",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "tgw-domains",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "tgw-native-firewall",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "lab": "alb-waf",
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  }
+]

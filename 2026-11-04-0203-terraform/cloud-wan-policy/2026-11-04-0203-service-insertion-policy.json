@@ -1,0 +1,75 @@
+{
+  "version": "2021.12",
+  "core-network-configuration": {
+    "asn-ranges": [
+      "64512-65534"
+    ],
+    "edge-locations": [
+      {
+        "location": "us-east-1"
+      }
+    ]
+  },
+  "segments": [
+    {
+      "name": "prod",
+      "require-attachment-acceptance": true
+    }
+  ],
+  "network-function-groups": [
+    {
+      "name": "inspection",
+      "require-attachment-acceptance": true
+    }
+  ],
+  "segment-actions": [
+    {
+      "action": "send-via",
+      "segment": "prod",
+      "mode": "single-hop",
+      "when-sent-to": {
+        "segments": [
+          "prod"
+        ]
+      },
+      "via": {
+        "network-function-groups": [
+          "inspection"
+        ]
+      }
+    }
+  ],
+  "attachment-policies": [
+    {
+      "rule-number": 100,
+      "condition-logic": "or",
+      "conditions": [
+        {
+          "type": "tag-value",
+          "key": "role",
+          "operator": "equals",
+          "value": "inspection"
+        }
+      ],
+      "action": {
+        "add-to-network-function-group": "inspection"
+      }
+    },
+    {
+      "rule-number": 200,
+      "condition-logic": "or",
+      "conditions": [
+        {
+          "type": "tag-value",
+          "key": "segment",
+          "operator": "equals",
+          "value": "prod"
+        }
+      ],
+      "action": {
+        "association-method": "constant",
+        "segment": "prod"
+      }
+    }
+  ]
+}
